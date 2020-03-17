@@ -4,9 +4,7 @@
 @endsection
 @section('content')
 <h3>Dashboard</h3>
-<<<<<<< HEAD
-    <div><p>Coming soon!</p></div>
-=======
+
 <div class="main-panel">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -206,5 +204,4 @@
     </div> -->
   </div>
 </div>
->>>>>>> fc699c33a034c255217a7ab2522526e847e9b67a
 @endsection
