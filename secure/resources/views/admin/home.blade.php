@@ -3,8 +3,15 @@
     <title>Dashboard</title>
 @endsection
 @section('content')
+<style media="screen">
+.card-stats p {
+  color: white !important;
+}
+.card-stats {
+  border-radius: 6px;
+}
+</style>
 <h3>Dashboard</h3>
-
 <div class="main-panel">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">

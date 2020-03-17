@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{!! url('assets/css/cropper.min.css') !!}">
     <link rel="stylesheet" type="text/css" href="{!! url('assets/css/admin.css') !!}">
     <link rel="stylesheet" type="text/css" href="{!! url('assets/summernote/summernote-bs4.min.css') !!}">
+    <script src="{!!  url('assets/plugins/chartjs.min.js') !!}"></script>
+    <script src="{!! url('assets/demo/demo.js') !!}"></script>
     <script src="{!! url('assets/js/jquery.min.js') !!}"></script>
     <script src="{!! url('assets/js/popper.min.js') !!}"></script>
     <script src="{!! url('assets/js/bootstrap.min.js') !!}"></script>
@@ -60,6 +62,12 @@
 var ajax_url = '{!! route('adminajax') !!}';
 </script>
 <script src="{!! url('assets/js/admin.js') !!}"></script>
+<script>
+  $(document).ready(function() {
+    // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+    demo.initChartsPages();
+  });
+</script>
 @yield('javascript')
 </body>
 </html>
