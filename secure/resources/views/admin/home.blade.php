@@ -36,7 +36,7 @@
         <ul class="navbar-nav">
 
           <li class="nav-item btn-rotate dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <p>
                 <span class="d-lg-none d-md-block">Some Actions</span>
               </p>
