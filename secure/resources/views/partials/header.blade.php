@@ -20,24 +20,6 @@
 <script src="{!! url('assets/js/jquery.mcustomscrollbar.min.js') !!}"></script>
 <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
 <script src="{!! url('assets/js/cropper.min.js') !!}"></script>
-<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/cropper.min.css">
-<link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/fontawesome.min.css">
-<link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/datepicker.min.css">
-<link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/jquery.fancybox.min.css">
-<link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/jquery.mcustomscrollbar.css">
-<link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/app.css">
-<script src="http://localhost/dating/node_modules/socket.io-client/dist/socket.io.js"></script>
-<script src="http://localhost/dating/assets/js/jquery.min.js"></script>
-<script src="http://localhost/dating/assets/js/popper.min.js"></script>
-<script src="http://localhost/dating/assets/js/bootstrap.min.js"></script>
-<script src="http://localhost/dating/assets/js/jquery.fancybox.min.js"></script>
-<script src="http://localhost/dating/assets/js/datepicker.min.js"></script>
-<script src="http://localhost/dating/assets/js/jquery.form.min.js"></script>
-<script src="http://localhost/dating/assets/js/jquery.mcustomscrollbar.min.js"></script>
-<script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
-<script src="http://localhost/dating/assets/js/cropper.min.js"></script> -->
 <?php
 $seo_website_title = setting('website_title');
 $seo_website_description = setting('website_description');
