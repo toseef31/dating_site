@@ -60,3 +60,8 @@ Route::middleware('admin')->prefix('admin')->group(function(){
     Route::post('page/add/{id?}', 'Admin\HomeController@submitPage')->name('adminaddpage');
     Route::get('page/delete/{id}', 'Admin\HomeController@deletePage')->name('admindeletepage');
 });
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return redirect('/admin');
+    // return what you want
+});
