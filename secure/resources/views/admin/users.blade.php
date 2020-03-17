@@ -14,17 +14,20 @@
                         @endif
                         <?php
                         $avatar = avatar($user->avatar, $user->gender);
+                        // dd($avatar);
                         $avatar2 = substr($avatar,7,9);
                         if ($avatar2 == 'localhost') {
                           $avatar = substr($avatar,34);
                           $avatar ='http://localhost/dating/'.$avatar;
                         }
                         // $avatar ='https://demo.myclouddate.com/'.$avatar;
-                        // print_r($avatar2); die;
-                        // substr("Hello world",6);
                         $age = Carbon\Carbon::parse($user->birthday)->age;
                         ?>
-                        <a target="_blank" href="{{url('u/'.$user->username)}}"><img src="{!! $avatar !!}"></a>
+                        @if($user->username !="")
+                        <a target="_blank" href="{!! route('profile',['username'=>$user->username]) !!}"><img src="{!! $avatar !!}"></a>
+                        @else
+                        <img src="{!! $avatar !!}">
+                        @endif
                         <!-- <a target="_blank" href="{{url('u/'.$user->username)}}"><img src="{!! $avatar !!}"></a> -->
                         <p class="text-center text-primary">{!! ($user->ip)?$user->ip:'No IP' !!}</p>
                         <p class="age">&#64;{!! ($user->username)?$user->username:'No Username'  !!}</p>
