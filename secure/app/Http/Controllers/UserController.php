@@ -374,6 +374,7 @@ class UserController extends Controller
         if($user) {
             $seo_title = $username;
             $nextuser = User::where('id','>', $user->id)->orderBy('id')->first();
+            // dd($nextuser);
             return view('users.profile',compact('seo_title', 'user', 'nextuser'));
         }
         else{
