@@ -301,6 +301,7 @@ jQuery(document).ready(function ($) {
         var el = $(e.currentTarget);
         var photo_id = el.attr('data-id');
         var url = el.attr('data-url');
+        // alert(url);
         var modalBody = $('#modalPhoto .modal-body');
         modalBody.empty();
         $.ajax({
@@ -314,19 +315,20 @@ jQuery(document).ready(function ($) {
                     $('#modalPhoto').modal('show').css({opacity: 0});
                     $('.view-photo-right .content-photo').mCustomScrollbar();
                     var image_box_width = modalBody.find('.full_photo').width();
-                    modalBody.find('.full_photo').height(image_box_width);
-                    modalBody.find('.view-photo-right').height(image_box_width);
+                    // console.log(image_box_width);
+                    // modalBody.find('.full_photo').height('auto');
+                    // modalBody.find('.view-photo-right').height('auto');
                     $('.view-photo-right .content-photo').mCustomScrollbar('scrollTo', '100%');
-                    if(res.height >= res.width){
-                        if(res.height >= image_box_width){
-                            modalBody.find('.full_photo img').height(image_box_width);
-                        }
-                    }
-                    else{
-                        if(res.height >= image_box_width){
-                            modalBody.find('.full_photo img').width(image_box_width);
-                        }
-                    }
+                    // if(res.height >= res.width){
+                    //     if(res.height >= image_box_width){
+                    //         modalBody.find('.full_photo img').height('auto');
+                    //     }
+                    // }
+                    // else{
+                    //     if(res.height >= image_box_width){
+                    //         modalBody.find('.full_photo img').width('auto');
+                    //     }
+                    // }
                     $('#modalPhoto').css({opacity: 1});
                 }
             }
