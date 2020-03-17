@@ -15,10 +15,12 @@ class AjaxController extends Controller
         $this->request = $request;
     }
 
-    public function main()
+    public function main(Request $request)
     {
+      return $request->all();
         if($this->request->has('action')){
             $action = $this->request->get('action');
+            // dd($action);
             if(method_exists($this,$action)){
                 return $this->$action();
             }
