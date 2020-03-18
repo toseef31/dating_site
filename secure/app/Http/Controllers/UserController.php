@@ -94,6 +94,7 @@ class UserController extends Controller
             $user->active = 1;
             $user->country = $this->request->get('country');
             $user->address = $this->request->get('address');
+            
             $user->save();
             if($this->request->hasFile('avatar')){
                 $avatar = $this->request->file('avatar');
