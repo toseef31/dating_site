@@ -7,7 +7,15 @@
                 {{--@endif--}}
                 <div class="top-photo pt-3 pb-3 pl-3">
                     <div class="media">
-                        <img src="{!! avatar($user->avatar, $user->gender) !!}" class="mr-3 border rounded-circle w-25">
+                      <?php
+                      $avatar = avatar($user->avatar, $user->gender);
+                      $avatar2 = substr($avatar,7,9);
+                      if ($avatar2 == 'localhost') {
+                        $avatar = substr($avatar,34);
+                        $avatar ='http://localhost/dating/'.$avatar;
+                      }
+                       ?>
+                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-25">
                         <div class="media-body pt-4">
                             <p class="font-weight-bold text-uppercase"><a href="{!! route('profile',['username'=>$user->username]) !!}">#{!! $user->username !!}</a></p>
                             <p>{!! $user->photos()->count() !!} photos</p>
@@ -24,8 +32,19 @@
                     @if($user->photos()->count())
                         <div class="row pl-3 mr-1">
                             @foreach($user->photos()->orderBy('created_at','DESC')->get()->take(16) as $photo)
-                                <div class="col-md-3 col-6 ">
-                                    <div data-id="{!! $photo->id !!}" data-url="{!! url($photo->file) !!}" class="photo-item view-photo border shadow" style="background-image: url('{!! url($photo->thumb) !!}')">
+
+                            <?php
+                            $url = url()->full();
+                            $url2 = substr($url,7,9);
+                            if ($url2 == 'localhost') {
+                              $cover = 'http://localhost/dating/'.$photo->thumb;
+                            }else {
+                              $cover = $photo->thumb;
+                            }
+                             ?>
+                                <div class="col-md-3">
+                                    <div data-id="{!! $photo->id !!}" data-url="{!! url($photo->file) !!}" class="photo-item view-photo border shadow" style="background-image: url('{!! url($cover) !!}')">
+
                                     </div>
                                 </div>
                             @endforeach

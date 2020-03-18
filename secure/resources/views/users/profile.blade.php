@@ -92,8 +92,22 @@
                     }
                     ?>
                     @foreach($photos as $photo)
-                        <div class="col-md-2 col-6">
-                            <div data-id="{!! $photo->id !!}" data-url="{!! url($photo->file) !!}" class="photo-item view-photo border" style="background-image: url('{!! url($photo->thumb) !!}')">
+
+                    <?php
+                    $url = url()->full();
+                    $url2 = substr($url,7,9);
+                    if ($url2 == 'localhost') {
+                      $cover = 'http://localhost/dating/'.$photo->thumb;
+                      $photo_file ='http://localhost/dating/'.$photo->file;
+                    }else {
+                      $cover = $photo->thumb;
+                      $photo_file = $photo->file;
+                    }
+                     ?>
+                        <div class="col-md-2">
+                            <!-- <div data-id="{!! $photo->id !!}" data-url="{!! url($photo->file) !!}" class="photo-item view-photo border" style="background-image: url('{!! url($photo->thumb) !!}')"> -->
+                            <div data-id="{!! $photo->id !!}" data-url="{!! url($photo_file) !!}" class="photo-item view-photo border" style="background-image: url('{!! url($cover) !!}')">
+
                             </div>
                         </div>
                     @endforeach

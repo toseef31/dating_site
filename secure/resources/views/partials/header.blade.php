@@ -2,25 +2,26 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta name="csrf_token" content="{!! csrf_token() !!}">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-{{--<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">--}}
-{{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">--}}
-{{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/fontawesome.min.css') !!}">--}}
-{{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/cropper.min.css') !!}">--}}
-{{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/datepicker.min.css') !!}">--}}
-{{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/jquery.fancybox.min.css') !!}">--}}
-{{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/jquery.mcustomscrollbar.css') !!}">--}}
-{{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/app.css') !!}">--}}
-{{--<script src="{!! url('node_modules/socket.io-client/dist/socket.io.js') !!}"></script>--}}
-{{--<script src="{!! url('assets/js/jquery.min.js') !!}"></script>--}}
-{{--<script src="{!! url('assets/js/popper.min.js') !!}"></script>--}}
-{{--<script src="{!! url('assets/js/bootstrap.min.js') !!}"></script>--}}
-{{--<script src="{!! url('assets/js/jquery.fancybox.min.js') !!}"></script>--}}
-{{--<script src="{!! url('assets/js/datepicker.min.js') !!}"></script>--}}
-{{--<script src="{!! url('assets/js/jquery.form.min.js') !!}"></script>--}}
-{{--<script src="{!! url('assets/js/jquery.mcustomscrollbar.min.js') !!}"></script>--}}
-{{--<script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>--}}
-{{--<script src="{!! url('assets/js/cropper.min.js') !!}"></script>--}}
- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">
+<link rel="stylesheet" type="text/css" href="{!! url('assets/css/fontawesome.min.css') !!}">
+<link rel="stylesheet" type="text/css" href="{!! url('assets/css/cropper.min.css') !!}">
+<link rel="stylesheet" type="text/css" href="{!! url('assets/css/datepicker.min.css') !!}">
+<link rel="stylesheet" type="text/css" href="{!! url('assets/css/jquery.fancybox.min.css') !!}">
+<link rel="stylesheet" type="text/css" href="{!! url('assets/css/jquery.mcustomscrollbar.css') !!}">
+<link rel="stylesheet" type="text/css" href="{!! url('assets/css/app.css') !!}">
+<script src="{!! url('node_modules/socket.io-client/dist/socket.io.js') !!}"></script>
+<script src="{!! url('assets/js/jquery.min.js') !!}"></script>
+<script src="{!! url('assets/js/popper.min.js') !!}"></script>
+<script src="{!! url('assets/js/bootstrap.min.js') !!}"></script>
+<script src="{!! url('assets/js/jquery.fancybox.min.js') !!}"></script>
+<script src="{!! url('assets/js/datepicker.min.js') !!}"></script>
+<script src="{!! url('assets/js/jquery.form.min.js') !!}"></script>
+<script src="{!! url('assets/js/jquery.mcustomscrollbar.min.js') !!}"></script>
+<script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
+<script src="{!! url('assets/js/cropper.min.js') !!}"></script> -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/cropper.min.css">
 <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/fontawesome.min.css">

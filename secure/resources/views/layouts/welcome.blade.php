@@ -18,6 +18,9 @@
     var ajax_url = '{!! route('ajax') !!}';
 </script>
 <script src="{!! url('assets/js/app.js') !!}"></script>
+<script src="{!! url('assets/js/socket.js') !!}"></script>
+<!-- <script src="http://localhost/dating/assets/js/app.js"></script>
+<script src="http://localhost/dating/assets/js/socket.js"></script> -->
 @yield('javascript')
 </body>
 </html>

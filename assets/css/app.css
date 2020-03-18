@@ -1,4 +1,4 @@
-/* 
+/*
 main color: #555eff
 focus color: #4b53df
 facebook: #3b5998
@@ -573,8 +573,8 @@ select.form-control-sm.form-control + i.fa{
     min-height: calc(100% - 153px);
 }
 #modalPhoto .modal-dialog{
-    width: 100vh;
-    max-width: 100vh;
+    width: 180vh;
+    max-width: 180vh;
 }
 #modalPhoto .modal-content{
     height: 100%;

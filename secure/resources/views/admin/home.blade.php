@@ -10,6 +10,9 @@
 .card-stats {
   border-radius: 6px;
 }
+.chart-buttons .btn:focus {
+  box-shadow: none !important;
+}
 </style>
 <h3>Dashboard</h3>
 <div class="main-panel">
@@ -36,7 +39,7 @@
         <ul class="navbar-nav">
 
           <li class="nav-item btn-rotate dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <p>
                 <span class="d-lg-none d-md-block">Some Actions</span>
               </p>
@@ -120,7 +123,12 @@
         </div>
       </div>
     </div>
-    <div class="row" style="margin-top: 20px;">
+    <div class="chart-buttons" style="text-align: right;">
+      <a href="#" id="day_btn" class="btn">Day</a>
+      <a href="#" id="week_btn" class="btn">Week</a>
+      <a href="#" id="month_btn" class="btn">Month</a>
+    </div>
+    <div class="row" id="today_user" style="margin-top: 20px;">
       <div class="col-md-12">
         <div class="card ">
           <div class="card-header ">
@@ -129,6 +137,52 @@
           </div>
           <div class="card-body ">
             <canvas id=chartHours width="400" height="100"></canvas>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <div class="legend">
+                <i class="fa fa-circle text-success"></i> User
+              <!-- <i class="fa fa-circle" style="color: #fcc468;"></i> Most successful -->
+              <!-- <i class="fa fa-circle text-danger"></i> Unsuccessfull -->
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="weekly_user" style="margin-top: 20px;display:none;">
+      <div class="col-md-12">
+        <div class="card ">
+          <div class="card-header ">
+            <h5 class="card-title">Weekly Users</h5>
+            <!-- <p class="card-category">Patners Registered</p> -->
+          </div>
+          <div class="card-body ">
+            <canvas id=chartHours_weekly width="400" height="100"></canvas>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <div class="legend">
+                <i class="fa fa-circle text-success"></i> User
+              <!-- <i class="fa fa-circle" style="color: #fcc468;"></i> Most successful -->
+              <!-- <i class="fa fa-circle text-danger"></i> Unsuccessfull -->
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="monthly_user" style="margin-top: 20px;display:none;">
+      <div class="col-md-12">
+        <div class="card ">
+          <div class="card-header ">
+            <h5 class="card-title">Monthly Users</h5>
+            <!-- <p class="card-category">Patners Registered</p> -->
+          </div>
+          <div class="card-body ">
+            <canvas id=chartHours_monthly width="400" height="100"></canvas>
           </div>
           <div class="card-footer ">
             <hr>
@@ -211,4 +265,26 @@
     </div> -->
   </div>
 </div>
+@endsection
+@section('javascript')
+<script>
+  $('#day_btn').on('click',function () {
+    // alert("daily");
+    $('#today_user').show();
+    $('#weekly_user').hide();
+    $('#monthly_user').hide();
+  });
+  $('#week_btn').on('click',function () {
+    // alert("week");
+    $('#today_user').hide();
+    $('#weekly_user').show();
+    $('#monthly_user').hide();
+  });
+  $('#month_btn').on('click',function () {
+    // alert("month");
+    $('#today_user').hide();
+    $('#weekly_user').hide();
+    $('#monthly_user').show();
+  });
+</script>
 @endsection
