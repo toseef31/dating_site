@@ -174,7 +174,7 @@
                 <div class="form-group">
                     <label>Interests</label>
                     <input type="hidden" name="interests" value="{!! implode(',',$user_interests) !!}" id="register-interests-input" required>
-                    <div class="row">
+                    <div class="row mr-1">
                         @foreach($interests as $interest)
                             <div data-id="{!! $interest->id !!}" class="interest-item shadow text-center{!! in_array($interest->id, $user_interests)?' active':'' !!}">
                                 <span class="fas fa-check-circle"></span>
@@ -186,7 +186,7 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <div class="form-group">
+                <div class="form-group mr-3">
                     <label>About Me</label>
                     <textarea rows="3" class="form-control bg-white">{!! $user->about !!}</textarea>
                 </div>

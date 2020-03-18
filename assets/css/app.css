@@ -14,6 +14,23 @@ html,body{
     width: 100%;
     overflow: paged-y;
 }
+
+@media (max-width: 768px){
+
+    .hidden-xs{
+        display: none;
+    }
+    .interest-item {
+        flex: 0 0 calc(50% - 20px) !important;
+        max-width: calc(50% - 20px) !important;
+    }
+}
+@media (max-width: 992px){
+
+    .hidden-md{
+        display: none;
+    }
+}
 a,
 a:hover,
 a:focus {
@@ -272,6 +289,8 @@ select.form-control-sm.form-control + i.fa{
 .text-primary{
     color: #555eff!important;
 }
+
+
 .interest-item{
     -ms-flex: 0 0 calc(20% - 20px);
     flex: 0 0 calc(20% - 20px);
@@ -398,8 +417,8 @@ select.form-control-sm.form-control + i.fa{
     margin-top: 5px;
 }
 @media (min-width: 768px) {
-    .profile .main,.landing .main {
-        margin-left: 270px; /* 180 + 40 */
+    .profile .main,.landing .main,.photos .main {
+        margin-left: 252px; /* 180 + 40 */
     }
     .pages .main{
         margin-left: 250px;
@@ -1245,6 +1264,11 @@ select.form-control-sm.form-control + i.fa{
     font-size: 25px;
     color: #e86060;
     animation: ring 4s .7s ease-in-out infinite;
+}
+.main_container
+{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 @keyframes ring {
     0% { transform: rotate(0); }

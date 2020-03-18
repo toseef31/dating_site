@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">
-    <link rel="stylesheet" type="text/css" href="{!! url('assets/css/fontawesome.min.css') !!}">
-    <link rel="stylesheet" type="text/css" href="{!! url('assets/css/cropper.min.css') !!}">
-    <link rel="stylesheet" type="text/css" href="{!! url('assets/css/admin.css') !!}">
-    <link rel="stylesheet" type="text/css" href="{!! url('assets/summernote/summernote-bs4.min.css') !!}">
-    <script src="{!! url('assets/plugins/chartjs.min.js') !!}"></script>
-    <script src="{!! url('assets/demo/demo.js') !!}"></script>
-    <script src="{!! url('assets/js/jquery.min.js') !!}"></script>
-    <script src="{!! url('assets/js/popper.min.js') !!}"></script>
-    <script src="{!! url('assets/js/bootstrap.min.js') !!}"></script>
-    <script src="{!! url('assets/js/cropper.min.js') !!}"></script>
-    <script src="{!! url('assets/summernote/summernote-bs4.min.js') !!}"></script>
+    {{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">--}}
+    {{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/fontawesome.min.css') !!}">--}}
+    {{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/cropper.min.css') !!}">--}}
+    {{--<link rel="stylesheet" type="text/css" href="{!! url('assets/css/admin.css') !!}">--}}
+    {{--<link rel="stylesheet" type="text/css" href="{!! url('assets/summernote/summernote-bs4.min.css') !!}">--}}
+    {{--<script src="{!! url('assets/plugins/chartjs.min.js') !!}"></script>--}}
+    {{--<script src="{!! url('assets/demo/demo.js') !!}"></script>--}}
+    {{--<script src="{!! url('assets/js/jquery.min.js') !!}"></script>--}}
+    {{--<script src="{!! url('assets/js/popper.min.js') !!}"></script>--}}
+    {{--<script src="{!! url('assets/js/bootstrap.min.js') !!}"></script>--}}
+    {{--<script src="{!! url('assets/js/cropper.min.js') !!}"></script>--}}
+    {{--<script src="{!! url('assets/summernote/summernote-bs4.min.js') !!}"></script>--}}
 
-    <!-- <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/cropper.min.css">
     <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/admin.css">
@@ -28,7 +28,7 @@
     <script src="http://localhost/dating/assets/js/popper.min.js"></script>
     <script src="http://localhost/dating/assets/js/bootstrap.min.js"></script>
     <script src="http://localhost/dating/assets/js/cropper.min.js"></script>
-    <script src="http://localhost/dating/assets/summernote/summernote-bs4.min.js"></script> -->
+    <script src="http://localhost/dating/assets/summernote/summernote-bs4.min.js"></script>
     @yield('title')
 </head>
 <body>
