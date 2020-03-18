@@ -301,7 +301,7 @@ demo = {
 
     $(document).ready(function(){
       $.ajax({
-        // url: "/admin/get_users",
+        // url: "/admin/get_users_weekly",
         url: "/dating/index.php/admin/get_users_weekly",
         success: function (response) {
           var res = JSON.parse(response);
@@ -395,166 +395,113 @@ demo = {
       });
     });
 
-    // myChart = new Chart(ctx2, {
-    //   type: 'line',
-    //
-    //   data: {
-    //     // labels: ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM","10AM","11AM","12PM","1PM","2PM","3PM","4PM"],
-    //     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
-    //
-    //     datasets: [{
-    //         borderColor: "#ef6e84",
-    //         backgroundColor: "#ef6e84",
-    //         pointRadius: 0,
-    //         pointHoverRadius: 0,
-    //         label: "Female",
-    //         borderWidth: 3,
-    //         data: [300, 310, 316, 322, 330, 326, 333, 345,300, 310, 316, 322, 330, 326, 333, 345]
-    //
-    //       },
-    //       {
-    //         borderColor: "#824cde",
-    //         backgroundColor: "#824cde",
-    //         pointRadius: 0,
-    //         pointHoverRadius: 0,
-    //         borderWidth: 3,
-    //         label: "Male",
-    //         data: [320, 340, 365, 360, 370, 385, 390, 384,320, 340, 365, 360, 370, 385, 390, 384]
-    //       },
-    //       // {
-    //       //   borderColor: "#fcc468",
-    //       //   backgroundColor: "#fcc468",
-    //       //   pointRadius: 0,
-    //       //   pointHoverRadius: 0,
-    //       //   borderWidth: 3,
-    //       //   data: [370, 394, 415, 409, 425, 445, 460, 450,370, 394, 415, 409, 425, 445, 460, 450]
-    //       // }
-    //     ]
-    //   },
-    //   options: {
-    //     legend: {
-    //       display: true
-    //     },
-    //
-    //     tooltips: {
-    //       enabled: false
-    //     },
-    //
-    //     scales: {
-    //       yAxes: [{
-    //
-    //         ticks: {
-    //           fontColor: "#9f9f9f",
-    //           beginAtZero: false,
-    //           maxTicksLimit: 5,
-    //           //padding: 20
-    //         },
-    //         gridLines: {
-    //           drawBorder: false,
-    //           zeroLineColor: "#ccc",
-    //           color: 'rgba(255,255,255,0.05)'
-    //         }
-    //
-    //       }],
-    //
-    //       xAxes: [{
-    //         barPercentage: 1.6,
-    //         gridLines: {
-    //           drawBorder: false,
-    //           color: 'rgba(255,255,255,0.1)',
-    //           zeroLineColor: "transparent",
-    //           display: false,
-    //         },
-    //         ticks: {
-    //           padding: 20,
-    //           fontColor: "#9f9f9f"
-    //         }
-    //       }]
-    //     },
-    //   }
-    // });
-
-
     ctx3 = document.getElementById('chartHours_monthly').getContext("2d");
     // labels: ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM","10AM","11AM","12PM","1PM","2PM","3PM","4PM"],
 
-    myChart = new Chart(ctx3, {
-      type: 'line',
+    $(document).ready(function(){
+      $.ajax({
+        // url: "/admin/get_users_monthly",
+        url: "/dating/index.php/admin/get_users_monthly",
+        success: function (response) {
+          var res = JSON.parse(response);
+          var mJanuary = res.mJanuary;
+          var mFebruary = res.mFebruary;
+          var mMarch = res.mMarch;
+          var mApril = res.mApril;
+          var mMay = res.mMay;
+          var mJune = res.mJune;
+          var mJuly = res.mJuly;
+          var mAugust = res.mAugust;
+          var mSeptember = res.mSeptember;
+          var mOctober = res.mOctober;
+          var mNovember = res.mNovember;
+          var mDecember = res.mDecember;
 
-      data: {
-        // labels: ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM","10AM","11AM","12PM","1PM","2PM","3PM","4PM"],
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+          var fJanuary = res.fJanuary;
+          var fFebruary = res.fFebruary;
+          var fMarch = res.fMarch;
+          var fApril = res.fApril;
+          var fMay = res.fMay;
+          var fJune = res.fJune;
+          var fJuly = res.fJuly;
+          var fAugust = res.fAugust;
+          var fSeptember = res.fSeptember;
+          var fOctober = res.fOctober;
+          var fNovember = res.fNovember;
+          var fDecember = res.fDecember;
+          // console.log(mFebruary);
+          myChart = new Chart(ctx3, {
+            type: 'line',
 
-        datasets: [{
-            borderColor: "#ef6e84",
-            backgroundColor: "#ef6e84",
-            pointRadius: 0,
-            pointHoverRadius: 0,
-            label: "Female",
-            borderWidth: 3,
-            data: [300, 310, 316, 322, 330, 326, 333, 345,300, 310, 316, 322, 330, 326, 333, 345]
+            data: {
+              // labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov","Dec"],
 
-          },
-          {
-            borderColor: "#824cde",
-            backgroundColor: "#824cde",
-            pointRadius: 0,
-            pointHoverRadius: 0,
-            borderWidth: 3,
-            label: "Male",
-            data: [320, 340, 365, 360, 370, 385, 390, 384,320, 340, 365, 360, 370, 385, 390, 384]
-          },
-          // {
-          //   borderColor: "#fcc468",
-          //   backgroundColor: "#fcc468",
-          //   pointRadius: 0,
-          //   pointHoverRadius: 0,
-          //   borderWidth: 3,
-          //   data: [370, 394, 415, 409, 425, 445, 460, 450,370, 394, 415, 409, 425, 445, 460, 450]
-          // }
-        ]
-      },
-      options: {
-        legend: {
-          display: true
-        },
-
-        tooltips: {
-          enabled: false
-        },
-
-        scales: {
-          yAxes: [{
-
-            ticks: {
-              fontColor: "#9f9f9f",
-              beginAtZero: false,
-              maxTicksLimit: 5,
-              //padding: 20
+              datasets: [{
+                  borderColor: "#824cde",
+                  backgroundColor: "#824cde",
+                  pointRadius: 0,
+                  pointHoverRadius: 0,
+                  borderWidth: 3,
+                  label: "Male",
+                  data: [mJanuary, mFebruary, mMarch, mApril, mMay, mJune, mJuly, mAugust, mSeptember, mOctober, mNovember, mDecember]
+                },
+                {
+                  borderColor: "#ef6e84",
+                  backgroundColor: "#ef6e84",
+                  pointRadius: 0,
+                  pointHoverRadius: 0,
+                  label: "Female",
+                  borderWidth: 3,
+                  data: [fJanuary, fFebruary, fMarch, fApril, fMay, fJune, fJuly, fAugust, fSeptember, fOctober, fNovember, fDecember]
+                }
+              ]
             },
-            gridLines: {
-              drawBorder: false,
-              zeroLineColor: "#ccc",
-              color: 'rgba(255,255,255,0.05)'
-            }
+            options: {
+              legend: {
+                display: true
+              },
 
-          }],
+              tooltips: {
+                enabled: false
+              },
 
-          xAxes: [{
-            barPercentage: 1.6,
-            gridLines: {
-              drawBorder: false,
-              color: 'rgba(255,255,255,0.1)',
-              zeroLineColor: "transparent",
-              display: false,
-            },
-            ticks: {
-              padding: 20,
-              fontColor: "#9f9f9f"
+              scales: {
+                yAxes: [{
+
+                  ticks: {
+                    fontColor: "#9f9f9f",
+                    beginAtZero: false,
+                    maxTicksLimit: 5,
+                    //padding: 20
+                  },
+                  gridLines: {
+                    drawBorder: false,
+                    zeroLineColor: "#ccc",
+                    color: 'rgba(255,255,255,0.05)'
+                  }
+
+                }],
+
+                xAxes: [{
+                  barPercentage: 1.6,
+                  gridLines: {
+                    drawBorder: false,
+                    color: 'rgba(255,255,255,0.1)',
+                    zeroLineColor: "transparent",
+                    display: false,
+                  },
+                  ticks: {
+                    padding: 20,
+                    fontColor: "#9f9f9f"
+                  }
+                }]
+              },
             }
-          }]
-        },
-      }
+          });
+
+        }
+      });
     });
 
 
