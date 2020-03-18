@@ -5,6 +5,7 @@
     $register_background = $register_background ? url($register_background) : url('assets/images/bg.jpg');
     ?>
     <style>
+
         .register{
             background-image: url("{!! $register_background !!}");
             background-repeat: no-repeat;
