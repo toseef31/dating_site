@@ -182,8 +182,8 @@ demo = {
   // });
     $(document).ready(function(){
       $.ajax({
-        // url: "/admin/get_users",
-        url: "/dating/index.php/admin/get_users",
+        url: "/admin/get_users",
+        // url: "/dating/index.php/admin/get_users",
         success: function (response) {
           var res = JSON.parse(response);
           var mhour_12am = res.mhour_12am;
@@ -301,8 +301,8 @@ demo = {
 
     $(document).ready(function(){
       $.ajax({
-        // url: "/admin/get_users_weekly",
-        url: "/dating/index.php/admin/get_users_weekly",
+        url: "/admin/get_users_weekly",
+        // url: "/dating/index.php/admin/get_users_weekly",
         success: function (response) {
           var res = JSON.parse(response);
           var mMonday = res.mMonday;
@@ -400,8 +400,8 @@ demo = {
 
     $(document).ready(function(){
       $.ajax({
-        // url: "/admin/get_users_monthly",
-        url: "/dating/index.php/admin/get_users_monthly",
+        url: "/admin/get_users_monthly",
+        // url: "/dating/index.php/admin/get_users_monthly",
         success: function (response) {
           var res = JSON.parse(response);
           var mJanuary = res.mJanuary;
