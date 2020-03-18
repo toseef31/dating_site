@@ -123,7 +123,7 @@
         </div>
       </div>
     </div>
-    <div class="chart-buttons" style="text-align: right;">
+    <div class="chart-buttons" style="position:absolute;top: 40%;right: 3%;z-index: 9;">
       <a href="#" id="day_btn" class="btn">Day</a>
       <a href="#" id="week_btn" class="btn">Week</a>
       <a href="#" id="month_btn" class="btn">Month</a>
