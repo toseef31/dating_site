@@ -1,11 +1,11 @@
 @extends('layouts.photo')
 @section('content')
-    <div class="container photos">
-        @if(!auth()->check())
+    <div class="container-fluid main_container photos">
+        {{--@if(!auth()->check())--}}
             @include('partials.sidebar')
             <div class="main">
-                @endif
-                <div class="top-photo pt-3 pb-3">
+                {{--@endif--}}
+                <div class="top-photo pt-3 pb-3 pl-3">
                     <div class="media">
                       <?php
                       $avatar = avatar($user->avatar, $user->gender);
@@ -28,10 +28,11 @@
                     </div>
                 </div>
                 <div class="main-photos">
-                    <p class="page-title mb-2 mt-5">Lastest Photos</p>
+                    <p class="page-title mb-2 mt-5 pl-3">Lastest Photos</p>
                     @if($user->photos()->count())
-                        <div class="row">
+                        <div class="row pl-3 mr-1">
                             @foreach($user->photos()->orderBy('created_at','DESC')->get()->take(16) as $photo)
+
                             <?php
                             $url = url()->full();
                             $url2 = substr($url,7,9);
@@ -43,6 +44,7 @@
                              ?>
                                 <div class="col-md-3">
                                     <div data-id="{!! $photo->id !!}" data-url="{!! url($photo->file) !!}" class="photo-item view-photo border shadow" style="background-image: url('{!! url($cover) !!}')">
+
                                     </div>
                                 </div>
                             @endforeach

@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta name="csrf_token" content="{!! csrf_token() !!}">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/fontawesome.min.css') !!}">
@@ -55,3 +56,11 @@ $seo_website_type = 'website';
 <meta property="og:image" content="{!! isset($seo_image) ? $seo_image : url($seo_social_image) !!}">
 <meta property="og:site_name" content="{!! $seo_website_tagline !!}">
 <meta property="og:description" content="{!! isset($seo_description) ? $seo_description.','.$seo_website_description : $seo_website_description !!}">
+<div class="hidden-md hidden-lg">
+
+   <nav class="mean-nav">
+
+
+   </nav>
+
+</div>

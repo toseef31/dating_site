@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="landing">
-    <div class="container">
+    <div class="container-fluid main_container">
         @include('partials.sidebar')
         <div class="main">
             @yield('content')
