@@ -6,11 +6,15 @@
     @yield('stylesheet')
 </head>
 <body>
-
-
-
+<!-- <div class="header text-center p-2">
+    <?php
+    $logo = setting('website_logo');
+    $logo = $logo ? url($logo) : url('assets/images/logo.png');
+    ?>
+    <a href="{!! route('home') !!}"><img src="{!! $logo !!}"></a>
+</div> -->
 @yield('content')
-@include('partials.footer')
+<!-- @include('partials.footer') -->
 <script>
     var ajax_url = '{!! route('ajax') !!}';
     var socket_url = 'https://socket.myclouddate.com';

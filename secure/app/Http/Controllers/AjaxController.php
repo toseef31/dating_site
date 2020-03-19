@@ -19,8 +19,9 @@ class AjaxController extends Controller
     {
         $this->request = $request;
     }
-    public function main()
+    public function main(Request $request)
     {
+      // dd($this->request->get('action'));
         if($this->request->has('action')){
             $action = $this->request->get('action');
             if(method_exists($this,$action)){
@@ -88,8 +89,22 @@ class AjaxController extends Controller
     {
         if($this->request->has('id')){
             $photo = Photo::with('comments','likes','user')->where('id',$this->request->id)->first();
+            $type='';
             if($photo) {
-                $html = view('photo.view',compact('photo'))->render();
+                $html = view('photo.view',compact('photo','type'))->render();
+                return response()->json(['status' => 'success', 'height' => $photo->height, 'width'=>$photo->width ,'html'=>$html]);
+            }
+        }
+        return response()->json(['status'=>'error']);
+    }
+
+    public function view_cover_photo()
+    {
+        if($this->request->has('id')){
+            $photo = User::where('id',$this->request->id)->first();
+            $type = "cover";
+            if($photo) {
+                $html = view('photo.view',compact('photo','type'))->render();
                 return response()->json(['status' => 'success', 'height' => $photo->height, 'width'=>$photo->width ,'html'=>$html]);
             }
         }

@@ -96,7 +96,7 @@
                     ?>
                     <?php
                     $avatar = avatar($user->avatar, $user->gender);
-                    // dd($avatar);
+                    // dd($user->id);
                     $avatar2 = substr($avatar,7,9);
                     if ($avatar2 == 'localhost') {
                         $avatar = substr($avatar,34);
@@ -109,7 +109,7 @@
 
                         <div class="col-md-2">
 
-                            <div data-id="{!! $user->id !!}" data-url="{!! url($avatar) !!}" class="photo-item view-photo border" style="background-image: url('{!! url($avatar) !!}')">
+                            <div data-id="{!! $user->id !!}" data-url="{!! url($avatar) !!}" class="photo-item-cover view-photo border" style="background-image: url('{!! url($avatar) !!}')">
 
                             </div>
                         </div>
@@ -119,6 +119,7 @@
                     <?php
                     $url = url()->full();
                     $url2 = substr($url,7,9);
+                    // dd($photo->id);
                     if ($url2 == 'localhost') {
                       $cover = 'http://localhost/dating/'.$photo->thumb;
                       $photo_file ='http://localhost/dating/'.$photo->file;
@@ -185,5 +186,22 @@
                 </div>
             @endif
         </div>
+        <div class="main"> <div class="footer">
+<div class="container">
+<div class="text-center">
+<ul class="list-unstyled menu-footer clearfix mb-1">
+<li><a href="#">About</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="https://demo.myclouddate.com/browse">Search</a></li>
+<li><a href="#">Terms</a></li>
+<li><a href="#">Privacy</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+<p class="mb-1">© 2020 Singles Dating World</p>
+</div>
+</div>
+</div>
+</div>
+
     </div>
 @endsection
