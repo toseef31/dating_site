@@ -590,8 +590,8 @@ select.form-control-sm.form-control + i.fa{
     min-height: calc(100% - 153px);
 }
 #modalPhoto .modal-dialog{
-    width: 160vh;
-    max-width: 160vh;
+    width: 150vh;
+    max-width: 150vh;
 }
 #modalPhoto .modal-content{
     height: 100%;
