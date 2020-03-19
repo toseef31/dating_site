@@ -14,7 +14,12 @@
           $photo_file ='http://localhost/dating/'.$photo_file;
         }
       }else {
-        $photo_file = $photo->file;
+        if ($type == 'cover') {
+          $photo_file = avatar($photo->avatar, $photo->gender);
+        }else {
+          $photo_file = $photo->file;
+        }
+        // dd($photo_file);
       }
        ?>
         <div class="full_photo d-flex align-items-center"><img src="{!! url($photo_file) !!}" style="width:100%;max-height: 630px;"></div>
