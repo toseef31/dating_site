@@ -1,11 +1,12 @@
+
 <div class="sidebar hidden-xs">
     <?php
     $logo = setting('logo_second');
     $logo = $logo ? url($logo) : url('assets/images/logo_white.png');
     ?>
-    <p class="text-center logo mb-4">
+    <!-- <p class="text-center logo mb-4">
         <a href="{!! url('/') !!}"><img src="{!! $logo !!}" class="img-fluid"></a>
-    </p>
+    </p> -->
     @if(auth()->check())
         <?php
         $user = auth()->user();
