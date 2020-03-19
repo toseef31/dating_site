@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  @include('partials.navbar')
     @include('partials.header')
     @yield('stylesheet')
 </head>
@@ -12,6 +13,8 @@
     ?>
     <a href="{!! route('home') !!}"><img src="{!! $logo !!}"></a>
 </div>
+@include('partials.sidebar')
+
 @yield('content')
 @include('partials.footer')
 <script>

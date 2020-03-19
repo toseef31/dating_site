@@ -1,3 +1,4 @@
+
 <div class="sidebar hidden-xs">
     <?php
     $logo = setting('logo_second');

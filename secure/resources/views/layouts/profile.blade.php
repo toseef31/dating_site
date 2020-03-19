@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  @include('partials.navbar')
     @include('partials.header')
     @yield('stylesheet')
 </head>
@@ -20,10 +21,10 @@
     var logged_id = {!! auth()->check() ? auth()->id() : 'false' !!};
 </script>
 </script>
-<script src="{!! url('assets/js/app.js') !!}"></script>
-<script src="{!! url('assets/js/socket.js') !!}"></script>
-<!-- <script src="http://localhost/dating/assets/js/app.js"></script>
-<script src="http://localhost/dating/assets/js/socket.js"></script> -->
+<!-- <script src="{!! url('assets/js/app.js') !!}"></script>
+<script src="{!! url('assets/js/socket.js') !!}"></script> -->
+<script src="http://localhost/dating/assets/js/app.js"></script>
+<script src="http://localhost/dating/assets/js/socket.js"></script>
 @yield('javascript')
 </body>
 </html>

@@ -30,6 +30,15 @@
     <script src="https://maps.googleapis.com/maps/api/js?key={!! env('GOOGLE_PLACE_API','AIzaSyBjVRkL8MOLaVd-fjloQguTIQDLAAzA4w0') !!}&callback=showUserLocation" async defer></script>
 @endsection
 @section('content')
+<style>
+@media (max-width: 992px)  and (min-width: 768px){
+
+    .hidden-md{
+        display: none;
+    }
+
+}
+</style>
     <div class="profile">
 
         <div class="container-fluid main_container">
@@ -39,7 +48,7 @@
 
 
             {{--@endif--}}
-                    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" id="profile-header">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm hidden-sm hidden-xs" id="profile-header">
                         <div class="container">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -77,6 +86,7 @@
                             </div>
                         </div>
                     </nav>
+
             @if($user->photos()->count() || (auth()->check() && auth()->user()->id == $user->id) )
                 <p class="page-title text-uppercase mb-1 clearfix pl-4">
                     Public Photos
