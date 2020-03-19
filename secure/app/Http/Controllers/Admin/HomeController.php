@@ -141,10 +141,7 @@ class HomeController extends Controller
       $fFriday = $fweekly_data->where("day",'Friday')->count();
       $fSaturday = $fweekly_data->where("day",'Saturday')->count();
       $fSunday = $fweekly_data->where("day",'Sunday')->count();
-
       // dd($mMonday,$mTuesday,$mWednesday,$mThursday,$mFriday,$mSaturday,$mSunday);
-
-    // dd($hour_3pm);
     $obj = array(
       "mMonday" => $mMonday,
       "mTuesday" => $mTuesday,
@@ -160,7 +157,77 @@ class HomeController extends Controller
       "fThursday" => $fThursday,
       "fFriday" => $fFriday,
       "fSaturday" => $fSaturday,
-      "fSunday" => $fSunday,
+      "fSunday" => $fSunday
+    );
+    echo json_encode($obj);
+  }
+
+    public function get_users_monthly(Request $request)
+    {
+      $agoDate = Carbon\Carbon::now()->subYear();
+      // dd(Carbon\Carbon::now()->format('F'));
+      $mmonthly_data = User::where('gender','=',1)->where('created_at','>=',$agoDate)->where('created_at','<=',Carbon\Carbon::today())->get();
+      foreach ($mmonthly_data as &$data) {
+        $data->month=Carbon\Carbon::parse($data->created_at)->format('F');
+      }
+      // dd($mmonthly_data);
+      $mJanuary = $mmonthly_data->where("month",'January')->count();
+      $mFebruary = $mmonthly_data->where("month",'February')->count();
+      $mMarch = $mmonthly_data->where("month",'March')->count();
+      $mApril = $mmonthly_data->where("month",'April')->count();
+      $mMay = $mmonthly_data->where("month",'May')->count();
+      $mJune = $mmonthly_data->where("month",'June')->count();
+      $mJuly = $mmonthly_data->where("month",'July')->count();
+      $mAugust = $mmonthly_data->where("month",'August')->count();
+      $mSeptember = $mmonthly_data->where("month",'September')->count();
+      $mOctober = $mmonthly_data->where("month",'October')->count();
+      $mNovember = $mmonthly_data->where("month",'November')->count();
+      $mDecember = $mmonthly_data->where("month",'December')->count();
+
+      $fmonthly_data = User::where('gender','=',2)->where('created_at','>=',$agoDate)->where('created_at','<=',Carbon\Carbon::today())->get();
+      foreach ($fmonthly_data as &$data) {
+        $data->month=Carbon\Carbon::parse($data->created_at)->format('F');
+      }
+      // dd($fmonthly_data);
+      $fJanuary = $fmonthly_data->where("month",'January')->count();
+      $fFebruary = $fmonthly_data->where("month",'February')->count();
+      $fMarch = $fmonthly_data->where("month",'March')->count();
+      $fApril = $fmonthly_data->where("month",'April')->count();
+      $fMay = $fmonthly_data->where("month",'May')->count();
+      $fJune = $fmonthly_data->where("month",'June')->count();
+      $fJuly = $fmonthly_data->where("month",'July')->count();
+      $fAugust = $fmonthly_data->where("month",'August')->count();
+      $fSeptember = $fmonthly_data->where("month",'September')->count();
+      $fOctober = $fmonthly_data->where("month",'October')->count();
+      $fNovember = $fmonthly_data->where("month",'November')->count();
+      $fDecember = $fmonthly_data->where("month",'December')->count();
+      // dd($mMonday,$mTuesday,$mWednesday,$mThursday,$mFriday,$mSaturday,$mSunday);
+    $obj = array(
+      "mJanuary" => $mJanuary,
+      "mFebruary" => $mFebruary,
+      "mMarch" => $mMarch,
+      "mApril" => $mApril,
+      "mMay" => $mMay,
+      "mJune" => $mJune,
+      "mJuly" => $mJuly,
+      "mAugust" => $mAugust,
+      "mSeptember" => $mSeptember,
+      "mOctober" => $mOctober,
+      "mNovember" => $mNovember,
+      "mDecember" => $mDecember,
+
+      "fJanuary" => $fJanuary,
+      "fFebruary" => $fFebruary,
+      "fMarch" => $fMarch,
+      "fApril" => $fApril,
+      "fMay" => $fMay,
+      "fJune" => $fJune,
+      "fJuly" => $fJuly,
+      "fAugust" => $fAugust,
+      "fSeptember" => $fSeptember,
+      "fOctober" => $fOctober,
+      "fNovember" => $fNovember,
+      "fDecember" => $fDecember
     );
     echo json_encode($obj);
     }

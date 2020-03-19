@@ -51,6 +51,7 @@ Route::middleware('admin')->prefix('admin')->group(function(){
     Route::get('interests', 'Admin\SettingController@interests')->name('admininterest');
     Route::get('get_users', 'Admin\HomeController@get_users');
     Route::get('get_users_weekly', 'Admin\HomeController@get_users_weekly');
+    Route::get('get_users_monthly', 'Admin\HomeController@get_users_monthly');
     /*Users*/
     Route::get('users', 'Admin\UserController@main')->name('adminusers');
     Route::get('user/{id}', 'Admin\UserController@edit')->name('adminedituser');
