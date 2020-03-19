@@ -1,5 +1,5 @@
 <div class="footer">
-    <div class="container">
+    <div class="container" style="margin-left:20rem;">
         <div class="text-center">
             <ul class="list-unstyled menu-footer clearfix mb-1">
                 <li><a href="#">About</a></li>
