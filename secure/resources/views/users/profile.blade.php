@@ -186,7 +186,7 @@
                 </div>
             @endif
         </div>
-        <div class="main"> <div class="footer">
+        <!-- <div class="main"> <div class="footer">
 <div class="container">
 <div class="text-center">
 <ul class="list-unstyled menu-footer clearfix mb-1">
@@ -200,7 +200,7 @@
 <p class="mb-1">© 2020 Singles Dating World</p>
 </div>
 </div>
-</div>
+</div> -->
 </div>
 
     </div>
