@@ -371,6 +371,7 @@ class UserController extends Controller
     public function profile($username)
     {
         $user = User::with('photos','interests')->where('username', $username)->first();
+
         if($user) {
             $seo_title = $username;
             $nextuser = User::where('id','>', $user->id)->orderBy('id')->first();

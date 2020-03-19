@@ -5,11 +5,16 @@
       $url = url()->full();
       $url2 = substr($url,7,9);
       if ($url2 == 'localhost') {
-        // $cover = 'http://localhost/dating/'.$photo->thumb;
-        $photo_file ='http://localhost/dating/'.$photo->file;
+        if ($type == 'cover') {
+          $photo_file = avatar($photo->avatar, $photo->gender);
+          $photo_file = substr($photo_file,34);
+          $photo_file ='http://localhost/dating/'.$photo_file;
+        }else {
+          $photo_file = $photo->file;
+          $photo_file ='http://localhost/dating/'.$photo_file;
+        }
       }else {
-        // $cover = $photo->thumb;
-        $photo_file = $photo->file;
+        $photo_file = $photo_file;
       }
        ?>
         <div class="full_photo d-flex align-items-center"><img src="{!! url($photo_file) !!}" style="width:100%;max-height: 630px;"></div>
@@ -19,39 +24,60 @@
             <div class="user-info">
                 <div class="media">
                   <?php
-                  $avatar = avatar($photo->user->avatar, $photo->user->gender);
+                  if($type == 'cover') {
+                    $avatar = avatar($photo->avatar, $photo->gender);
+                    $username = $photo->username;
+                    $firstname = $photo->firstname;
+                    $lastname = $photo->lastname;
+                    $user_id = $photo->id;
+                    // print_r($username); die;
+                  }else {
+                    $avatar = avatar($photo->user->avatar, $photo->user->gender);
+                    $username = $photo->user->username;
+                    $firstname = $photo->user->firstname;
+                    $lastname = $photo->user->lastname;
+                    $user_id = $photo->user->id;
+                  }
                   // dd($avatar);
                   $url = url()->full();
                   $url2 = substr($url,7,9);
                   if ($url2 == 'localhost') {
                     $avatar = substr($avatar,34);
                     $avatar ='http://localhost/dating/'.$avatar;
+                    // dd($avatar);
                   }
+                  // dd(auth()->user()->follows()->get()->pluck('id'));
+                  // dd(in_array($user_id, collect(auth()->user()->follows()->get())->pluck('id')->all()));
                   ?>
                     <img src="{!! $avatar !!}">
                     <div class="media-body">
-                        <h3 class="mb-0"><a href="{!! route('profile',['username'=>$photo->user->username]) !!}">{!! fullname($photo->user->firstname, $photo->user->lastname, $photo->user->username) !!}</a></h3>
-                        @if(auth()->check() && in_array($photo->user->id, collect(auth()->user()->follows()->get())->pluck('id')->all()))
-                            <span data-id="{!! $photo->user->id !!}" class="badge badge-primary btn-follow"><i class="fas fa-check"></i> Followed</span>
-                        @else
-                            <span data-id="{!! $photo->user->id !!}" class="badge badge-primary btn-follow">Follow</span>
+                        <h3 class="mb-0"><a href="{!! route('profile',['username'=>$username]) !!}">{!! fullname($firstname, $lastname, $username) !!}</a></h3>
+                          @if(auth()->check() && in_array($user_id, collect(auth()->user()->follows()->get())->pluck('id')->all()))
+                              <span data-id="{!! $user_id !!}" class="badge badge-primary btn-follow"><i class="fas fa-check"></i> Followed</span>
+                          @else
+                              <span data-id="{!! $user_id !!}" class="badge badge-primary btn-follow">Follow</span>
+                          @endif
+                          @if($type != 'cover')
+                          <p>
+                              {!! $photo->description !!}
+                          </p>
                         @endif
-                        <p>
-                            {!! $photo->description !!}
-                        </p>
                     </div>
                 </div>
             </div>
             <div class="comments">
                 <ul class="list-unstyled m-0">
+                  @if($type != 'cover')
                     @if($photo->comments()->count())
                         @foreach($photo->comments as $comment)
                             @include('photo.comment')
                         @endforeach
                     @endif
+                  @endif
                 </ul>
             </div>
         </div>
+        @if($type != 'cover')
         <div class="photo-action">
             <div class="like-photo clearfix">
                 @if($photo->likes()->count() && auth()->check() && in_array(auth()->id(), collect($photo->likes()->get())->pluck('id')->all()))
@@ -63,5 +89,7 @@
             </div>
             <textarea data-id="{!! $photo->id !!}" class="write-comment" placeholder="Comment on this photo"></textarea>
         </div>
+        @endif
+
     </div>
 </div>

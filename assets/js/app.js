@@ -335,6 +335,44 @@ jQuery(document).ready(function ($) {
         });
 
     });
+    $(document).on('click','.photo-item-cover.view-photo', function (e) {
+        var el = $(e.currentTarget);
+        var photo_id = el.attr('data-id');
+        var url = el.attr('data-url');
+        // alert(photo_id);
+        var modalBody = $('#modalPhoto .modal-body');
+        modalBody.empty();
+        $.ajax({
+            url: ajax_url,
+            data: {action: 'view_cover_photo', _token: token, id: photo_id},
+            dataType: 'JSON',
+            type: 'POST',
+            success: function (res) {
+                if(res.status == 'success') {
+                    modalBody.append(res.html);
+                    $('#modalPhoto').modal('show').css({opacity: 0});
+                    $('.view-photo-right .content-photo').mCustomScrollbar();
+                    var image_box_width = modalBody.find('.full_photo').width();
+                    // console.log(image_box_width);
+                    // modalBody.find('.full_photo').height('auto');
+                    // modalBody.find('.view-photo-right').height('auto');
+                    $('.view-photo-right .content-photo').mCustomScrollbar('scrollTo', '100%');
+                    // if(res.height >= res.width){
+                    //     if(res.height >= image_box_width){
+                    //         modalBody.find('.full_photo img').height('auto');
+                    //     }
+                    // }
+                    // else{
+                    //     if(res.height >= image_box_width){
+                    //         modalBody.find('.full_photo img').width('auto');
+                    //     }
+                    // }
+                    $('#modalPhoto').css({opacity: 1});
+                }
+            }
+        });
+
+    });
     $(document).on('click','.search-content .pagination .page-link', function (e) {
         var el = $(e.currentTarget);
         if(!el.hasClass('active')){
