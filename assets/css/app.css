@@ -148,8 +148,20 @@ a:focus {
     font-size: 18px;
     font-weight: 600;
 }
+.custom-file-label::after
+{
+    height: calc(2em + .75rem);
+    box-shadow: inset 0px -1px 1px -2px rgb(149, 149, 149) !important;
+}
+.custom-file-label
+{
+    height: calc(1.9em + .75rem + 2px) !important;
+    box-shadow: inset 0px -1px 1px -2px rgb(149, 149, 149) !important;
+    border: 0px !important;
+}
 .form-control.second{
-    min-height: calc(1.5em + .75rem + 5px);
+    min-height: calc(1.9em + .75rem + 5px);
+    box-shadow: inset 0px -1px 1px -2px rgb(149, 149, 149);
     border-radius: 6px;
     font-size: 16px;
 }
