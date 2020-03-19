@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  @include('partials.navbar')
     @include('partials.header')
     @yield('stylesheet')
 </head>
 <body>
-<div class="header text-center p-2">
+<!-- <div class="header text-center p-2">
     <?php
     $logo = setting('website_logo');
     $logo = $logo ? url($logo) : url('assets/images/logo.png');
     ?>
     <a href="{!! route('home') !!}"><img src="{!! $logo !!}"></a>
-</div>
+</div> -->
 @yield('content')
 @include('partials.footer')
 <script>

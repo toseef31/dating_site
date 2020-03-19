@@ -25,11 +25,22 @@ html,body{
         max-width: calc(50% - 20px) !important;
     }
 }
-@media (max-width: 992px){
+/* @media (max-width: 992px)  and (min-width: 768px){
 
     .hidden-md{
         display: none;
     }
+
+} */
+/* @media (max-width: 992px) and (min-width: 512px){
+  #profile-header-sm {
+    display: none;
+  }
+} */
+@media (max-width: 512px) and (min-width: 440px){
+  #profile-header-sm {
+    display: block !important;
+  }
 }
 a,
 a:hover,
@@ -702,6 +713,9 @@ select.form-control-sm.form-control + i.fa{
 #profile-header .user-address{
     font-size: 13px;
 }
+#profile-header-sm .user-address{
+    font-size: 13px;
+}
 .mCSB_inside > .mCSB_container{
     margin-right: 0px;
 }
@@ -711,6 +725,10 @@ select.form-control-sm.form-control + i.fa{
     height: 200px;
 }
 #profile-header{
+    position: relative;
+    z-index: 9999;
+}
+#profile-header-sm{
     position: relative;
     z-index: 9999;
 }
@@ -1270,6 +1288,10 @@ select.form-control-sm.form-control + i.fa{
     padding-left: 0px;
     padding-right: 0px;
 }
+.bold{
+    font-size: 20px !important;
+    font-weight: bolder !important;
+}
 @keyframes ring {
     0% { transform: rotate(0); }
     5% { transform: rotate(30deg); }
@@ -1292,4 +1314,21 @@ select.form-control-sm.form-control + i.fa{
     90% { transform: rotate(-4deg); }
     95% { transform: rotate(2deg); }
     100% { transform: rotate(-1deg); }
+}
+.w-20 {
+  width: 20% !important;
+}
+.mbl-hdr-nm {
+  position: relative;
+  top: 27%;
+  left: 23%;
+}
+.bg-blue {
+  background: #555eff;
+}
+.nav-btn {
+  background: white !important;
+}
+#profile-header-sm .nav-link {
+  color: white !important;
 }

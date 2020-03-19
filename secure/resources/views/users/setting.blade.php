@@ -36,30 +36,30 @@
     @endif
     <form action="" method="post" enctype="multipart/form-data">
         {!! csrf_field() !!}
-        <div class="row">
-            <div class="col-md-6">
+        <div class="row mr-1">
+            <div class="col-md-6 col-12 ">
                 <div class="form-group">
                     <label>First Name</label>
                     <input class="form-control second bg-white" name="firstname" value="{!! $user->firstname !!}">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-12">
                 <div class="form-group">
                     <label>Last Name</label>
                     <input class="form-control second bg-white" name="lastname" value="{!! $user->lastname !!}">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-12">
                 <div class="form-group">
                     <label>Email</label>
                     <input class="form-control second bg-white" readonly value="{!! $user->email !!}">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-12">
                 <div class="form-group">
                     <label>Age</label>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-3">
                             <select autocomplete="off" class="form-control second bg-white" name="day" required>
                                 <option value="">Day</option>
                                 @for($i=1;$i <32; $i++)
@@ -68,7 +68,7 @@
                             </select>
                             <i class="fa fa-chevron-down"></i>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-5">
                             <select autocomplete="off" class="form-control second bg-white" name="month" required>
                                 <option value="">Month</option>
                                 @foreach(months() as $key=>$month)
@@ -77,7 +77,7 @@
                             </select>
                             <i class="fa fa-chevron-down"></i>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-4">
                             <select autocomplete="off" class="form-control second bg-white" name="year" required>
                                 <option value="">Year</option>
                                 @for($i=date('Y')-10;$i >= 1920; $i--)
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-12">
                 <div class="form-group">
                     <label>Address</label>
                     <input id="register-address" class="form-control second bg-white" name="address" value="{!! $user->address !!}">
@@ -97,7 +97,7 @@
                     <input type="hidden" value="{!! $user->lng !!}" name="lng" id="register-lng">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-12">
                 <div class="form-group">
                     <label>Country</label>
                     <select class="form-control second bg-white" name="country" required id="register-country">
@@ -109,7 +109,7 @@
                     <i class="fa fa-chevron-down"></i>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-12">
                 <div class="form-group">
                     <label>Username</label>
                     <input class="form-control second bg-white" name="username" value="{!! $user->username !!}">
@@ -121,7 +121,7 @@
                     <input class="form-control second bg-white" name="password" type="password">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-12">
                 <div class="form-group">
                     <label>Gender</label>
                     <select class="form-control second bg-white" name="gender" required>
@@ -131,7 +131,7 @@
                     <i class="fa fa-chevron-down"></i>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-12">
                 <div class="form-group">
                     <label>Preference</label>
                     <select class="form-control second bg-white" name="preference" required>
@@ -142,7 +142,7 @@
                     <i class="fa fa-chevron-down"></i>
                 </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 col-12">
                 <div class="form-group">
                     <label>Avatar</label>
                     <div class="row">
@@ -154,7 +154,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-12">
                             <div class="register-upload-avatar">
                                 <input type="hidden" id="x" value="" name="x">
                                 <input type="hidden" id="y" value="" name="y">
@@ -170,11 +170,11 @@
             <?php
             $user_interests = collect($user->interests()->get())->pluck('id')->all();
             ?>
-            <div class="col-md-12">
+            <div class="col-md-12 col-12">
                 <div class="form-group">
                     <label>Interests</label>
                     <input type="hidden" name="interests" value="{!! implode(',',$user_interests) !!}" id="register-interests-input" required>
-                    <div class="row mr-1">
+                    <div class="row">
                         @foreach($interests as $interest)
                             <div data-id="{!! $interest->id !!}" class="interest-item shadow text-center{!! in_array($interest->id, $user_interests)?' active':'' !!}">
                                 <span class="fas fa-check-circle"></span>
@@ -185,13 +185,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
-                <div class="form-group mr-3">
+            <div class="col-md-12 col-12">
+                <div class="form-group">
                     <label>About Me</label>
                     <textarea rows="3" class="form-control bg-white">{!! $user->about !!}</textarea>
                 </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 col-12    ">
                 <div class="form-group text-center">
                     <button class="btn btn-primary" type="submit">Save Changes</button>
                 </div>
