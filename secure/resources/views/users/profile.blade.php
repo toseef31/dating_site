@@ -30,15 +30,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key={!! env('GOOGLE_PLACE_API','AIzaSyBjVRkL8MOLaVd-fjloQguTIQDLAAzA4w0') !!}&callback=showUserLocation" async defer></script>
 @endsection
 @section('content')
-<style>
-@media (max-width: 992px)  and (min-width: 768px){
 
-    .hidden-md{
-        display: none;
-    }
-
-}
-</style>
     <div class="profile">
 
         <div class="container-fluid main_container">
