@@ -37,8 +37,8 @@
 <script src="http://localhost/dating/assets/js/jquery.form.min.js"></script>
 <script src="http://localhost/dating/assets/js/jquery.mcustomscrollbar.min.js"></script>
 <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
-<script src="http://localhost/dating/assets/js/cropper.min.js"></script>
-<?php -->
+<script src="http://localhost/dating/assets/js/cropper.min.js"></script> -->
+<?php
 $seo_website_title = setting('website_title');
 $seo_website_description = setting('website_description');
 $seo_website_tagline = setting('website_tagline');
