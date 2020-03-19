@@ -69,13 +69,13 @@
                                     @endif
                                     <li class="nav-item">
                                         <p class="mb-1">
-                                            <span class="text-uppercase">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
+                                            <span class="text-uppercase font-weight-bold pr-3 bold" >{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
                                             <span class="user-info">
                                     {!! Carbon\Carbon::parse($user->birthday)->age !!}yr {!! $user->gender == 1 ? 'Male' : 'Female' !!}
                                                 | Seeking {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male, Female') !!}
                                 </span>
                                         </p>
-                                        <p class="user-address"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
+                                        <p class="user-address font-weight-bold mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
                                     </li>
                                 </ul>
                                 @if((auth()->check() && auth()->user()->id != $user->id) || !auth()->check())

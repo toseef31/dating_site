@@ -1288,6 +1288,10 @@ select.form-control-sm.form-control + i.fa{
     padding-left: 0px;
     padding-right: 0px;
 }
+.bold{
+    font-size: 20px !important;
+    font-weight: bolder !important;
+}
 @keyframes ring {
     0% { transform: rotate(0); }
     5% { transform: rotate(30deg); }
