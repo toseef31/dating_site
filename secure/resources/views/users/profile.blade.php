@@ -84,14 +84,35 @@
                     <a class="float-right" href="{!! route('userphoto',['username'=>$user->username]) !!}">View All</a>
                 </p>
                 <div class="row users-photo mb-3  pl-4 mr-1">
+
                     <?php
                     if((auth()->check() && auth()->user()->id == $user->id)){
-                        $photos = $user->photos()->orderBy('updated_at','DESC')->get()->take(5);
+                        $photos = $user->photos()->orderBy('updated_at','DESC')->get()->take(4);
                     }
                     else{
-                        $photos = $user->photos()->orderBy('updated_at','DESC')->get()->take(6);
+                        $photos = $user->photos()->orderBy('updated_at','DESC')->get()->take(5);
                     }
                     ?>
+                    <?php
+                    $avatar = avatar($user->avatar, $user->gender);
+                    // dd($avatar);
+                    $avatar2 = substr($avatar,7,9);
+                    if ($avatar2 == 'localhost') {
+                        $avatar = substr($avatar,34);
+                        $avatar ='http://localhost/dating/'.$avatar;
+                    }
+
+                    ?>
+
+
+
+                        <div class="col-md-2">
+
+                            <div data-id="{!! $user->id !!}" data-url="{!! url($avatar) !!}" class="photo-item view-photo border" style="background-image: url('{!! url($avatar) !!}')">
+
+                            </div>
+                        </div>
+
                     @foreach($photos as $photo)
 
                     <?php
@@ -154,7 +175,7 @@
                 <p class="page-title text-uppercase mb-1 mt-3 pl-4">About Me</p>
                 <div id="user-about" class="text-muted pl-4">{!! $user->about !!}</div>
                 <p class="page-title text-uppercase mb-1 mt-3 pl-4">Preference</p>
-                <div id="user-preference" class="pl-4 mb-3">
+                <div id="user-preference" class="pl-4 mb-3 ">
                     @foreach($user->interests as $interest)
                         <a href="javascript:void(0)" class="user-interest">{!! $interest->text !!}</a>
                     @endforeach

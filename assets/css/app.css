@@ -367,6 +367,7 @@ select.form-control-sm.form-control + i.fa{
     position: fixed;
     bottom: 0px;
     width: 100%;
+    z-index: 99;
 }
 .pages .sidebar,.landing .sidebar{
     height: 100vh;
