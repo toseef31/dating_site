@@ -1,5 +1,12 @@
+<style>
+@media (min-width: 768px){
+.container {
+    margin-left: 20rem;
+}
+}
+</style>
 <div class="footer">
-    <div class="container" style="margin-left:20rem;">
+    <div class="container">
         <div class="text-center">
             <ul class="list-unstyled menu-footer clearfix mb-1">
                 <li><a href="#">About</a></li>
