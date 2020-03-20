@@ -38,7 +38,7 @@
                                         </button>
                                     </div>
                             @endif
-                            <form method="post" action="">
+                            <form method="post" class="login_form" action="">
                                 {!! csrf_field() !!}
                                 <div class="form-group">
                                     <label>Username</label>

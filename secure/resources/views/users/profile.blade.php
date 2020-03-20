@@ -182,25 +182,38 @@
                         <a href="javascript:void(0)" class="user-interest">{!! $interest->text !!}</a>
                     @endforeach
                 </div>
+                    <div class="footer" style="position: fixed !important; width: 100%;"  >
+                        <div class="container foo_container" style="margin-left: 5rem;">
+                            <div class="text-center">
+                                <ul class="list-unstyled menu-footer clearfix mb-1">
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="{!! route('landing') !!}">Search</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                                <p class="mb-1">&copy; 2020 Singles Dating World</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modalPhoto" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             @if(!auth()->check())
                 </div>
+
+
             @endif
+
+
         </div>
-        <!-- <div class="main"> <div class="footer">
-<div class="container">
-<div class="text-center">
-<ul class="list-unstyled menu-footer clearfix mb-1">
-<li><a href="#">About</a></li>
-<li><a href="#">Blog</a></li>
-<li><a href="https://demo.myclouddate.com/browse">Search</a></li>
-<li><a href="#">Terms</a></li>
-<li><a href="#">Privacy</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-<p class="mb-1">© 2020 Singles Dating World</p>
-</div>
-</div>
-</div> -->
+
 </div>
 
     </div>

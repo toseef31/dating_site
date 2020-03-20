@@ -12,8 +12,10 @@
         {!! session()->forget('success_register') !!}
     </div>
     @endif
-    <div class="filter shadow-sm p-3 border bg-white">
+    <div class=" filter shadow-sm p-3 border bg-white">
         <form class="form-inline" action="" id="formFilter">
+
+            <div class="filter col-12 col-md-3 m-1">
             <strong>I am a&nbsp;</strong>
             <div class="custom-control custom-radio custom-control-inline">
                 <input{!! request()->get('gender') == 'male' || (auth()->check() && auth()->user()->gender == '1') || !auth()->check()?' checked':'' !!} type="radio" value="male" id="gender-filter-male" name="gender" class="custom-control-input">
@@ -23,6 +25,10 @@
                 <input{!! request()->get('gender') == 'female' || auth()->check() && auth()->user()->gender == '2' ?' checked':'' !!} type="radio" value="female" id="gender-filter-female" name="gender" class="custom-control-input">
                 <label class="custom-control-label" for="gender-filter-female">Female</label>
             </div>
+            </div>
+
+
+            <div class="filter col-12 col-md-3 m-1">
             <strong>Seeking a&nbsp;</strong>
             <div class="custom-control custom-checkbox custom-control-inline">
                 <input{!! in_array(1,$default_preference)?' checked':'' !!} type="checkbox" value="male" id="seeking-filter-male" name="seeking[]" class="custom-control-input">
@@ -32,13 +38,23 @@
                 <input{!! in_array(2,$default_preference)?' checked':'' !!} type="checkbox" value="female" id="seeking-filter-female" name="seeking[]" class="custom-control-input">
                 <label class="custom-control-label" for="seeking-filter-female">Female</label>
             </div>
-            <select class="custom-select custom-select-sm w-25" name="country" id="filter-country">
-                <option value="">Country</option>
-                @foreach(countries() as $key=>$country)
-                    <option{!! request()->get('country') == $key ? ' selected':'' !!} value="{!! $key !!}">{!! $country !!}</option>
-                @endforeach
-            </select>
-            <button class="btn btn-sm btn-primary ml-2">Search</button>
+
+            </div>
+
+            <div class="filter col-12 col-md-4 m-1">
+                <select class="search_search custom-select custom-select-sm w-50" name="country" id="filter-country">
+                    <option value="">Country</option>
+                    @foreach(countries() as $key=>$country)
+                        <option{!! request()->get('country') == $key ? ' selected':'' !!} value="{!! $key !!}">{!! $country !!}</option>
+                    @endforeach
+                </select>
+                <button class="search_btn btn btn-sm btn-primary ml-2">Search</button>
+
+            </div>
+
+
+
+
         </form>
     </div>
     <div class="search-content mt-3 mb-3 col-xs-12">
@@ -59,5 +75,20 @@
         @else
         @endif
         {!! $users->onEachSide(5)->links() !!}
+            <div class="footer" style="position: fixed !important;">
+                <div class="container foo_container" style="margin-left: 5rem;">
+                    <div class="text-center">
+                        <ul class="list-unstyled menu-footer clearfix mb-1">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="{!! route('landing') !!}">Search</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <p class="mb-1">&copy; 2020 Singles Dating World</p>
+                    </div>
+                </div>
+            </div>
     </div>
 @endsection
