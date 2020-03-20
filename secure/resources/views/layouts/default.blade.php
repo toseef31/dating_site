@@ -12,9 +12,9 @@
         <div class="main">
             @yield('content')
 
+            @include('partials.footer')
         </div>
     </div>
-    @include('partials.footer')
 </div>
 <script>
     var ajax_url = '{!! route('ajax') !!}';

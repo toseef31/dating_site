@@ -43,11 +43,7 @@ html,body{
     display: none;
   }
 } */
-@media (max-width: 512px) and (min-width: 440px){
-  #profile-header-sm {
-    display: block !important;
-  }
-}
+
 a,
 a:hover,
 a:focus {
@@ -577,6 +573,20 @@ select.form-control-sm.form-control + i.fa{
 .photo-item.view-photo{
     background-size: cover;
     background-repeat: no-repeat;
+}
+.photo-item-cover.view-photo{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.photo-item-cover {
+    height: 150px;
+    position: relative;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+    color: #FFF!important;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 #usermap{
     height: 200px;
