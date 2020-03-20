@@ -14,7 +14,7 @@
     <a href="{!! route('home') !!}"><img src="{!! $logo !!}"></a>
 </div> -->
 @yield('content')
-@include('partials.footer')
+
 <script>
     var ajax_url = '{!! route('ajax') !!}';
     var socket_url = 'https://socket.myclouddate.com';

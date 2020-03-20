@@ -1,9 +1,5 @@
 <style>
-@media (min-width: 768px){
-.container {
-    margin-left: 20rem;
-}
-}
+
 </style>
 <div class="footer">
     <div class="container">

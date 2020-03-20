@@ -198,8 +198,10 @@
             </div>
         </div>
     </form>
+
 </div>
+@include('partials.footer')
 <script>
-    var uploadedImageURL = '{!! avatar($user->avatar, $user->gender) !!}';
+   var uploadedImageURL = '{!! avatar($user->avatar, $user->gender) !!}';
 </script>
 @endsection
