@@ -42,7 +42,7 @@
                                 <div class="tab-pane fade show active p-5" id="register-account" role="tabpanel" aria-labelledby="home-tab">
                                     <div class="form-group">
                                         <label>Username</label>
-                                        <input class="form-control second bg-mute" name="username" id="register-username">
+                                        <input class="form-control second bg-mute" name="username" id="register-username"style="text-transform:lowercase;">
                                     </div>
                                     <div class="form-group">
                                         <label>Email</label>
