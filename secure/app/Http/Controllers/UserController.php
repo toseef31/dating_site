@@ -267,6 +267,7 @@ class UserController extends Controller
                   $newuser->username = $user->screen_name;
                   $newuser->avatar = str_replace('_normal', '', $user->profile_image_url);
                   $newuser->password = Hash::make(Str::random(10));
+                  $newuser->save();
                     Auth::login($newuser);
                     return redirect()->route('setting');
                 }
