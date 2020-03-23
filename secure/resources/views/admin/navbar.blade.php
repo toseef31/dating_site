@@ -28,15 +28,15 @@
                         <span class="mbl-hdr-nm">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
                     </div>
                 </a>
-                <a class="{!! Illuminate\Support\Facades\Route::is('adminhome')?'active':'' !!} nav-item nav-link" href="{!! route('adminhome') !!}">Dashboard <i class="fas fa-home" style="padding-left:48px;"></i></a>
-                <a class="{!! Illuminate\Support\Facades\Route::is('adminsetting') || Illuminate\Support\Facades\Route::is('adminsetting')?'active':'' !!} nav-item nav-link" href="{!! route('adminsetting') !!}">Setting  <span class="badge badge-light">{!! $unread > 0 ? $unread: '' !!}</span><i class="fas fa-cogs"  style="padding-left:30px;"></i></a>
-                <a class="{!! Illuminate\Support\Facades\Route::is('admininterest')?'active':'' !!} nav-item nav-link" href="{!! route('admininterest') !!}">Interests <i class="fas fa-grin-hearts"  style="padding-left:22px;"></i></a>
-                <a class="{!! Illuminate\Support\Facades\Route::is('adminusers')?'active':'' !!} nav-item nav-link" href="{!! route('adminusers') !!}">Manage AD <i class="fas fa-ad" style="padding-left:50px;"></i></a>
-                    <a class="{!! Illuminate\Support\Facades\Route::is('adminusers')?'active':'' !!} nav-item nav-link" href="{!! route('adminusers') !!}">Manage Users <i class="fas fa-users" style="padding-left:50px;"></i></a>
+                <a class="{!! Illuminate\Support\Facades\Route::is('adminhome')?'active':'' !!} nav-item nav-link" href="{!! route('adminhome') !!}">Dashboard <i class="fas fa-home float-right" style="padding-left:48px; margin-right: 50px;"></i></a>
+                <a class="{!! Illuminate\Support\Facades\Route::is('adminsetting') || Illuminate\Support\Facades\Route::is('adminsetting')?'active':'' !!} nav-item nav-link" href="{!! route('adminsetting') !!}">Setting  <span class="badge badge-light ">{!! $unread > 0 ? $unread: '' !!}</span><i class="fas fa-cogs float-right"  style="padding-left:30px; margin-right: 50px;"></i></a>
+                <a class="{!! Illuminate\Support\Facades\Route::is('admininterest')?'active':'' !!} nav-item nav-link" href="{!! route('admininterest') !!}">Interests <i class="fas fa-grin-hearts float-right"  style="padding-left:22px; margin-right: 50px;"></i></a>
+                <a class="{!! Illuminate\Support\Facades\Route::is('adminusers')?'active':'' !!} nav-item nav-link" href="{!! route('adminusers') !!}">Manage AD <i class="fas fa-ad float-right" style="padding-left:50px; margin-right: 50px;"></i></a>
+                    <a class="{!! Illuminate\Support\Facades\Route::is('adminusers')?'active':'' !!} nav-item nav-link" href="{!! route('adminusers') !!}">Manage Users <i class="fas fa-users float-right" style="padding-left:50px; margin-right: 50px;"></i></a>
 
-                    <a class="{!! Illuminate\Support\Facades\Route::is('adminusers')?'active':'' !!} nav-item nav-link" href="{!! route('adminusers') !!}">Manage Languages <i class="fas fa-language" style="padding-left:50px;"></i></a>
-                    <a class="{!! Illuminate\Support\Facades\Route::is('adminaddpage')?'active':'' !!} nav-item nav-link" href="{!! route('adminaddpage') !!}">Pages <i class="fas fa-file" style="padding-left:50px;"></i></a>
-                    <a class="{!! Illuminate\Support\Facades\Route::is('adminlogout')?'active':'' !!} nav-item nav-link" href="{!! route('adminlogout') !!}">Logout <i class="fas fa-sign-out-alt" style="padding-left:50px;"></i></a>
+                    <a class="{!! Illuminate\Support\Facades\Route::is('adminusers')?'active':'' !!} nav-item nav-link" href="{!! route('adminusers') !!}">Manage Languages <i class="fas fa-language float-right" style="padding-left:50px; margin-right: 50px;"></i></a>
+                    <a class="{!! Illuminate\Support\Facades\Route::is('adminaddpage')?'active':'' !!} nav-item nav-link" href="{!! route('adminaddpage') !!}">Pages <i class="fas fa-file float-right" style="padding-left:50px; margin-right: 50px;"></i></a>
+                    <a class="{!! Illuminate\Support\Facades\Route::is('adminlogout')?'active':'' !!} nav-item nav-link" href="{!! route('adminlogout') !!}">Logout <i class="fas fa-sign-out-alt float-right" style="padding-left:50px; margin-right: 50px;"></i></a>
 
             @else
 
