@@ -78,8 +78,9 @@
                             </div>
                         </div>
                     </nav>
-
-            @if($user->photos()->count() || (auth()->check() && auth()->user()->id == $user->id) )
+                    <?php
+                    // @if($user->photos()->count() || (auth()->check() && auth()->user()->id == $user->id) )
+                     ?>
                 <p class="page-title text-uppercase mb-1 clearfix pl-4">
                     Public Photos
                     <a class="float-right" href="{!! route('userphoto',['username'=>$user->username]) !!}">View All</a>
@@ -104,13 +105,8 @@
                     }
 
                     ?>
-
-
-
                         <div class="col-md-2">
-
                             <div data-id="{!! $user->id !!}" data-url="{!! url($avatar) !!}" class="photo-item-cover view-photo border" style="background-image: url('{!! url($avatar) !!}')">
-
                             </div>
                         </div>
 
@@ -171,7 +167,9 @@
                         </div>
                     </div>
                 </div>
-            @endif
+                <?php
+                // @endif
+                 ?>
                 <p class="page-title text-uppercase mb-1 pl-4 ">Location</p>
                 <div id="usermap" class="ml-4 mr-3"></div>
                 <p class="page-title text-uppercase mb-1 mt-3 pl-4">About Me</p>
@@ -194,6 +192,14 @@
                                     <li><a href="#">Contact</a></li>
                                 </ul>
                                 <p class="mb-1">&copy; 2020 Singles Dating World</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modalPhoto" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                </div>
                             </div>
                         </div>
                     </div>

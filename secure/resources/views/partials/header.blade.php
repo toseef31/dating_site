@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta name="csrf_token" content="{!! csrf_token() !!}">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/fontawesome.min.css') !!}">
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/cropper.min.css') !!}">
@@ -19,8 +19,8 @@
 <script src="{!! url('assets/js/jquery.form.min.js') !!}"></script>
 <script src="{!! url('assets/js/jquery.mcustomscrollbar.min.js') !!}"></script>
 <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
-<script src="{!! url('assets/js/cropper.min.js') !!}"></script> -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<script src="{!! url('assets/js/cropper.min.js') !!}"></script>
+ <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/cropper.min.css">
 <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/fontawesome.min.css">
@@ -37,7 +37,7 @@
 <script src="http://localhost/dating/assets/js/jquery.form.min.js"></script>
 <script src="http://localhost/dating/assets/js/jquery.mcustomscrollbar.min.js"></script>
 <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
-<script src="http://localhost/dating/assets/js/cropper.min.js"></script>
+<script src="http://localhost/dating/assets/js/cropper.min.js"></script> -->
 <?php
 $seo_website_title = setting('website_title');
 $seo_website_description = setting('website_description');

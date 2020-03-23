@@ -19,8 +19,10 @@
             <div class="text-center user-block text-white mb-3">
                 <a href="{!! route('profile',['username'=>$user->username]) !!}"><img src="{!! avatar($user->avatar, $user->gender) !!}" class="w-50 rounded-circle mb-2"></a>
                 <p class="font-weight-bold text-uppercase mb-0">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</p>
+                @if($user->address !=null && $user->country)
                 <p style="font-size: 14px;"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
-            </div>
+                @endif
+          </div>
         </div>
         <ul class="list-unstyled">
             <li><a class="{!! Illuminate\Support\Facades\Route::is('landing')?'active':'' !!}" href="{!! route('landing') !!}">Browse <i class="fas fa-search"></i></a></li>

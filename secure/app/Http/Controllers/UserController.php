@@ -94,7 +94,7 @@ class UserController extends Controller
             $user->active = 1;
             $user->country = $this->request->get('country');
             $user->address = $this->request->get('address');
-            
+
             $user->save();
             if($this->request->hasFile('avatar')){
                 $avatar = $this->request->file('avatar');
@@ -196,6 +196,7 @@ class UserController extends Controller
                 $newuser = new User;
                 $newuser->email = $info['email'];
                 $newuser->firstname = $info['name'];
+                $newuser->username = $info['email'];
                 $newuser->fb_id = $info['id'];
                 $newuser->avatar = 'http://graph.facebook.com/'.$info['id'].'/picture?type=large';
                 $newuser->password = Hash::make(Str::random(10));
@@ -259,12 +260,14 @@ class UserController extends Controller
                     Auth::login($checkExist);
                     return redirect()->route('landing');
                 } else {
-                    $newuser = new User;
-                    $newuser->email = $user->email;
-                    $newuser->twitter_id = $user->id;
-                    $newuser->avatar = str_replace('_normal', '', $user->profile_image_url);
-                    $newuser->password = Hash::make(Str::random(10));
-                    $newuser->save();
+                  $newuser = new User;
+                  $newuser->email = $user->email;
+                  $newuser->firstname = $user->name;
+                  $newuser->twitter_id = $user->id;
+                  $newuser->username = $user->screen_name;
+                  $newuser->avatar = str_replace('_normal', '', $user->profile_image_url);
+                  $newuser->password = Hash::make(Str::random(10));
+                  $newuser->save();
                     Auth::login($newuser);
                     return redirect()->route('setting');
                 }
@@ -288,6 +291,7 @@ class UserController extends Controller
 
     public function postSetting()
     {
+      // dd($this->request->all());
         if(\auth()->check()){
             $user_id = \auth()->id();
             $rules = array(
