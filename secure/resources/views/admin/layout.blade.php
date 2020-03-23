@@ -48,27 +48,34 @@
             <li<?php echo Illuminate\Support\Facades\Route::is('adminusers') || Illuminate\Support\Facades\Route::is('adminedituser')?' class="active"':'';?>><a href="{!! route('adminusers') !!}"><i class="fas fa-users"></i> Manage Users</a></li>
             <li<?php echo Illuminate\Support\Facades\Route::is('adminlanguage')?' class="active"':'';?>><a href="{!! route('adminusers') !!}"><i class="fas fa-language"></i> Manage Languages</a></li>
             <li<?php echo Illuminate\Support\Facades\Route::is('adminpages') || Illuminate\Support\Facades\Route::is('adminaddpage')?' class="active"':'';?>><a href="{!! route('adminpages') !!}"><i class="fas fa-file"></i> Pages</a></li>
+            <li<?php echo Illuminate\Support\Facades\Route::is('adminlogout') || Illuminate\Support\Facades\Route::is('adminlogout')?' class="active"':'';?>><a href="{!! route('adminlogout') !!}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
         <ul class="list-unstyled CTAs">
             <li>
                 <a href="{!! url('/') !!}" class="article"><i class="fas fa-globe"></i> Visit Website</a>
-                <a href="{!! route('adminlogout') !!}" class="download d-block d-sm-none"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <!--<a href="{!! route('adminlogout') !!}" class="download d-block d-sm-none"><i class="fas fa-sign-out-alt"></i> Logout</a> -->
             </li>
         </ul>
     </div>
     <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                    <i class="fas fa-th-list"></i>
+                <button type="button" id="sidebarCollapse" class="btn btn-info hidden-xs">
+                    <i class="fas fa-th-list "></i>
                 </button>
+                @include('admin.navbar')
                 <a class="btn btn-danger text-white d-none d-sm-block" href="{!! route('adminlogout') !!}"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </div>
         </nav>
         <div class="container-fluid">
             @yield('content')
+
         </div>
+
+
+
     </div>
+
 </div>
 <script>
 var ajax_url = '{!! route('adminajax') !!}';

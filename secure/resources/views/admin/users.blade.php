@@ -3,6 +3,15 @@
     <title>Users</title>
 @endsection
 @section('content')
+    <style media="screen">
+        @media (max-width: 768px){
+
+            .hidden-xs
+            {
+                display: none;
+            }
+        }
+        </style>
     <div class="users_section">
         <h2>Manage Users</h2>
         <div class="row mb-4">

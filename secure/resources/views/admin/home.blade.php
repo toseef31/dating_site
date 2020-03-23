@@ -4,6 +4,17 @@
 @endsection
 @section('content')
 <style media="screen">
+  @media (max-width: 768px){
+    .chart-buttons{
+      margin-top: 7% !important;
+
+    }
+
+  }
+  .chart-buttons
+  {
+    margin-top: 2%;
+  }
 .card-stats p {
   color: white !important;
 }
@@ -16,7 +27,7 @@
 </style>
 <h3>Dashboard</h3>
 <div class="main-panel">
-  <!-- Navbar -->
+  <!-- Navbar
   <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
     <div class="container-fluid">
       <div class="navbar-wrapper">
@@ -53,7 +64,7 @@
       </div>
     </div>
   </nav>
-  <!-- End Navbar -->
+  End Navbar -->
   <!-- <div class="panel-header panel-header-lg">
 
 <canvas id="bigDashboardChart"></canvas>
@@ -62,7 +73,7 @@
 </div> -->
   <div class="content">
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
         <div class="card card-stats" style="background: #824cde;">
           <div class="card-body ">
             <div class="row">
@@ -77,7 +88,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
         <div class="card card-stats" style="background:#ef6e84;">
           <div class="card-body ">
             <div class="row">
@@ -92,7 +103,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
         <div class="card card-stats" style="background: #e28637;">
           <div class="card-body ">
             <div class="row">
@@ -107,7 +118,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
         <div class="card card-stats" style="background: #4040d2;">
           <div class="card-body ">
             <div class="row">
@@ -123,11 +134,14 @@
         </div>
       </div>
     </div>
-    <div class="chart-buttons" style="position:absolute;top: 40%;right: 3%;z-index: 9;">
-      <a href="#" id="day_btn" class="btn">Day</a>
-      <a href="#" id="week_btn" class="btn">Week</a>
-      <a href="#" id="month_btn" class="btn">Month</a>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="chart-buttons mar" style="position:absolute;top: 40%;right: 3%;z-index: 9;">
+      <a href="#" id="day_btn" class="btn" style="color: black !important;">Day</a>
+      <a href="#" id="week_btn" class="btn" style="color: black !important;">Week</a>
+      <a href="#" id="month_btn" class="btn" style="color: black !important;">Month</a>
     </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
     <div class="row" id="today_user" style="margin-top: 20px;">
       <div class="col-md-12">
         <div class="card ">
@@ -151,6 +165,8 @@
         </div>
       </div>
     </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
     <div class="row" id="weekly_user" style="margin-top: 20px;display:none;">
       <div class="col-md-12">
         <div class="card ">
@@ -174,6 +190,8 @@
         </div>
       </div>
     </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
     <div class="row" id="monthly_user" style="margin-top: 20px;display:none;">
       <div class="col-md-12">
         <div class="card ">
@@ -196,6 +214,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
     <!-- <div class="row">
       <div class="col-md-4">
@@ -264,6 +283,7 @@
       </div>
     </div> -->
   </div>
+
 </div>
 @endsection
 @section('javascript')
@@ -273,18 +293,27 @@
     $('#today_user').show();
     $('#weekly_user').hide();
     $('#monthly_user').hide();
+      $('html, body').animate({
+          scrollTop: $('#today_user').offset().top
+      }, 'slow');
   });
   $('#week_btn').on('click',function () {
     // alert("week");
     $('#today_user').hide();
     $('#weekly_user').show();
     $('#monthly_user').hide();
+      $('html, body').animate({
+          scrollTop: $('#weekly_user').offset().top
+      }, 'slow');
   });
   $('#month_btn').on('click',function () {
     // alert("month");
     $('#today_user').hide();
     $('#weekly_user').hide();
     $('#monthly_user').show();
+      $('html, body').animate({
+          scrollTop: $('#monthly_user').offset().top
+      }, 'slow');
   });
 </script>
 @endsection
