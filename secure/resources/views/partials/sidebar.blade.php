@@ -7,6 +7,9 @@
     <!-- <p class="text-center logo mb-4">
         <a href="{!! url('/') !!}"><img src="{!! $logo !!}" class="img-fluid"></a>
     </p> -->
+        <a href="#" class="navbar-brand ml-2">
+            <img src="https://demo.myclouddate.com/uploads/sites/n52fiuUta9o8rUR5seeb.png" height="28" alt="CoolBrand">
+        </a>
     @if(auth()->check())
         <?php
         $user = auth()->user();

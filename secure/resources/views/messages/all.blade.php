@@ -1,6 +1,7 @@
 @extends('layouts.page')
 @section('content')
     <div class="conversations clearfix">
+
         <div class="float-left list-conversations">
             <div class="search-conversation">
                 <input type="text" placeholder="Search">
