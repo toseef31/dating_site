@@ -1,8 +1,57 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@media (max-width: 768px) {
+    .hidden-xs
+    {
+        display: none;
+    }
+
+    .navbar {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+        width: 100% !important;
+    }
+    .nav-btn
+    {
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+    .nav-link
+    {
+        padding-left: 15px !important;
+    }
+
+    .navbar-brand
+    {
+        margin-right: 3rem;
+    }
+    a,
+    a:hover,
+    a:focus {
+
+        color: white !important;
+    }
+    .mbl-hdr-nm
+    {
+        position: relative;
+        top: 27%;
+        left: 23%;
+    }
+    .card-stats
+    {
+        margin-bottom: 10px;
+    }
+
+
+
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     background: #fafafa;
 }
+
+
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
@@ -19,12 +68,13 @@ a:focus {
 }
 
 .navbar {
-    padding: 15px 10px;
-    background: #fff;
+
+    background: #555eff;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: .5rem 1rem;
 }
 
 .navbar-btn {
@@ -265,4 +315,7 @@ a.article:hover {
     margin: 0 auto;
     margin-bottom: 10px;
     display: block;
+}
+.card-stats p {
+  color: white !important;
 }

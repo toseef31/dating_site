@@ -1,6 +1,6 @@
 @extends('layouts.page')
 @section('content')
-    <div class="video-con">
+    <div class="video-con col-12">
         <div id="remote-media">
             <div class="call-animation">
                 <img class="rounded-circle" src="{!! avatar($video->receive->avatar, $video->receive->gender) !!}" alt="" width="135"/>
