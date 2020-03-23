@@ -50,8 +50,6 @@ body {
     /*font-family: 'Poppins', sans-serif;*/
     background: #fafafa;
 }
-
-
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
@@ -68,13 +66,12 @@ a:focus {
 }
 
 .navbar {
-
-    background: #555eff;
+    padding: 15px 10px;
+    background: #fff;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    padding: .5rem 1rem;
 }
 
 .navbar-btn {
@@ -315,7 +312,4 @@ a.article:hover {
     margin: 0 auto;
     margin-bottom: 10px;
     display: block;
-}
-.card-stats p {
-  color: white !important;
 }
