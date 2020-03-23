@@ -188,7 +188,7 @@
             <div class="col-md-12 col-12">
                 <div class="form-group">
                     <label>About Me</label>
-                    <textarea rows="3" class="form-control bg-white">{!! $user->about !!}</textarea>
+                    <textarea rows="3" name="about" class="form-control bg-white">{!! $user->about !!}</textarea>
                 </div>
             </div>
             <div class="col-md-12 col-12    ">

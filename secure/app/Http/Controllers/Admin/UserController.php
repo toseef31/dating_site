@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Conversation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -116,8 +117,13 @@ class UserController extends Controller
     public function deleteUser($id)
     {
         $user = User::where('id',$id)->first();
+        $user_conversation = Conversation::where('sender_id',$id)->orWhere('receive_id',$id)->first();
+        // dd($user_conversation);
         if($user){
             $user->delete();
+            if ($user_conversation) {
+              $user_conversation->delete();
+            }
             return redirect()->back();
         }
         else return redirect()->back();

@@ -287,6 +287,7 @@ class UserController extends Controller
 
     public function postSetting()
     {
+      // dd($this->request->all());
         if(\auth()->check()){
             $user_id = \auth()->id();
             $rules = array(
