@@ -320,6 +320,12 @@ class UserController extends Controller
                     $user = User::with('interests')->where('id', $user_id)->first();
                     $user->gender = $this->request->get('gender');
                     $user->preference = $this->request->get('preference');
+                    if($this->request->has('firstname')){
+                        $user->firstname = $this->request->get('firstname');
+                    }
+                    if($this->request->has('lastname')){
+                        $user->lastname = $this->request->get('lastname');
+                    }
                     if($this->request->has('about')){
                         $user->about = $this->request->get('about');
                     }
