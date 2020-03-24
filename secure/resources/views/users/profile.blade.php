@@ -67,7 +67,9 @@
                                                 | Seeking {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male, Female') !!}
                                 </span>
                                         </p>
+                                        @if($user->address !=null && $user->country !=null)
                                         <p class="user-address font-weight-bold mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
+                                        @endif
                                     </li>
                                 </ul>
                                 @if((auth()->check() && auth()->user()->id != $user->id) || !auth()->check())
