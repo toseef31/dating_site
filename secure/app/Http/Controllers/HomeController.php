@@ -32,6 +32,10 @@ class HomeController extends Controller
         }
         else{
             if(Auth::attempt(['username'=>$this->request->get('username'), 'password' => $this->request->get('password')])){
+              $user = Auth::user();
+              $id = $user->id;
+              $input['status'] = 'Online';
+                User::where('id',$id)->update($input);
                 if($this->request->has('ref')){
                     return redirect()->to($this->request->get('ref'));
                 }

@@ -378,6 +378,11 @@ class UserController extends Controller
 
     public function logout()
     {
+      $user = Auth::user();
+      $id = $user->id;
+      $input['status'] = 'Offline';
+      $input['logout_time'] = Carbon::now();
+        User::where('id',$id)->update($input);
         Auth::logout();
         return redirect()->route('home');
     }
