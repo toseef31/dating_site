@@ -2,6 +2,7 @@
     <div class="title-conversation clearfix">
         {!! auth()->id() === $conversation->sender_id ? fullname($conversation->receive->firstname, $conversation->receive->lastname, $conversation->receive->username) : fullname($conversation->sender->firstname, $conversation->sender->lastname, $conversation->sender->username) !!}
         <div class="dropdown float-right">
+
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-ellipsis-v"></i>
             </a>
@@ -12,7 +13,12 @@
         </div>
     </div>
     <div class="list-messages">
+        <a href="{{url('/messages')}}"  class="meanmenu-reveal meanicon-bar d-md-none d-lg-none" style="left: 15px; text-align: center; text-indent: 0px; font-size: 25px;
+         position: absolute;top: 20%; z-index: 99;">
+            <i class="fa fa-arrow-left"></i>
+        </a>
         <ul class="list-unstyled mb-0">
+
             @if($conversation->messages()->count())
                 @if($conversation->messages()->count() > 20)
                     <li class="load_more_message" data-id="{!! $conversation->id !!}" data-page="1"><span>Load more</span></li>

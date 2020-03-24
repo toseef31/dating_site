@@ -58,8 +58,19 @@ html,body{
     {
         margin-left: 0px !important;
     }
+    .conversations .list-conversations{
+        width: 100% !important;
+        position: relative;
+        top: 18% !important;
+    }
+    .conversations .message-box{
+        width: 100% !important;
 
+    }
+    .conversations{
+      top: -51px !important;
 
+    }
 
 
 }

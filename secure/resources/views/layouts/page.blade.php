@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="pages">
-    <div class="header-page">
+    <div class="header-page hidden-xs">
         <div class="container">
             <div class="main">
                 {!! isset($page_title)?$page_title: '&nbsp;' !!}
@@ -27,10 +27,10 @@
     var socket_url = 'https://socket.myclouddate.com';
     var logged_id = {!! auth()->check() ? auth()->id() : 'false' !!};
 </script>
-<script src="{!! url('assets/js/app.js') !!}"></script>
-<script src="{!! url('assets/js/socket.js') !!}"></script>
-<!-- <script src="http://localhost/dating/assets/js/app.js"></script>
-<script src="http://localhost/dating/assets/js/socket.js"></script> -->
+<!-- <script src="{!! url('assets/js/app.js') !!}"></script>
+<script src="{!! url('assets/js/socket.js') !!}"></script> -->
+ <script src="http://localhost/dating/assets/js/app.js"></script>
+<script src="http://localhost/dating/assets/js/socket.js"></script>
 @yield('javascript')
 </body>
 </html>
