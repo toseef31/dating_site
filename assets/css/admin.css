@@ -50,6 +50,8 @@ body {
     /*font-family: 'Poppins', sans-serif;*/
     background: #fafafa;
 }
+
+
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
@@ -66,12 +68,13 @@ a:focus {
 }
 
 .navbar {
-    padding: 15px 10px;
-    background: #fff;
+
+    background: #555eff;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: .5rem 1rem;
 }
 
 .navbar-btn {
@@ -101,7 +104,7 @@ a:focus {
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #7386D5;
+    background: #4040d2;
     color: #fff;
     transition: all 0.3s;
 }
@@ -304,7 +307,7 @@ a.article:hover {
     text-align: center;
     border-bottom: 2px solid #586BB7;
     padding-bottom: 10px;
-    background: #6B78B0;
+    background: #4040d2;
 }
 .admin img{
     width: 100px;
@@ -312,4 +315,7 @@ a.article:hover {
     margin: 0 auto;
     margin-bottom: 10px;
     display: block;
+}
+.card-stats p {
+  color: white !important;
 }
