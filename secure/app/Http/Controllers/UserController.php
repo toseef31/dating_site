@@ -190,6 +190,10 @@ class UserController extends Controller
                     $checkExist->save();
                 }
                 Auth::login($checkExist);
+                $user = Auth::user();
+                $id = $user->id;
+                $input['status'] = 'Online';
+                  User::where('id',$id)->update($input);
                 return redirect()->route('landing');
             } else {
                 $newuser = new User;
@@ -200,6 +204,7 @@ class UserController extends Controller
                 $username = strtolower($username);
                 $newuser->username = $username;
                 $newuser->fb_id = $info['id'];
+                $newuser->status = "Online";
                 $newuser->avatar = 'http://graph.facebook.com/'.$info['id'].'/picture?type=large';
                 $newuser->password = Hash::make(Str::random(10));
                 $newuser->save();
@@ -260,6 +265,10 @@ class UserController extends Controller
                         $checkExist->save();
                     }
                     Auth::login($checkExist);
+                    $user = Auth::user();
+                    $id = $user->id;
+                    $input['status'] = 'Online';
+                      User::where('id',$id)->update($input);
                     return redirect()->route('landing');
                 } else {
                   $newuser = new User;
@@ -267,6 +276,7 @@ class UserController extends Controller
                   $newuser->firstname = $user->name;
                   $newuser->twitter_id = $user->id;
                   $newuser->username = $user->screen_name;
+                  $newuser->status = "Online";
                   $newuser->avatar = str_replace('_normal', '', $user->profile_image_url);
                   $newuser->password = Hash::make(Str::random(10));
                   $newuser->save();
