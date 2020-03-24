@@ -196,7 +196,10 @@ class UserController extends Controller
                 $newuser = new User;
                 $newuser->email = $info['email'];
                 $newuser->firstname = $info['name'];
-                $newuser->username = $info['email'];
+                $username = $info['name'];
+                $username = str_replace(' ', '', $username);
+                $username = strtolower($username);
+                $newuser->username = $username;
                 $newuser->fb_id = $info['id'];
                 $newuser->avatar = 'http://graph.facebook.com/'.$info['id'].'/picture?type=large';
                 $newuser->password = Hash::make(Str::random(10));
@@ -317,6 +320,12 @@ class UserController extends Controller
                     $user = User::with('interests')->where('id', $user_id)->first();
                     $user->gender = $this->request->get('gender');
                     $user->preference = $this->request->get('preference');
+                    if($this->request->has('firstname')){
+                        $user->firstname = $this->request->get('firstname');
+                    }
+                    if($this->request->has('lastname')){
+                        $user->lastname = $this->request->get('lastname');
+                    }
                     if($this->request->has('about')){
                         $user->about = $this->request->get('about');
                     }
