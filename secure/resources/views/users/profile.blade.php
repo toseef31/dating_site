@@ -29,17 +29,15 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key={!! env('GOOGLE_PLACE_API','AIzaSyBjVRkL8MOLaVd-fjloQguTIQDLAAzA4w0') !!}&callback=showUserLocation" async defer></script>
 @endsection
+
 @section('content')
 
-    <div class="profile">
+    <div class="landing">
 
-        <div class="container-fluid main_container">
-            {{--@if(!auth()->check())--}}
-                @include('partials.sidebar')
+        <div class="container-fluid main_container ">
+            @include('partials.sidebar')
                 <div class="main">
 
-
-            {{--@endif--}}
                     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm hidden-sm hidden-xs" id="profile-header">
                         <div class="container">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

@@ -21,10 +21,8 @@ class PhotoController extends Controller
     {
         if($this->request->hasFile('file') && auth()->check()){
             $file = $this->request->file('file');
-            // dd($file);
             if(in_array($file->getClientOriginalExtension(), ['jpg','jpeg','png','gif'])){
                 $fulldestPath = create_folder(auth()->user()->id);
-                dd($fulldestPath);
                 $random = Str::random('20').time();
                 $name = $random.'.'.$file->getClientOriginalExtension();
                 $thumb = $random.'_thumb.'.$file->getClientOriginalExtension();
