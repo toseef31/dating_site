@@ -194,7 +194,7 @@ class UserController extends Controller
                 return redirect()->route('landing');
             } else {
                 $newuser = new User;
-                $newuser->email = $info['email'];
+                // $newuser->email = $info['email'];
                 $newuser->firstname = $info['name'];
                 $username = $info['name'];
                 $username = str_replace(' ', '', $username);
