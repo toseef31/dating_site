@@ -196,7 +196,10 @@ class UserController extends Controller
                 $newuser = new User;
                 $newuser->email = $info['email'];
                 $newuser->firstname = $info['name'];
-                $newuser->username = $info['email'];
+                $username = $info['name'];
+                $username = str_replace(' ', '', $username);
+                $username = strtolower($username);
+                $newuser->username = $username;
                 $newuser->fb_id = $info['id'];
                 $newuser->avatar = 'http://graph.facebook.com/'.$info['id'].'/picture?type=large';
                 $newuser->password = Hash::make(Str::random(10));
