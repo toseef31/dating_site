@@ -67,7 +67,7 @@
                                                 | Seeking {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male, Female') !!}
                                 </span>
                                         </p>
-                                        @if($user->address !=null && $user->country !=null)
+                                        @if($user->address !=null && $user->country)
                                         <p class="user-address font-weight-bold mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
                                         @endif
                                     </li>
