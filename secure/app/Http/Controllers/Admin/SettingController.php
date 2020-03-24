@@ -87,6 +87,7 @@ class SettingController extends Controller
                 $logo = $this->request->file('register_background');
                 if(in_array($logo->getClientOriginalExtension(),['jpg','png','gif','jpeg'])){
                   $image=Str::random(20).'.'.$logo->getClientOriginalExtension();
+                  $destinationPath = $this->base_path.'uploads/sites/';
                   $upload = $logo->move($destinationPath,$image);
                   $image = 'uploads/sites/'.$image;
                     Setting::where('meta','register_background')->update(['value'=>$image]);
