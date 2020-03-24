@@ -197,7 +197,7 @@ class UserController extends Controller
                 $newuser->email = $info['email'];
                 $newuser->firstname = $info['name'];
                 $username = $info['name'];
-                // $username = str_replace(' ', '', $username);
+                $username = str_replace(' ', '', $username);
                 $username = strtolower($username);
                 $newuser->username = $username;
                 $newuser->fb_id = $info['id'];
