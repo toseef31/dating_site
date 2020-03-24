@@ -15,13 +15,16 @@
                 @endif
             </ul>
         </div>
-        <div class="float-left message-box">
+        <div class="float-left message-box hidden-xs">
+
             <?php
             if(!isset($conversation)){
                 $conversation = $conversations->first();
             }
             ?>
+
             @if($conversation)
+
                 @include('messages.conversation')
             @endif
 
@@ -43,5 +46,22 @@
         </div>
 
     </div>
+    <script>
+        function functionHide() {
+            if (navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+            )
+            {
+                $('.list-conversations').hide();
+                $('.message-box').show();
+            }
 
+        }
+    </script>
 @endsection
+
