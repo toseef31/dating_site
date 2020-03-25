@@ -24,7 +24,7 @@ html,body{
 @media  (min-device-width: 761px) and (max-device-width: 1024px) {
     .foo_container
     {
-        margin-left: -5rem !important;
+        margin-left: 0rem !important;
     }
     .hidden-sm
     {
