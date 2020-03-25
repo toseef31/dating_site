@@ -21,7 +21,7 @@ html,body{
 
 }
 
-@media (max-width: 1024px) {
+@media  (min-device-width: 761px) and (max-device-width: 1024px) {
     .foo_container
     {
         margin-left: -5rem !important;
