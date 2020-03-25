@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use App\User;
+use Carbon\Carbon;
 
 class AuthController extends Controller
 {
@@ -29,6 +31,11 @@ class AuthController extends Controller
         }
         else{
             if(Auth::attempt(['is_admin'=>1,'email' => $this->request->get('email'), 'password' => $this->request->get('password')])){
+              $user = Auth::user();
+              // dd($user);
+              $id = $user->id;
+              $input['status'] = 'Online';
+                User::where('id',$id)->update($input);
                 return redirect()->route('adminhome');
             }
             else return redirect()->back()->with('errorlogin', 'Something went wrong');
@@ -37,6 +44,11 @@ class AuthController extends Controller
 
     public function logout()
     {
+      $user = Auth::user();
+      $id = $user->id;
+      $input['status'] = 'Offline';
+      $input['logout_time'] = Carbon::now();
+        User::where('id',$id)->update($input);
         Auth::logout();
         return redirect()->route('adminlogin');
     }
