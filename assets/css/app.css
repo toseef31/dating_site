@@ -21,7 +21,15 @@ html,body{
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 1024px) {
+    .foo_container
+    {
+        margin-left: -5rem !important;
+    }
+
+}
+
+@media (max-width: 760px){
 
     .hidden-xs{
         display: none;
@@ -93,6 +101,9 @@ button.search_btn {
   }
 } */
 
+.foo_container{
+    margin-left: 5rem;
+}
 a,
 a:hover,
 a:focus {

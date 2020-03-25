@@ -1,4 +1,5 @@
 @extends('layouts.profile')
+
 @section('javascript')
     <script>
         function showUserLocation(){
@@ -28,6 +29,10 @@
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key={!! env('GOOGLE_PLACE_API','AIzaSyBjVRkL8MOLaVd-fjloQguTIQDLAAzA4w0') !!}&callback=showUserLocation" async defer></script>
+    <style>
+
+
+    </style>
 @endsection
 
 @section('content')
@@ -181,7 +186,7 @@
                     @endforeach
                 </div>
                     <div class="footer" style="position: fixed !important; width: 100%;"  >
-                        <div class="container foo_container" style="margin-left: 5rem;">
+                        <div class="container foo_container" >
                             <div class="text-center">
                                 <ul class="list-unstyled menu-footer clearfix mb-1">
                                     <li><a href="#">About</a></li>
