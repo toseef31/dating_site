@@ -1435,9 +1435,15 @@ select.form-control-sm.form-control + i.fa{
 #profile-header-sm .nav-link {
   color: white !important;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
 .ipad-col {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+}
+@media (max-width: 1024px) {
+.ipad-col {
+    flex: 0 0 33%;
+    max-width: 33%;
   }
 }
