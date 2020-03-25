@@ -1,5 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .hidden-xs
     {
         display: none;
