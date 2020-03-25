@@ -1479,6 +1479,10 @@ select.form-control-sm.form-control + i.fa{
     flex: 0 0 33% !important;
     max-width: 33% !important;
   }
+  #modalPhoto .modal-dialog {
+    width: 71vh;
+    max-width: 71vh;
+  }
 }
 @media (max-width: 1024px) {
 .ipad-col {
