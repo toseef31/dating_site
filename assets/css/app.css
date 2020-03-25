@@ -1464,6 +1464,13 @@ select.form-control-sm.form-control + i.fa{
   .ipad-photo-img {
       min-width: 100%;
     }
+    #mCSB_4_container {
+      left: 23px;
+    }
+    .view-photo-right .photo-action {
+      width: 90%;
+      left: 21px;
+    }
 }
 @media (max-width: 768px) {
 .ipad-col {
