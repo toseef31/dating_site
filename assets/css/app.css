@@ -1471,6 +1471,9 @@ position: relative;
   .ipad-photo-img {
       min-width: 100%;
     }
+  .user-img {
+      min-width: 100%;
+    }
 }
 @media (max-width: 768px) {
 .ipad-col {
@@ -1485,6 +1488,10 @@ position: relative;
   .ipad-photo-img {
     flex: 0 0 33% !important;
     max-width: 33% !important;
+  }
+  .user-img {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
   }
 }
 @media (max-width: 1024px) {
