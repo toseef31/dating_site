@@ -1471,8 +1471,8 @@ position: relative;
   .ipad-photo-img {
       min-width: 100%;
     }
-    #mCSB_inside {
-      left: 23px;
+    .view-photo-right .content-photo {
+      margin-left: 0px !important;
     }
     .view-photo-right .photo-action {
       width: 90%;
