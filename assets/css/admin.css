@@ -331,7 +331,7 @@ a.article:hover {
     max-width: 50% !important;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .user-img {
     flex: 0 0 33%;
     max-width: 33%;
