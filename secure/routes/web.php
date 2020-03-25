@@ -37,6 +37,8 @@ Route::middleware(['auth','complete'])->prefix('/')->group(function(){
 });
 Route::get('user/setting','UserController@setting')->name('setting')->middleware('auth');
 Route::post('user/setting','UserController@postSetting')->middleware('auth');
+/*custome*/
+Route::get('/custome','UserController@custome')->name('custome');
 /*Ajax*/
 Route::post('ajax', 'AjaxController@main')->name('ajax');
 /*Admin*/
