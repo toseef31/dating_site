@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
 @media (max-width: 760px) {
     .hidden-xs
     {
@@ -54,7 +55,7 @@ body {
 
 p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
+    font-size: 0.85rem;
     font-weight: 300;
     line-height: 1.7em;
     color: #999;
@@ -207,7 +208,7 @@ a.article:hover {
     MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     #sidebar {
         margin-left: -250px;
     }
