@@ -21,7 +21,7 @@ html,body{
 
 }
 
-@media (max-width: 1024px) {
+@media  (min-device-width: 761px) and (max-device-width: 1024px) {
     .foo_container
     {
         margin-left: -5rem !important;
@@ -1485,6 +1485,10 @@ position: relative;
   .ipad-photo-img {
     flex: 0 0 33% !important;
     max-width: 33% !important;
+  }
+  #modalPhoto .modal-dialog {
+    width: 71vh;
+    max-width: 71vh;
   }
 }
 @media (max-width: 1024px) {
