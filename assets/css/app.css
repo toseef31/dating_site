@@ -1461,6 +1461,9 @@ select.form-control-sm.form-control + i.fa{
   .photo-item {
     height: 220px !important;
   }
+  .ipad-photo-img {
+      min-width: 100%;
+    }
 }
 @media (max-width: 768px) {
 .ipad-col {
