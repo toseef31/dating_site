@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-blue d-md-none d-lg-none d-sm-none"  id="profile-header-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-blue d-md-none d-lg-none hidden-sm"  id="profile-header-sm">
   <!-- <div class="bg-blue"> -->
     <button type="button" class="navbar-toggler nav-btn" data-toggle="collapse" data-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,7 @@
       <a class="{!! Illuminate\Support\Facades\Route::is('setting')?'active':'' !!} nav-item nav-link" href="{!! route('setting') !!}">Setting <i class="fas fa-cog" style="float: right;"></i></a>
       <a class="nav-item nav-link" href="{!! route('logout') !!}">Logout <i class="fas fa-sign-out-alt" style="float: right;"></i></a>
       @else
-      <a href="{{url('/')}}" class="nav-item nav-link">Login</a>
+
       <a href="{{url('/register')}}" class="nav-item nav-link">Login</a>
       @endif
       <!-- <a href="#" class="nav-item nav-link active">Home</a>
