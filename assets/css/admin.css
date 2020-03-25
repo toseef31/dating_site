@@ -332,8 +332,8 @@ a.article:hover {
   }
 }
 @media (max-width: 768px) {
-  /* .user-img {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-  } */
+  .user-img {
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
 }
