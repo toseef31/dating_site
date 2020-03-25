@@ -185,7 +185,7 @@
                         <a href="javascript:void(0)" class="user-interest">{!! $interest->text !!}</a>
                     @endforeach
                 </div>
-                    <div class="footer" style="position: fixed !important; width: 100%;"  >
+                    <div class="footer" style="position: relative !important; width: 100%;"  >
                         <div class="container foo_container" >
                             <div class="text-center">
                                 <ul class="list-unstyled menu-footer clearfix mb-1">
