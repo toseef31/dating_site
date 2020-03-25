@@ -2,7 +2,7 @@
 @section('content')
 <style>
   .online {
-    left: 86% !important;
+    left: 91% !important;
     top: 2%;
   }
   .online i{
