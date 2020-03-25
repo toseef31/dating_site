@@ -1505,4 +1505,8 @@ position: relative;
     flex: 0 0 25%;
     max-width: 25%;
   }
+  #modalPhoto .modal-dialog {
+    width: 71vh;
+    max-width: 71vh;
+  }
 }
