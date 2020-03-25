@@ -1437,7 +1437,7 @@ select.form-control-sm.form-control + i.fa{
 }
 @media (max-width: 576px) {
 .ipad-col {
-    width: 100%;
+    min-width: 100%;
   }
 }
 @media (max-width: 768px) {
