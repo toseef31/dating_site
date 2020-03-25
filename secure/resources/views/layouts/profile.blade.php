@@ -19,7 +19,7 @@
     var socket_url = 'https://socket.myclouddate.com';
     var logged_id = {!! auth()->check() ? auth()->id() : 'false' !!};
 </script>
-</script>
+
 <script src="{!! url('assets/js/app.js') !!}"></script>
 <script src="{!! url('assets/js/socket.js') !!}"></script>
 <!-- <script src="http://localhost/dating/assets/js/app.js"></script>
