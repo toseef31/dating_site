@@ -4,7 +4,17 @@
 @endsection
 @section('content')
 <style media="screen">
-  @media (max-width: 768px){
+  @media (max-width: 924px) {
+    .chart-buttons{
+      margin-top: 7% !important;
+
+    }
+    .sty{
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 760px){
     .chart-buttons{
       margin-top: 7% !important;
 
@@ -73,7 +83,7 @@
 </div> -->
   <div class="content">
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 sty">
         <div class="card card-stats" style="background: #824cde;">
           <div class="card-body ">
             <div class="row">
@@ -88,7 +98,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 sty">
         <div class="card card-stats" style="background:#ef6e84;">
           <div class="card-body ">
             <div class="row">
@@ -103,7 +113,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 sty">
         <div class="card card-stats" style="background: #e28637;">
           <div class="card-body ">
             <div class="row">
@@ -118,7 +128,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 sty">
         <div class="card card-stats" style="background: #4040d2;">
           <div class="card-body ">
             <div class="row">

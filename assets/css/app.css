@@ -26,6 +26,18 @@ html,body{
     {
         margin-left: -5rem !important;
     }
+    .hidden-sm
+    {
+        display: none!important;
+    }
+    .conversations .message-box .list-messages ul{
+        width: 90% !important;
+
+    }
+    .interest-item {
+        flex: 0 0 calc(50% - 20px) !important;
+        max-width: calc(50% - 20px) !important;
+    }
 
 }
 
