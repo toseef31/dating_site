@@ -1442,7 +1442,7 @@ position: relative;
 #profile-header-sm .nav-link {
   color: white !important;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 .ipad-col {
     flex: 0 0 50%;
     max-width: 50%;
