@@ -1464,6 +1464,13 @@ select.form-control-sm.form-control + i.fa{
   .ipad-photo-img {
       min-width: 100%;
     }
+    .view-photo-right .content-photo {
+      margin-left: 0px !important;
+    }
+    .view-photo-right .photo-action {
+      width: 90%;
+      left: 21px;
+    }
 }
 @media (max-width: 768px) {
 .ipad-col {
@@ -1479,6 +1486,10 @@ select.form-control-sm.form-control + i.fa{
     flex: 0 0 33% !important;
     max-width: 33% !important;
   }
+  #modalPhoto .modal-dialog {
+    width: 71vh;
+    max-width: 71vh;
+  }
 }
 @media (max-width: 1024px) {
 .ipad-col {
@@ -1493,5 +1504,9 @@ select.form-control-sm.form-control + i.fa{
   .ipad-photo-img {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+  #modalPhoto .modal-dialog {
+    width: 71vh;
+    max-width: 71vh;
   }
 }
