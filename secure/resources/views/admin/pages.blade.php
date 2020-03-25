@@ -17,7 +17,7 @@
             @foreach($pages as $page)
                 <tr>
                     <td>
-                        <a href="{!! route('page-detail',['id'=>$page->slug]) !!}">{!! $page->title !!}</a>
+                        <a href="{!! route('page',['slug'=>$page->slug]) !!}">{!! $page->title !!}</a>
                     </td>
                     <td>{!! $page->created_at !!}</td>
                     <td>
