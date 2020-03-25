@@ -83,7 +83,7 @@
                      ?>
                 <p class="page-title text-uppercase mb-1 clearfix pl-4">
                     Public Photos
-                    <a class="float-right" href="{!! route('userphoto',['username'=>$user->username]) !!}">View All</a>
+                    <a class="float-right push-right" href="{!! route('userphoto',['username'=>$user->username]) !!}">View All</a>
                 </p>
                 <div class="row users-photo mb-3  pl-4 mr-1">
 

@@ -39,15 +39,15 @@
                         <form action="" method="post" enctype="multipart/form-data" id="formRegister">
                             {!! csrf_field() !!}
                             <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active p-5" id="register-account" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="tab-pane fade show active p-5" id="register-account" role="tabpanel" aria-labelledby="home-tab"><div class="row"><div class="col-md-6">
                                     <div class="form-group">
                                         <label>Username</label>
                                         <input class="form-control second bg-mute" name="username" id="register-username"style="text-transform:lowercase;">
-                                    </div>
+                                    </div></div><div class="col-md-6">
                                     <div class="form-group">
                                         <label>Email</label>
                                         <input class="form-control second bg-mute" name="email" type="email" id="register-email">
-                                    </div>
+                                    </div></div></div>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">

@@ -3,9 +3,9 @@
     <button type="button" class="navbar-toggler nav-btn" data-toggle="collapse" data-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a href="#" class="navbar-brand">
-      <img src="https://demo.myclouddate.com/uploads/sites/n52fiuUta9o8rUR5seeb.png" height="28" alt="CoolBrand">
-    </a>
+   <!-- <a href="#" class="navbar-brand">
+      <img src="https://demo.myclouddate.com/uploads/sites/DIBlX8KBDCEd9VftbPuh.png" height="28" alt="CoolBrand">
+    </a> -->
   <!-- </div> -->
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav">
