@@ -29,7 +29,7 @@
             @endif
 
         </div>
-        <div class="footer" style="position: fixed !important;"  >
+        <div class="footer" style="position: relative !important;"  >
             <div class="container foo_container" style="margin-left: 5rem;">
                 <div class="text-center">
                     <ul class="list-unstyled menu-footer clearfix mb-1">
@@ -63,4 +63,3 @@
         }
     </script>
 @endsection
-
