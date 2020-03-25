@@ -110,7 +110,7 @@
                     }
 
                     ?>
-                        <div class="col-md-2">
+                        <div class="col-md-2 profile-ipad-img">
                             <div data-id="{!! $user->id !!}" data-url="{!! url($avatar) !!}" class="photo-item-cover view-photo border" style="background-image: url('{!! url($avatar) !!}')">
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                       $photo_file = $photo->file;
                     }
                      ?>
-                        <div class="col-md-2">
+                        <div class="col-md-2 profile-ipad-img">
                             <!-- <div data-id="{!! $photo->id !!}" data-url="{!! url($photo->file) !!}" class="photo-item view-photo border" style="background-image: url('{!! url($photo->thumb) !!}')"> -->
                             <div data-id="{!! $photo->id !!}" data-url="{!! url($photo_file) !!}" class="photo-item view-photo border" style="background-image: url('{!! url($cover) !!}')">
 
@@ -137,7 +137,7 @@
                         </div>
                     @endforeach
                     @if((auth()->check() && auth()->user()->id == $user->id))
-                        <div class="col-md-2 ">
+                        <div class="col-md-2 profile-ipad-img">
                             <div class="photo-item add-photo">
                                 <i class="fas fa-camera"></i>
                                 <p>Add Photo</p>
