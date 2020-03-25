@@ -40,6 +40,7 @@
       <a class="{!! Illuminate\Support\Facades\Route::is('messages') || Illuminate\Support\Facades\Route::is('message')?'active':'' !!} nav-item nav-link" href="{!! route('messages') !!}">Messages  <span class="badge badge-light">{!! $unread > 0 ? $unread: '' !!}</span><i class="fas fa-comments"  style="float: right;"></i></a>
       <a class="{!! Illuminate\Support\Facades\Route::is('video')?'active':'' !!} nav-item nav-link" href="">Video Chat <i class="fas fa-video"  style="float: right;"></i></a>
       <a class="{!! Illuminate\Support\Facades\Route::is('setting')?'active':'' !!} nav-item nav-link" href="{!! route('setting') !!}">Setting <i class="fas fa-cog" style="float: right;"></i></a>
+        <a class="{!! Illuminate\Support\Facades\Route::is('Custome')?'active':'' !!} nav-item nav-link" href="{!! route('custome') !!}">Custome Page <i class="fa fa-file" style="float: right;"></i></a>
       <a class="nav-item nav-link" href="{!! route('logout') !!}">Logout <i class="fas fa-sign-out-alt" style="float: right;"></i></a>
       @else
 

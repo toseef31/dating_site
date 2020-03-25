@@ -385,6 +385,7 @@ class UserController extends Controller
         else return redirect()->route('home');
     }
 
+
     public function logout()
     {
       $user = Auth::user();
@@ -409,5 +410,10 @@ class UserController extends Controller
         else{
             abort(404);
         }
+    }
+
+    public function custome()
+    {
+        return view('custome');
     }
 }
