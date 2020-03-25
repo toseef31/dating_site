@@ -36,11 +36,11 @@
           <span class="mbl-hdr-nm">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
         </div>
       </a>
-      <a class="{!! Illuminate\Support\Facades\Route::is('landing')?'active':'' !!} nav-item nav-link" href="{!! route('landing') !!}">Browse <i class="fas fa-search" style="padding-left:48px;"></i></a>
-      <a class="{!! Illuminate\Support\Facades\Route::is('messages') || Illuminate\Support\Facades\Route::is('message')?'active':'' !!} nav-item nav-link" href="{!! route('messages') !!}">Messages  <span class="badge badge-light">{!! $unread > 0 ? $unread: '' !!}</span><i class="fas fa-comments"  style="padding-left:30px;"></i></a>
-      <a class="{!! Illuminate\Support\Facades\Route::is('video')?'active':'' !!} nav-item nav-link" href="">Video Chat <i class="fas fa-video"  style="padding-left:22px;"></i></a>
-      <a class="{!! Illuminate\Support\Facades\Route::is('setting')?'active':'' !!} nav-item nav-link" href="{!! route('setting') !!}">Setting <i class="fas fa-cog" style="padding-left:50px;"></i></a>
-      <a class="nav-item nav-link" href="{!! route('logout') !!}">Logout <i class="fas fa-sign-out-alt" style="padding-left:52px;"></i></a>
+      <a class="{!! Illuminate\Support\Facades\Route::is('landing')?'active':'' !!} nav-item nav-link" href="{!! route('landing') !!}">Browse <i class="fas fa-search" style="float: right;"></i></a>
+      <a class="{!! Illuminate\Support\Facades\Route::is('messages') || Illuminate\Support\Facades\Route::is('message')?'active':'' !!} nav-item nav-link" href="{!! route('messages') !!}">Messages  <span class="badge badge-light">{!! $unread > 0 ? $unread: '' !!}</span><i class="fas fa-comments"  style="float: right;"></i></a>
+      <a class="{!! Illuminate\Support\Facades\Route::is('video')?'active':'' !!} nav-item nav-link" href="">Video Chat <i class="fas fa-video"  style="float: right;"></i></a>
+      <a class="{!! Illuminate\Support\Facades\Route::is('setting')?'active':'' !!} nav-item nav-link" href="{!! route('setting') !!}">Setting <i class="fas fa-cog" style="float: right;"></i></a>
+      <a class="nav-item nav-link" href="{!! route('logout') !!}">Logout <i class="fas fa-sign-out-alt" style="float: right;"></i></a>
       @else
       <a href="{{url('/')}}" class="nav-item nav-link">Login</a>
       <a href="{{url('/register')}}" class="nav-item nav-link">Login</a>
