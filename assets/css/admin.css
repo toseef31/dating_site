@@ -320,3 +320,20 @@ a.article:hover {
 .card-stats p {
   color: white !important;
 }
+@media (max-width: 576px) {
+  .user-img {
+      min-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+  .user-img {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+@media (max-width: 1024px) {
+  .user-img {
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+}

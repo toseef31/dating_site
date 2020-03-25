@@ -16,7 +16,7 @@
         <h2>Manage Users</h2>
         <div class="row mb-4">
             @foreach($users as $user)
-                <div class="col-md-3">
+                <div class="col-md-3 user-img">
                     <div class="user effect<?php echo !$user->active?' suspended':'';?>">
                         @if(!$user->active)
                             <span>Deactivated</span>
