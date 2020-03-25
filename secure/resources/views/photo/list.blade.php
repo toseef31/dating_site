@@ -42,7 +42,7 @@
                               $cover = $photo->thumb;
                             }
                              ?>
-                                <div class="col-md-3">
+                                <div class="col-md-3 ipad-photo-img">
                                     <div data-id="{!! $photo->id !!}" data-url="{!! url($photo->file) !!}" class="photo-item view-photo border shadow style" style=" background-repeat: no-repeat;
                                             background-size: 100% 100%;background-image: url('{!! url($cover) !!}');">
 
