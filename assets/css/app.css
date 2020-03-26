@@ -1510,6 +1510,10 @@ position: relative;
     min-width: 47%;
 
   }
+  .full_photo img {
+    max-height: 400px !important;
+    min-height: 300px !important;
+  }
   .profile-ipad-img {
     min-width: 50%;
     margin-bottom: 10px;
