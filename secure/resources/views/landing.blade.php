@@ -8,7 +8,11 @@
   .online i{
     color: #0aec0a;
   }
-  
+  @media  (min-device-width: 1500px) and (max-device-width: 2000px) {
+    .foo_container {
+      margin-left: 14rem !important;
+    }
+  }
 </style>
 <div class="main-content">
 
