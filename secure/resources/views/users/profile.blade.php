@@ -39,6 +39,11 @@
     margin-left: 16rem !important;
   }
 }
+.online {
+  position: absolute;
+  left: 5%;
+  color: #0aec0a;
+}
 
 </style>
     <div class="landing">
