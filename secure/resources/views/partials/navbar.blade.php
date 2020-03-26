@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-blue d-md-none d-lg-none hidden-sm"  id="profile-header-sm">
+<nav class="navbar  navbar-light bg-blue hidden-lg"  id="profile-header-sm">
   <!-- <div class="bg-blue"> -->
     <button type="button" class="navbar-toggler nav-btn" data-toggle="collapse" data-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>

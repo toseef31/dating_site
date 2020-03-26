@@ -60,7 +60,7 @@
     <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <button type="button" id="sidebarCollapse" class="btn btn-info hidden-xs">
+                <button type="button" id="sidebarCollapse" class="btn btn-info hidden-xs ">
                     <i class="fas fa-th-list "></i>
                 </button>
                 @include('admin.navbar')

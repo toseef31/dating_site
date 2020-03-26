@@ -1,4 +1,19 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@media (min-device-width: 1025px)
+{
+    .hidden-lg
+    {
+        display: none;
+    }
+}
+@media  (min-device-width: 761px) {
+
+    .hidden-sm
+    {
+        display: none!important;
+    }
+
+}
 
 @media (max-width: 760px) {
     .hidden-xs
