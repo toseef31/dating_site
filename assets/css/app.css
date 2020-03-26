@@ -1517,3 +1517,7 @@ position: relative;
     max-width: 71vh;
   }
 }
+.ipad-col .user-item {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
