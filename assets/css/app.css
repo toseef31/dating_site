@@ -1456,7 +1456,7 @@ select.form-control-sm.form-control + i.fa{
  /* Mobile */
 @media (max-width: 576px) {
 .ipad-col {
-    min-width: 100%;
+    min-width: 47%;
   }
   .profile-ipad-img {
     min-width: 100%;
