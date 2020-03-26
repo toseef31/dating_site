@@ -100,7 +100,7 @@
   </div>
 
     <div class="footer" style="position: relative !important;">
-      <div class="container foo_container" style="margin-left: 0 !important;">
+      <div class="container foo_container" style="margin-left:0;">
         <div class="text-center">
           <ul class="list-unstyled menu-footer clearfix mb-1">
             <li><a href="#">About</a></li>
