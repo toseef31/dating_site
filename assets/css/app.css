@@ -1588,7 +1588,7 @@ position: relative;
 @media  (min-device-width: 200px) and (max-device-width: 600px) {
   .main-navbar-logo {
     position: relative;
-    right: 43%;
+    /* right: 43%; */
   }
 }
 /* Ipad 2 */
