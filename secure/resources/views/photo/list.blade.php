@@ -5,6 +5,8 @@
             @include('partials.sidebar')
             <div class="main">
                 {{--@endif--}}
+                <div class="main-content">
+
                 <div class="top-photo pt-3 pb-3 pl-3">
                     <div class="media">
                       <?php
@@ -57,7 +59,9 @@
                     @else
                     @endif
                 </div>
-                <div class="footer">
+              </div>
+
+                <div class="footer" style="position:relative !important;">
                     <div class="container">
                         <div class="text-center">
                             <ul class="list-unstyled menu-footer clearfix mb-1">

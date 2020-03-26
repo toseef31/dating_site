@@ -1483,13 +1483,28 @@ select.form-control-sm.form-control + i.fa{
 #profile-header-sm .nav-link {
   color: white !important;
 }
+.main-content {
+  min-height: 600px;
+}
+.main-content-message {
+  min-height: 600px;
+}
+ /* Mobile */
+@media (max-width: 400px) {
+  #modalPhoto .modal-dialog {
+    width: 50vh !important;
+    max-width: !important;
+  }
+}
+ /* Mobile */
 @media (max-width: 576px) {
 .ipad-col {
-    min-width: 100%;
+
+    min-width: 47%;
 
   }
   .profile-ipad-img {
-    min-width: 100%;
+    min-width: 50%;
     margin-bottom: 10px;
   }
   .photo-item-cover {
@@ -1499,7 +1514,7 @@ select.form-control-sm.form-control + i.fa{
     height: 220px !important;
   }
   .ipad-photo-img {
-      min-width: 100%;
+      min-width: 50%;
     }
     .view-photo-right .content-photo {
       margin-left: 0px !important;
@@ -1508,7 +1523,11 @@ select.form-control-sm.form-control + i.fa{
       width: 90%;
       left: 21px;
     }
+    .main-content-message {
+      min-height: 413px !important;
+    }
 }
+/* Ipad */
 @media (max-width: 768px) {
 .ipad-col {
     flex: 0 0 50% !important;
@@ -1527,7 +1546,11 @@ select.form-control-sm.form-control + i.fa{
     width: 71vh;
     max-width: 71vh;
   }
+  .main-content {
+    min-height: 928px !important;
+  }
 }
+/* Ipad Pro */
 @media (max-width: 1024px) {
 .ipad-col {
     flex: 0 0 33%;
@@ -1546,4 +1569,41 @@ select.form-control-sm.form-control + i.fa{
     width: 71vh;
     max-width: 71vh;
   }
+}
+/* Ipad 2 */
+@media  (min-device-width: 600px) and (max-device-width: 768px) {
+  .main-content-message {
+    min-height: 928px !important;
+  }
+}
+/* Ipad pro 2 */
+@media  (min-device-width: 769px) and (max-device-width: 1024px) {
+  .main-content {
+      min-height: 1273px !important;
+  }
+  .main-content-message {
+    min-height: 1273px !important;
+  }
+}
+/* LCD */
+@media  (min-device-width: 1500px) and (max-device-width: 2000px) {
+  .main-content {
+      min-height: 986px !important;
+  }
+  .main-content-message {
+    min-height: 928px !important;
+  }
+  .photo-item-cover {
+    height: 244px;
+  }
+  .photo-item {
+    height: 244px;
+  }
+  .search-content .user-item {
+    min-height: 350px;
+  }
+}
+.ipad-col .user-item {
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -1,5 +1,22 @@
 @extends('layouts.page')
 @section('content')
+<style>
+@media  (min-device-width: 600px) and (max-device-width: 768px) {
+  .foo_container {
+    margin-left: -5rem !important;
+  }
+}
+@media  (min-device-width: 768px) and (max-device-width: 1024px) {
+  .foo_container {
+    margin-left: -5rem !important;
+  }
+}
+@media  (min-device-width: 1500px) and (max-device-width: 2000px) {
+  .foo_container {
+    margin-left: 14rem !important;
+  }
+}
+</style>
     <div class="conversations clearfix">
 
         <div class="float-left list-conversations">

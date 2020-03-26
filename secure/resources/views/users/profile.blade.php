@@ -29,19 +29,24 @@
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key={!! env('GOOGLE_PLACE_API','AIzaSyBjVRkL8MOLaVd-fjloQguTIQDLAAzA4w0') !!}&callback=showUserLocation" async defer></script>
-    <style>
 
-
-    </style>
 @endsection
 
 @section('content')
+<style>
+@media  (min-device-width: 1500px) and (max-device-width: 2000px) {
+  .foo_container {
+    margin-left: 16rem !important;
+  }
+}
 
+</style>
     <div class="landing">
 
         <div class="container-fluid main_container ">
             @include('partials.sidebar')
                 <div class="main">
+                  <div class="main-content">
 
                     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm hidden-sm hidden-xs" id="profile-header">
                         <div class="container">
@@ -185,6 +190,8 @@
                         <a href="javascript:void(0)" class="user-interest">{!! $interest->text !!}</a>
                     @endforeach
                 </div>
+              </div>
+
                     <div class="footer" style="position: relative !important; width: 100%;"  >
                         <div class="container foo_container" >
                             <div class="text-center">
@@ -208,16 +215,12 @@
                             </div>
                         </div>
                     </div>
+
             @if(!auth()->check())
                 </div>
-
-
             @endif
-
-
         </div>
-
 </div>
 
-    </div>
+    <!-- </div> -->
 @endsection

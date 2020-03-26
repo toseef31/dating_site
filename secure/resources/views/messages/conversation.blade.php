@@ -14,7 +14,7 @@
     </div>
     <div class="list-messages">
         <a href="{{url('/messages')}}"  class="meanmenu-reveal meanicon-bar d-md-none d-lg-none" style="left: 15px; text-align: center; text-indent: 0px; font-size: 25px;
-         position: absolute;top: 12%; z-index: 99;">
+         position: absolute;top: 18%; z-index: 99;">
             <i class="fa fa-arrow-left"></i>
         </a>
         <ul class="list-unstyled mb-0">
