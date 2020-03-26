@@ -1555,6 +1555,9 @@ position: relative;
   .main-content-message {
     min-height: 928px !important;
   }
+  .photo-item-cover {
+    height: 244px;
+  }
 }
 .ipad-col .user-item {
   background-repeat: no-repeat;
