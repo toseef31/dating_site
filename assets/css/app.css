@@ -1459,7 +1459,7 @@ select.form-control-sm.form-control + i.fa{
     min-width: 47%;
   }
   .profile-ipad-img {
-    min-width: 100%;
+    min-width: 50%;
     margin-bottom: 10px;
   }
   .photo-item-cover {
