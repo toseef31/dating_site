@@ -1469,7 +1469,7 @@ select.form-control-sm.form-control + i.fa{
     height: 220px !important;
   }
   .ipad-photo-img {
-      min-width: 100%;
+      min-width: 50%;
     }
     .view-photo-right .content-photo {
       margin-left: 0px !important;
