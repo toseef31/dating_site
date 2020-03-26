@@ -1591,7 +1591,7 @@ select.form-control-sm.form-control + i.fa{
   }
   .main-navbar-logo {
     position: relative;
-    right: 63%;
+    right: 12rem;
   }
 }
 /* Ipad pro 2 */
@@ -1604,7 +1604,7 @@ select.form-control-sm.form-control + i.fa{
   }
   .main-navbar-logo {
     position: relative;
-    right: 100%;
+    right: 21rem;
   }
 }
 /* LCD */
