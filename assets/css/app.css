@@ -1461,6 +1461,13 @@ position: relative;
   min-height: 600px;
 }
  /* Mobile */
+@media (max-width: 400px) {
+  #modalPhoto .modal-dialog {
+    width: 50vh;
+    max-width: 50vh;
+  }
+}
+ /* Mobile */
 @media (max-width: 576px) {
 .ipad-col {
     min-width: 47%;
