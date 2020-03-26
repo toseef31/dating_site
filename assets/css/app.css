@@ -1537,10 +1537,7 @@ position: relative;
     .main-content-message {
       min-height: 413px !important;
     }
-    .main-navbar-logo {
-      position: relative;
-      right: 43%;
-    }
+
 }
 /* Ipad */
 @media (max-width: 768px) {
@@ -1564,10 +1561,7 @@ position: relative;
   .main-content {
     min-height: 928px !important;
   }
-  .main-navbar-logo {
-    position: relative;
-    right: 63%;
-  }
+
 }
 /* Ipad Pro */
 @media (max-width: 1024px) {
@@ -1588,15 +1582,23 @@ position: relative;
     width: 71vh;
     max-width: 71vh;
   }
+
+}
+/* Mobiel 2 */
+@media  (min-device-width: 200px) and (max-device-width: 600px) {
   .main-navbar-logo {
     position: relative;
-    right: 100%;
+    right: 43%;
   }
 }
 /* Ipad 2 */
 @media  (min-device-width: 600px) and (max-device-width: 768px) {
   .main-content-message {
     min-height: 928px !important;
+  }
+  .main-navbar-logo {
+    position: relative;
+    right: 63%;
   }
 }
 /* Ipad pro 2 */
@@ -1606,6 +1608,10 @@ position: relative;
   }
   .main-content-message {
     min-height: 1273px !important;
+  }
+  .main-navbar-logo {
+    position: relative;
+    right: 100%;
   }
 }
 /* LCD */
