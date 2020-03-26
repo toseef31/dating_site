@@ -1457,6 +1457,9 @@ position: relative;
 .main-content {
   min-height: 600px;
 }
+.main-content-message {
+  min-height: 600px;
+}
  /* Mobile */
 @media (max-width: 576px) {
 .ipad-col {
@@ -1481,6 +1484,9 @@ position: relative;
     .view-photo-right .photo-action {
       width: 90%;
       left: 21px;
+    }
+    .main-content-message {
+      min-height: 413px !important;
     }
 }
 /* Ipad */
@@ -1526,16 +1532,28 @@ position: relative;
     max-width: 71vh;
   }
 }
+/* Ipad 2 */
+@media  (min-device-width: 600px) and (max-device-width: 768px) {
+  .main-content-message {
+    min-height: 928px !important;
+  }
+}
 /* Ipad pro 2 */
 @media  (min-device-width: 769px) and (max-device-width: 1024px) {
   .main-content {
       min-height: 1273px !important;
+  }
+  .main-content-message {
+    min-height: 1273px !important;
   }
 }
 /* LCD */
 @media  (min-device-width: 1500px) and (max-device-width: 2000px) {
   .main-content {
       min-height: 986px !important;
+  }
+  .main-content-message {
+    min-height: 928px !important;
   }
 }
 .ipad-col .user-item {
