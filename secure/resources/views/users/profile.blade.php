@@ -79,7 +79,7 @@
                                         <p class="user-address font-weight-bold mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
                                         @endif
                                         @if($user->status == 'Online')
-                                        <p style="color: #0aec0a;">Online</p>
+                                        <span style="color: #0aec0a;position: absolute;top: 47%;left: 28%;">Online Now</span>
                                         @endif
                                     </li>
                                 </ul>
