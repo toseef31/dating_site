@@ -1551,6 +1551,9 @@ select.form-control-sm.form-control + i.fa{
   .photo-item-cover {
     height: 244px;
   }
+  .search-content .user-item {
+    min-height: 350px;
+  }
 }
 .ipad-col .user-item {
   background-repeat: no-repeat;
