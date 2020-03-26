@@ -1598,7 +1598,7 @@ position: relative;
   }
   .main-navbar-logo {
     position: relative;
-    right: 63%;
+    right: 12rem;
   }
 }
 /* Ipad pro 2 */
@@ -1611,7 +1611,7 @@ position: relative;
   }
   .main-navbar-logo {
     position: relative;
-    right: 100%;
+    right: 21rem;
   }
 }
 /* LCD */
