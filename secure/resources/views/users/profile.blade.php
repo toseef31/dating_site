@@ -29,14 +29,18 @@
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key={!! env('GOOGLE_PLACE_API','AIzaSyBjVRkL8MOLaVd-fjloQguTIQDLAAzA4w0') !!}&callback=showUserLocation" async defer></script>
-    <style>
 
-
-    </style>
 @endsection
 
 @section('content')
+<style>
+@media  (min-device-width: 1500px) and (max-device-width: 2000px) {
+  .foo_container {
+    margin-left: 16rem !important;
+  }
+}
 
+</style>
     <div class="landing">
 
         <div class="container-fluid main_container ">
