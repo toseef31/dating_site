@@ -8,7 +8,7 @@
 }
 @media  (min-device-width: 768px) and (max-device-width: 1024px) {
   .foo_container {
-    margin-left: -5rem !important;
+    margin-left: 0rem !important;
   }
 }
 @media  (min-device-width: 1500px) and (max-device-width: 2000px) {
