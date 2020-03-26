@@ -78,6 +78,9 @@
                                         @if($user->address !=null && $user->country)
                                         <p class="user-address font-weight-bold mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
                                         @endif
+                                        @if($user->status == 'Online')
+                                        <p style="color: #0aec0a;">Online</p>
+                                        @endif
                                     </li>
                                 </ul>
                                 @if((auth()->check() && auth()->user()->id != $user->id) || !auth()->check())
