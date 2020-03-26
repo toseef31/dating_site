@@ -1510,3 +1510,7 @@ select.form-control-sm.form-control + i.fa{
     max-width: 71vh;
   }
 }
+.ipad-col .user-item {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
