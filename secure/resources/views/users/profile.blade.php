@@ -79,7 +79,7 @@
                                         <p class="user-address font-weight-bold mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
                                         @endif
                                         @if($user->status == 'Online')
-                                        <span style="color: #0aec0a;position: absolute;top: 47%;left: 28%;">Online Now</span>
+                                        <span style="color: #0aec0a;position: absolute;top: 47%;left: 21%;">Online Now</span>
                                         @endif
                                     </li>
                                 </ul>
@@ -120,6 +120,9 @@
                     ?>
                         <div class="col-md-2 profile-ipad-img">
                             <div data-id="{!! $user->id !!}" data-url="{!! url($avatar) !!}" class="photo-item-cover view-photo border" style="background-image: url('{!! url($avatar) !!}')">
+                              @if($user->status == 'Online')
+                              <span class="online"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                              @endif
                             </div>
                         </div>
 
