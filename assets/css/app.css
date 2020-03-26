@@ -1454,10 +1454,10 @@ select.form-control-sm.form-control + i.fa{
   min-height: 600px;
 }
  /* Mobile */
-@media (max-width: 400px) {
+@media (max-width: 444px) {
   #modalPhoto .modal-dialog {
     width: 50vh !important;
-    max-width: !important;
+    max-width:50vh !important;
   }
 }
  /* Mobile */
