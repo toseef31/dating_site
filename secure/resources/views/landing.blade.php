@@ -8,7 +8,10 @@
   .online i{
     color: #0aec0a;
   }
+  
 </style>
+<div class="main-content">
+
     <div class="page-title text-uppercase">
         Search Filter
     </div>
@@ -87,20 +90,22 @@
         @else
         @endif
         {!! $users->onEachSide(5)->links() !!}
-            <div class="footer" style="position: relative !important;">
-                <div class="container foo_container" style="margin-left: 5rem;">
-                    <div class="text-center">
-                        <ul class="list-unstyled menu-footer clearfix mb-1">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="{!! route('landing') !!}">Search</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                        <p class="mb-1">&copy; 2020 Singles Dating World</p>
-                    </div>
-                </div>
-            </div>
+    </div>
+  </div>
+
+    <div class="footer" style="position: relative !important;">
+      <div class="container foo_container" style="margin-left: 5rem;">
+        <div class="text-center">
+          <ul class="list-unstyled menu-footer clearfix mb-1">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="{!! route('landing') !!}">Search</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <p class="mb-1">&copy; 2020 Singles Dating World</p>
+        </div>
+      </div>
     </div>
 @endsection

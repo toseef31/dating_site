@@ -1454,6 +1454,10 @@ position: relative;
 #profile-header-sm .nav-link {
   color: white !important;
 }
+.main-content {
+  min-height: 600px;
+}
+ /* Mobile */
 @media (max-width: 576px) {
 .ipad-col {
     min-width: 100%;
@@ -1479,6 +1483,7 @@ position: relative;
       left: 21px;
     }
 }
+/* Ipad */
 @media (max-width: 768px) {
 .ipad-col {
     flex: 0 0 50% !important;
@@ -1497,7 +1502,11 @@ position: relative;
     width: 71vh;
     max-width: 71vh;
   }
+  .main-content {
+    min-height: 928px !important;
+  }
 }
+/* Ipad Pro */
 @media (max-width: 1024px) {
 .ipad-col {
     flex: 0 0 33%;
@@ -1515,6 +1524,18 @@ position: relative;
   #modalPhoto .modal-dialog {
     width: 71vh;
     max-width: 71vh;
+  }
+}
+/* Ipad pro 2 */
+@media  (min-device-width: 769px) and (max-device-width: 1024px) {
+  .main-content {
+      min-height: 1273px !important;
+  }
+}
+/* LCD */
+@media  (min-device-width: 1500px) and (max-device-width: 2000px) {
+  .main-content {
+      min-height: 986px !important;
   }
 }
 .ipad-col .user-item {
