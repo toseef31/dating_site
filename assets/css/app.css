@@ -1530,6 +1530,10 @@ select.form-control-sm.form-control + i.fa{
     .main-content-message {
       min-height: 413px !important;
     }
+    .main-navbar-logo {
+      position: relative;
+      right: 43%;
+    }
 }
 /* Ipad */
 @media (max-width: 768px) {
@@ -1553,6 +1557,10 @@ select.form-control-sm.form-control + i.fa{
   .main-content {
     min-height: 928px !important;
   }
+  .main-navbar-logo {
+    position: relative;
+    right: 63%;
+  }
 }
 /* Ipad Pro */
 @media (max-width: 1024px) {
@@ -1572,6 +1580,10 @@ select.form-control-sm.form-control + i.fa{
   #modalPhoto .modal-dialog {
     width: 71vh;
     max-width: 71vh;
+  }
+  .main-navbar-logo {
+    position: relative;
+    right: 100%;
   }
 }
 /* Ipad 2 */
