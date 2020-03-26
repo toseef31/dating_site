@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
     <!-- <link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">
+=======
+<!--    <link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">
+>>>>>>> 36a04e08e5450c7a68ce8be5dcb9a88c50aeeb08
     <link rel="stylesheet" type="text/css" href="{!! url('assets/css/fontawesome.min.css') !!}">
     <link rel="stylesheet" type="text/css" href="{!! url('assets/css/cropper.min.css') !!}">
     <link rel="stylesheet" type="text/css" href="{!! url('assets/css/admin.css') !!}">
@@ -60,7 +64,7 @@
     <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <button type="button" id="sidebarCollapse" class="btn btn-info hidden-xs">
+                <button type="button" id="sidebarCollapse" class="btn btn-info hidden-xs ">
                     <i class="fas fa-th-list "></i>
                 </button>
                 @include('admin.navbar')

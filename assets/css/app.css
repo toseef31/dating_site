@@ -20,6 +20,13 @@ html,body{
     font-weight: 400;
 
 }
+@media (min-device-width: 1025px)
+{
+    .hidden-lg
+    {
+        display: none;
+    }
+}
 
 @media  (min-device-width: 761px) and (max-device-width: 1024px) {
     .foo_container
@@ -38,11 +45,32 @@ html,body{
         flex: 0 0 calc(50% - 20px) !important;
         max-width: calc(50% - 20px) !important;
     }
+    .navbar-brand{
+        margin-right: 3rem;
+        padding: .25rem .5rem;
+        font-size: 1.2rem;
+    }
+    .main
+    {
+        width: 100% !important;
+    }
+    .conversations .list-conversations{
+
+        position: relative;
+        top: 12% !important;
+    }
+
+
+
+
 
 }
 
 @media (max-width: 760px){
-
+    .main
+    {
+        width: 100% !important;
+    }
     .hidden-xs{
         display: none;
     }
@@ -470,14 +498,15 @@ select.form-control-sm.form-control + i.fa{
     height: 100vh;
     position: fixed;
     background: #555eff;
-    width: 250px;
+    width: 25%;
     top: 0px;
 }
+
 .photos .sidebar,.profile .sidebar{
     height: 100vh;
     position: fixed;
     background: #555eff;
-    width: 250px;
+    width: 25%;
     top:0px;
     padding-top: 60px;
 }
@@ -514,14 +543,16 @@ select.form-control-sm.form-control + i.fa{
     margin-right: 10px;
     margin-top: 5px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1030px) {
     .profile .main,.landing .main,.photos .main {
-        margin-left: 252px; /* 180 + 40 */
+        margin-left: 25%;
     }
     .pages .main{
-        margin-left: 252px;
+        margin-left: 25%;
         position: relative;
+        bottom: 10px;
     }
+
 }
 
 .header-page{
@@ -530,7 +561,7 @@ select.form-control-sm.form-control + i.fa{
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
     background: #fff;
     border-bottom: 1px solid #ddd;
-    padding: 10px;
+    padding: 25px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -644,11 +675,11 @@ select.form-control-sm.form-control + i.fa{
     margin-bottom: 5px;
 }
 .photo-item.view-photo{
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .photo-item-cover.view-photo{
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .photo-item-cover {
@@ -1389,6 +1420,11 @@ select.form-control-sm.form-control + i.fa{
 {
     padding-left: 0px;
     padding-right: 0px;
+
+}
+.main{
+    width: 75%;
+    float: right;
 }
 .bold{
     font-size: 20px !important;
@@ -1463,7 +1499,9 @@ select.form-control-sm.form-control + i.fa{
  /* Mobile */
 @media (max-width: 576px) {
 .ipad-col {
+
     min-width: 47%;
+
   }
   .profile-ipad-img {
     min-width: 50%;

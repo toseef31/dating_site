@@ -1,5 +1,5 @@
-<div class="d-md-none d-lg-none" style="width: 100%;">
-<nav class="navbar navbar-expand-md navbar-light bg-blue"  id="profile-header-sm">
+<div class=" d-md-none d-lg-none" style="width: 100%;">
+<nav class="navbar navbar-expand-md  navbar-light bg-blue"  id="profile-header-sm">
     <!-- <div class="bg-blue"> -->
     <button type="button" class="navbar-toggler nav-btn" data-toggle="collapse" data-target="#navbarCollapse" style="background: #ffffff;">
         <span class="navbar-toggler-icon"></span>

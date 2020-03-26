@@ -4,6 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">
+>>>>>>> 60f1fd5eeae731d4f05d542a8e2e2a4e43cb0a7b
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/fontawesome.min.css') !!}">
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/cropper.min.css') !!}">
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/datepicker.min.css') !!}">
