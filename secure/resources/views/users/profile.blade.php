@@ -42,6 +42,7 @@
         <div class="container-fluid main_container ">
             @include('partials.sidebar')
                 <div class="main">
+                  <div class="main-content">
 
                     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm hidden-sm hidden-xs" id="profile-header">
                         <div class="container">
@@ -185,6 +186,8 @@
                         <a href="javascript:void(0)" class="user-interest">{!! $interest->text !!}</a>
                     @endforeach
                 </div>
+              </div>
+
                     <div class="footer" style="position: relative !important; width: 100%;"  >
                         <div class="container foo_container" >
                             <div class="text-center">
@@ -208,16 +211,12 @@
                             </div>
                         </div>
                     </div>
+
             @if(!auth()->check())
                 </div>
-
-
             @endif
-
-
         </div>
-
 </div>
 
-    </div>
+    <!-- </div> -->
 @endsection
