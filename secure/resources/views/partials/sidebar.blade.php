@@ -9,7 +9,7 @@
     </p> -->
         <a href="#" class="navbar-brand ml-2">
             <!-- <img src="https://demo.myclouddate.com/uploads/sites/n52fiuUta9o8rUR5seeb.png" height="28" alt="CoolBrand"> -->
-            <img src="{{$logo}}" height="28" alt="CoolBrand">
+            <img src="{{$logo}}" height="28" alt="CoolBrand" style="min-height: 55px;margin: auto;">
         </a>
     @if(auth()->check())
         <?php
