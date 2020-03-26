@@ -8,6 +8,12 @@
   .online i{
     color: #0aec0a;
   }
+    .user-item
+    {
+        background-repeat: no-repeat;
+
+        background-size: 100% 100%;
+    }
 </style>
     <div class="page-title text-uppercase">
         Search Filter
