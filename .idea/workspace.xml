@@ -82,10 +82,10 @@
       <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/secure/resources/views/users/profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="443">
+              <caret line="54" column="15" lean-forward="false" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
               <folding>
-                <element signature="e#12077#12099#0#HTML" expanded="true" />
+                <element signature="e#12299#12321#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>message</find>
       <find>ajax</find>
       <find>message(</find>
       <find>float-left message-box</find>
@@ -155,6 +154,7 @@
       <find>.foo_container</find>
       <find>2000</find>
       <find>browse</find>
+      <find>user-address font-weight-bold mt-2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -726,12 +726,12 @@
       <workItem from="1585116778469" duration="22993000" />
       <workItem from="1585202824525" duration="9615000" />
       <workItem from="1585219353066" duration="7073000" />
-      <workItem from="1585289373522" duration="12680000" />
+      <workItem from="1585289373522" duration="14060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153532000" />
+    <option name="totallyTimeSpent" value="154912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="875" extended-state="0" />
@@ -1161,10 +1161,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/secure/resources/views/users/profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        <state relative-caret-position="443">
+          <caret line="54" column="15" lean-forward="false" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
           <folding>
-            <element signature="e#12077#12099#0#HTML" expanded="true" />
+            <element signature="e#12299#12321#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
