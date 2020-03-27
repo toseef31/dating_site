@@ -11,7 +11,7 @@
     margin-left: 0rem !important;
   }
 }
-@media  (min-device-width: 1500px) and (max-device-width: 2000px) {
+@media  (min-device-width: 1900px) and (max-device-width: 2000px) {
   .foo_container {
     margin-left: 14rem !important;
   }
