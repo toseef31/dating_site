@@ -122,6 +122,10 @@ html,body{
 
 
 }
+body
+{
+    margin: auto;
+}
 button.search_btn {
     width: 30%;
     padding: 5px 0 !important;
@@ -581,6 +585,7 @@ position: relative;
     line-height: 50px;
     font-size: 20px;
     font-weight: bold;
+    padding-left: 20px;
 }
 .filter{
 }
@@ -591,6 +596,7 @@ position: relative;
     overflow: hidden;
     transition: all .2s ease;
     margin: 10px 0px;
+
 }
 .search-content .user-item:before{
     position: absolute;
