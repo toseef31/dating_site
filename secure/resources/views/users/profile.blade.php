@@ -39,10 +39,25 @@
     margin-left: 16rem !important;
   }
 }
+@media  (min-device-width: 765px) and (max-device-width: 1025px) {
+    .online-class
+    {
+        left:40% !important;
+    }
+}
+
 @media  (max-device-width: 760px) {
     .user-info {
         font-size: 0.75rem !important;
     }
+    .online-class
+    {
+        left:60% !important;
+    }
+}
+.online-class
+{
+    color: #0aec0a;position: absolute;top: 47%;left:21%;
 }
 .online {
   position: absolute;
@@ -90,7 +105,7 @@
                                         <p class="user-address font-weight-bold mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
                                         @endif
                                         @if($user->status == 'Online')
-                                        <span style="color: #0aec0a;position: absolute;top: 47%;left: 21%;">Online Now</span>
+                                        <span class="online-class">Online Now</span>
                                         @endif
                                     </li>
                                 </ul>
