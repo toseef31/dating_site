@@ -9,7 +9,7 @@
     color: #0aec0a;
   }
 
-  @media  (min-device-width: 1500px) and (max-device-width: 2000px) {
+  @media  (min-device-width: 1900px) and (max-device-width: 2000px) {
     .foo_container {
       margin-left: 16rem !important;
     }
@@ -100,7 +100,7 @@
   </div>
 
     <div class="footer" style="position: relative !important;">
-      <div class="container foo_container" style="margin-left:0;">
+      <div class="foo_container" style="margin-left:0;">
         <div class="text-center">
           <ul class="list-unstyled menu-footer clearfix mb-1">
             <li><a href="#">About</a></li>
