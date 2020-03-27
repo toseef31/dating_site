@@ -34,10 +34,15 @@
 
 @section('content')
 <style>
-@media  (min-device-width: 1500px) and (max-device-width: 2000px) {
+@media  (min-device-width: 1900px) and (max-device-width: 2000px) {
   .foo_container {
     margin-left: 16rem !important;
   }
+}
+@media  (max-device-width: 760px) {
+    .user-info {
+        font-size: 0.75rem !important;
+    }
 }
 .online {
   position: absolute;
@@ -51,9 +56,10 @@
         <div class="container-fluid main_container ">
             @include('partials.sidebar')
                 <div class="main">
+
                   <div class="main-content">
 
-                    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm hidden-sm hidden-xs" id="profile-header">
+                    <nav class="navbar navbar-expand navbar-expand-md navbar-expand-lg navbar-light bg-white shadow-sm " id="profile-header">
                         <div class="container">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -204,7 +210,7 @@
               </div>
 
                     <div class="footer" style="position: relative !important; width: 100%;"  >
-                        <div class="container foo_container" style="margin-left:0;">
+                        <div class="foo_container" style="margin-left:0;">
                             <div class="text-center">
                                 <ul class="list-unstyled menu-footer clearfix mb-1">
                                     <li><a href="#">About</a></li>

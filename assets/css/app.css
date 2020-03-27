@@ -109,23 +109,21 @@ html,body{
     .conversations .list-conversations{
         width: 100% !important;
         position: relative;
-        top: 18% !important;
+        top: 15% !important;
     }
     .conversations .message-box{
         width: 100% !important;
+        height: 95% !important;
 
     }
     .conversations{
-      top: -51px !important;
+      top: 0px !important;
 
     }
 
 
 }
-body
-{
-    margin:0 auto;
-}
+
 button.search_btn {
     width: 30%;
     padding: 5px 0 !important;
