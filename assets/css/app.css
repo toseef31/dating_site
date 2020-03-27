@@ -124,7 +124,7 @@ html,body{
 }
 body
 {
-    margin: auto;
+    margin:0 auto;
 }
 button.search_btn {
     width: 30%;
