@@ -39,6 +39,11 @@
     margin-left: 16rem !important;
   }
 }
+.online {
+  position: absolute;
+  left: 5%;
+  color: #0aec0a;
+}
 
 </style>
     <div class="landing">
@@ -77,6 +82,9 @@
                                         </p>
                                         @if($user->address !=null && $user->country)
                                         <p class="user-address font-weight-bold mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!}</p>
+                                        @endif
+                                        @if($user->status == 'Online')
+                                        <span style="color: #0aec0a;position: absolute;top: 47%;left: 21%;">Online Now</span>
                                         @endif
                                     </li>
                                 </ul>
@@ -117,6 +125,9 @@
                     ?>
                         <div class="col-md-2 profile-ipad-img">
                             <div data-id="{!! $user->id !!}" data-url="{!! url($avatar) !!}" class="photo-item-cover view-photo border" style="background-image: url('{!! url($avatar) !!}')">
+                              @if($user->status == 'Online')
+                              <span class="online"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                              @endif
                             </div>
                         </div>
 
@@ -193,7 +204,7 @@
               </div>
 
                     <div class="footer" style="position: relative !important; width: 100%;"  >
-                        <div class="container foo_container" >
+                        <div class="container foo_container" style="margin-left:0;">
                             <div class="text-center">
                                 <ul class="list-unstyled menu-footer clearfix mb-1">
                                     <li><a href="#">About</a></li>

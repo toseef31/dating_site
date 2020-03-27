@@ -41,7 +41,7 @@
             <state relative-caret-position="632">
               <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
-                <marker date="1585226849671" expanded="false" signature="1344:1354" ph="..." />
+                <marker date="1585294928699" expanded="true" signature="1447:2060" ph="..." />
               </folding>
             </state>
           </provider>
@@ -79,12 +79,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/secure/resources/views/partials/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-              <folding />
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1585294928700" expanded="false" signature="1216:1232" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/secure/resources/views/partials/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -123,7 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.footer</find>
       <find>u/</find>
       <find>profile(</find>
       <find>message</find>
@@ -153,6 +155,7 @@
       <find>side</find>
       <find>&lt;&lt;&lt;</find>
       <find>&lt;&lt;&lt;&lt;</find>
+      <find>CoolBrand</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,7 +183,6 @@
         <option value="$PROJECT_DIR$/secure/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/secure/resources/views/layouts/custome.blade.php" />
         <option value="$PROJECT_DIR$/secure/resources/views/custome.blade.php" />
-        <option value="$PROJECT_DIR$/secure/resources/views/partials/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/secure/resources/views/partials/navbar.blade.php" />
         <option value="$PROJECT_DIR$/secure/resources/views/admin/home.blade.php" />
         <option value="$PROJECT_DIR$/assets/css/admin.css" />
@@ -191,6 +193,7 @@
         <option value="$PROJECT_DIR$/secure/resources/views/messages/conversation.blade.php" />
         <option value="$PROJECT_DIR$/assets/css/app.css" />
         <option value="$PROJECT_DIR$/secure/resources/views/landing.blade.php" />
+        <option value="$PROJECT_DIR$/secure/resources/views/partials/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/secure/resources/views/partials/header.blade.php" />
       </list>
     </option>
@@ -724,15 +727,15 @@
       <workItem from="1585116778469" duration="22993000" />
       <workItem from="1585202824525" duration="9615000" />
       <workItem from="1585219353066" duration="7073000" />
-      <workItem from="1585289373522" duration="1825000" />
+      <workItem from="1585289373522" duration="1904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142677000" />
+    <option name="totallyTimeSpent" value="142756000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="2" width="1612" height="875" extended-state="1" />
+    <frame x="-7" y="2" width="1612" height="875" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2921493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1032,7 +1035,7 @@
         <state relative-caret-position="5321">
           <caret line="1503" column="0" lean-forward="false" selection-start-line="1503" selection-start-column="0" selection-end-line="1503" selection-end-column="0" />
           <folding>
-            <marker date="1585227063472" expanded="true" signature="15854:15857" ph="{...}" />
+            <marker date="1585294928695" expanded="true" signature="15854:15857" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1090,7 +1093,7 @@
         <state relative-caret-position="632">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
-            <marker date="1585226849671" expanded="false" signature="1344:1354" ph="..." />
+            <marker date="1585294928699" expanded="true" signature="1447:2060" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1137,18 +1140,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/secure/resources/views/partials/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1585294928700" expanded="false" signature="1216:1232" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/secure/resources/views/partials/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/secure/resources/views/partials/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding />
         </state>
       </provider>
