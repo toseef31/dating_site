@@ -1638,5 +1638,5 @@ select.form-control-sm.form-control + i.fa{
 }
 .ipad-col .user-item {
   background-repeat: no-repeat;
-  background-size: cover;
+    background-size: 100% 100%;
 }
