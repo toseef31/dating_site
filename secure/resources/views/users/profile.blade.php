@@ -48,7 +48,7 @@
         left:40% !important;
     }
 }
-@media  (min-device-width: 576px) {
+@media  (max-device-width: 576px) {
     .online-class
     {
         left:10% !important;
