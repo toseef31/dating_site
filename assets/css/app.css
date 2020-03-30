@@ -24,29 +24,19 @@ html,body{
 {
     .hidden-lg
     {
-        display: none !important;
-    }
-
-}
-@media (max-width: 990px)
-{
-    .hidden-sm
-    {
         display: none;
     }
-    .main
-    {
-        width: 100% !important;
-    }
 }
 
-@media  (min-device-width:761px) and (max-device-width:1024px) {
-
+@media  (min-device-width: 761px) and (max-device-width: 1024px) {
     .foo_container
     {
         margin-left: 0rem !important;
     }
-
+    .hidden-sm
+    {
+        display: none!important;
+    }
     .conversations .message-box .list-messages ul{
         width: 90% !important;
 
@@ -60,7 +50,10 @@ html,body{
         padding: .25rem .5rem;
         font-size: 1.2rem;
     }
-
+    .main
+    {
+        width: 100% !important;
+    }
     .conversations .list-conversations{
 
         position: relative;
@@ -376,10 +369,9 @@ position: relative;
 	color:gray;
 }
 .footer{
-    /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25); */
-    /* -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25); */
-    /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25); */
-    border-top: 1px solid #cccc;
+    /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25); */
     min-height: 60px;
     background: white;;
     padding: 18px 0px;
@@ -1672,4 +1664,5 @@ background:#6ba8f7;
 .ipad-col .user-item {
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
