@@ -33,7 +33,7 @@
     <div class=" filter shadow-sm p-3 border bg-white">
         <form class="form-inline" action="" id="formFilter">
 
-            <div class="filter col-12 col-md-4 m-1">
+            <div class="filter col-12 col-md-4 ">
             <strong>I am a&nbsp;</strong>
             <div class="custom-control custom-radio custom-control-inline">
                 <input{!! request()->get('gender') == 'male' || (auth()->check() && auth()->user()->gender == '1') || !auth()->check()?' checked':'' !!} type="radio" value="male" id="gender-filter-male" name="gender" class="custom-control-input">
@@ -46,7 +46,7 @@
             </div>
 
 
-            <div class="filter col-12 col-md-4 m-1">
+            <div class="filter col-12 col-md-4 ">
             <strong>Seeking a&nbsp;</strong>
             <div class="custom-control custom-checkbox custom-control-inline">
                 <input{!! in_array(1,$default_preference)?' checked':'' !!} type="checkbox" value="male" id="seeking-filter-male" name="seeking[]" class="custom-control-input">
@@ -59,7 +59,7 @@
 
             </div>
 
-            <div class="filter col-12 col-md-4 m-1">
+            <div class="filter col-12 col-md-4 ">
                 <select class="search_search custom-select custom-select-sm w-50" name="country" id="filter-country">
                     <option value="">Country</option>
                     @foreach(countries() as $key=>$country)
