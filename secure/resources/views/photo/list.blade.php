@@ -17,7 +17,7 @@
                         $avatar ='http://localhost/dating/'.$avatar;
                       }
                        ?>
-                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-25">
+                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-20">
                         <div class="media-body pt-4">
                             <p class="font-weight-bold text-uppercase"><a href="{!! route('profile',['username'=>$user->username]) !!}">#{!! $user->username !!}</a></p>
                             <p>{!! $user->photos()->count() !!} photos</p>
@@ -52,7 +52,6 @@
                                 </div>
                             @endforeach
                         </div>
-                        <hr>
                         <p class="text-center">
                             <button data-id="{!! $user->id !!}" data-page="1" class="load_more_photo btn btn-sm btn-primary" style="padding-left: 50px!important;padding-right: 50px!important;"><i class="fas fa-spinner fa-spin"></i> Load more</button>
                         </p>

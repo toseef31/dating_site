@@ -4,8 +4,12 @@
     <button type="button" class="navbar-toggler nav-btn" data-toggle="collapse" data-target="#navbarCollapse" style="background: #ffffff;">
         <span class="navbar-toggler-icon"></span>
     </button>
+   <?php
+    $logo = setting('website_logo');
+    $logo = $logo ? url($logo) : url('assets/images/logo_white.png');
+    ?>
     <a href="#" class="navbar-brand">
-        <img src="https://demo.myclouddate.com/uploads/sites/n52fiuUta9o8rUR5seeb.png" height="28" alt="CoolBrand">
+      <img src="{{$logo}}" height="68" class="main-navbar-logo" alt="CoolBrand" style="min-height:48px;">
     </a>
     <!-- </div> -->
     <div class="collapse navbar-collapse"  id="navbarCollapse">

@@ -5,12 +5,11 @@
     <div class="container">
         <div class="text-center">
             <ul class="list-unstyled menu-footer clearfix mb-1">
-                <li><a href="#">About</a></li>
+                @foreach($pages as $page)
+                <li><a href="{{route('page',$page->slug)}}">{{$page->title}}</a></li>
+                @endforeach
                 <li><a href="#">Blog</a></li>
                 <li><a href="{!! route('landing') !!}">Search</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Contact</a></li>
             </ul>
             <p class="mb-1">&copy; 2020 Singles Dating World</p>
         </div>

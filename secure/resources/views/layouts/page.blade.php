@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="pages">
-    <div class="header-page hidden-xs hidden-sm">
+    <div class="header-page ">
         <div class="container">
             <div class="main">
                 {!! isset($page_title)?$page_title: '&nbsp;' !!}

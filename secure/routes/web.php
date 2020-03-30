@@ -14,7 +14,7 @@ Route::get('/','HomeController@main')->name('home')->middleware('logged');
 Route::post('/','HomeController@postHome');
 Route::get('/u/{username}','UserController@profile')->name('profile')->where('username','[a-z0-9-_]+');
 Route::get('/photos/{username}','PhotoController@photos')->name('userphoto')->where('username','[a-z0-9-_]+');
-Route::get('/page/{slug}','WelcomeController@main')->name('page')->where('username','[a-z-]+');
+Route::get('/page/{slug}','WelcomeController@dynamicPage')->name('page')->where('username','[a-z-]+');
 Route::get('login/facebook', 'UserController@facebook')->name('loginfacebook')->middleware('logged');
 Route::post('login', 'HomeController@postHome')->name('login');
 Route::get('login/facebook/callback', 'UserController@facebookcallback')->name('loginfacebookcallback')->middleware('logged');
@@ -44,6 +44,7 @@ Route::post('ajax', 'AjaxController@main')->name('ajax');
 /*Admin*/
 Route::get('admin/login', 'Admin\AuthController@login')->name('adminlogin');
 Route::post('admin/login', 'Admin\AuthController@postLogin');
+
 Route::middleware('admin')->prefix('admin')->group(function(){
     Route::get('logout', 'Admin\AuthController@logout')->name('adminlogout');
     Route::post('ajax', 'Admin\AjaxController@main')->name('adminajax');
@@ -61,8 +62,10 @@ Route::middleware('admin')->prefix('admin')->group(function(){
     Route::get('user/delete/{id}', 'Admin\UserController@deleteUser')->name('admindeleteuser');
     /*Page*/
     Route::get('pages', 'Admin\HomeController@pages')->name('adminpages');
-    Route::get('page/add/{id?}', 'Admin\HomeController@addPage')->name('adminaddpage');
-    Route::post('page/add/{id?}', 'Admin\HomeController@submitPage')->name('adminaddpage');
+    Route::get('page/add/', 'Admin\HomeController@addPage')->name('adminaddpage');
+    Route::post('page/add', 'Admin\HomeController@submitPage')->name('adminaddpage');
+    Route::get('page/edit/{id}', 'Admin\HomeController@editPage')->name('editpage');
+    Route::post('page/update/{id?}', 'Admin\HomeController@updatePage')->name('updatepage');
     Route::get('page/delete/{id}', 'Admin\HomeController@deletePage')->name('admindeletepage');
 });
 // Route::get('/clear-cache', function() {

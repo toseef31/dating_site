@@ -10,7 +10,7 @@
         $logo = setting('website_logo');
         $logo = $logo ? url($logo) : url('assets/images/logo.png');
     ?>
-    <img src="{!! $logo !!}">
+    <img class="set-welcome-logo" src="{!! $logo !!}">
 </div>
 @yield('content')
 @include('partials.footer')

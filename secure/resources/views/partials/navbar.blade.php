@@ -5,14 +5,14 @@
     </button>
 
 <!-- <a href="#" class="navbar-brand">
-   <img src="https://demo.myclouddate.com/uploads/sites/DIBlX8KBDCEd9VftbPuh.png" height="28" alt="CoolBrand">
+   <img src="https://demo.myclouddate.com/uploads/sites/DIBlX8KBDCEd9VftbPuh.png" height="68" alt="CoolBrand">
  </a> -->
     <?php
     $logo = setting('website_logo');
     $logo = $logo ? url($logo) : url('assets/images/logo_white.png');
     ?>
     <a href="#" class="navbar-brand">
-      <img src="{{$logo}}" height="28" class="main-navbar-logo" alt="CoolBrand" style="min-height:48px;">
+      <img src="{{$logo}}" height="68" class="main-navbar-logo" alt="CoolBrand" style="min-height:48px;">
     </a>
 
   <!-- </div> -->

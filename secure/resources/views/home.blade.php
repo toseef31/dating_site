@@ -1,5 +1,18 @@
 @extends('layouts.welcome')
 @section('content')
+<style>
+.set-image {
+width:100%;
+margin:auto;
+}
+.btn-register {
+background:#f478c4;
+color:#ffffff;
+}
+.set-login {
+margin-top:5%;
+}
+</style>
     <div class="welcome overflow-hidden">
         <div class="container h-100 position-relative">
             <span class="position-absolute circle-1"></span>
@@ -10,10 +23,10 @@
                         $home_background = setting('home_background');
                         $home_background = $home_background ? url($home_background) : url('assets/images/couple.png');
                     ?>
-                    <img style="margin-top: calc(50% - 250px)" src="{!! $home_background !!}">
+                    <img class="set-image" src="{!! $home_background !!}">
                 </div>
                 <div class="col-md-6">
-                    <div class="row" style="padding-top: calc(100% - 400px)">
+                    <div class="row" class="set-login">
                         <div class="col-md-9 mx-auto pt-5">
                             @if(session()->has('fail_login'))
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -52,7 +65,7 @@
                                     <button class="btn btn-primary btn-block" type="submit">Login</button>
                                 </div>
                             </form>
-                            <p class="text-center mt-4 mb-4"><a href="{!! route('register') !!}">Register</a></p>
+                            <p class="text-center mt-4 mb-4"><a class="btn btn-register btn-block" href="{!! route('register') !!}">Register</a></p>
                             @if(setting('social_login'))
                             <div class="row">
                                 <div class="col-md-6">

@@ -113,7 +113,7 @@ html,body{
     }
     .conversations .message-box{
         width: 100% !important;
-        height: 95% !important;
+        height: 90% !important;
 
     }
     .conversations{
@@ -149,7 +149,7 @@ button.search_btn {
 a,
 a:hover,
 a:focus {
-    color: #555eff;
+    color: #6db6f7;
     text-decoration: none;
     transition: all 0.3s;
 }
@@ -340,13 +340,14 @@ select.form-control-sm.form-control + i.fa{
 }
 .welcome, .register{
     min-height: calc(100% - 153px);
-    background: #f6f6f6;
+    background-color: #b0cbe1;
+background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 }
 .circle-1{
     width: 700px;
     height: 700px;
     display: block;
-    background: #ffd4fa;
+    background: #f478c4;
     border-radius: 50%;
     left: -134px;
     top: -72px;
@@ -365,14 +366,14 @@ select.form-control-sm.form-control + i.fa{
 position: relative;
 }
 .push-right, a {
-	color:grey;
+	color:gray;
 }
 .footer{
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25); */
     min-height: 60px;
-    background: #f6f6f6;
+    background: white;;
     padding: 18px 0px;
     color: #000;
 }
@@ -386,6 +387,9 @@ position: relative;
 }
 .menu-footer li a:hover{
     color: #bcbcbc;
+}
+.set-welcome-logo {
+	max-height: 70px;
 }
 .register{
     background: #f6f6f6;
@@ -401,10 +405,10 @@ position: relative;
     border-top-left-radius: 10px;
 }
 .tab-register ul.nav-tabs li{
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .tab-register ul.nav-tabs li a.nav-link{
-    font-weight: 800;
+    font-weight: 600;
     padding: 20px 12px;
 }
 .tab-register ul.nav-tabs li a.nav-link.active{
@@ -506,18 +510,23 @@ position: relative;
 .pages .sidebar,.landing .sidebar{
     height: 100vh;
     position: fixed;
-    background: #555eff;
+	background-color: #b0cbe1;
+background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     width: 25%;
     top: 0px;
 }
-
+.w-20 {
+	width: 20%;
+margin-left: 20px;
+}
 .photos .sidebar,.profile .sidebar{
     height: 100vh;
     position: fixed;
-    background: #555eff;
+    background-color: #b0cbe1;
+background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     width: 25%;
     top:0px;
-    padding-top: 60px;
+    padding-top: 10px;
 }
 .profile .sidebar{
     padding-top: 150px;
@@ -570,7 +579,7 @@ position: relative;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
     background: #fff;
     border-bottom: 1px solid #ddd;
-    padding: 25px;
+    padding: 15px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -602,7 +611,7 @@ position: relative;
     left: 0px;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.46);
     content: '';
 }
 .search-content .user-item span{
@@ -675,8 +684,14 @@ position: relative;
 .photo-item.add-photo{
     color: #fff;
     padding-top: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+	transition: ease-in-out 2s;
 }
+.photo-item.add-photo:hover{
+	transform: rotate(360deg);
+background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
+}
+
 .bg-primary{
     background-color: #555eff!important;
 }
@@ -704,7 +719,7 @@ position: relative;
     background-color: rgba(0, 0, 0, 0.5);
 }
 #usermap{
-    height: 200px;
+    height: 150px;
     border-radius: 10px;
     border: 1px solid #ccc;
 }
@@ -714,12 +729,21 @@ position: relative;
     height: 90% !important;
     border-radius: 50%;
 }
+.btn-chatter {
+	color: #6ba8f7;
+background: #ffffff;
+}
+.btn-chatter:hover {
+	color: #ffffff !important;
+background:#6ba8f7;
+}
 .user-interest{
     background: #ddd;
-    color: #333;
+    color: #f76bac;
     padding: 5px 30px;
     display: inline-block;
     margin-right: 5px;
+	margin-bottom:5px;
     border-radius: 15px;
     font-weight: bold;
     border: 1px solid #ccc;
@@ -839,16 +863,16 @@ position: relative;
     background: #fff;
     padding: 6px 13px;
     border-radius: 36px;
-    color: #d744c0;
+    color: #f76bac;
 }
 .btn-love.active,.btn-unlove.active,.btn-unlove:hover,.btn-love:hover{
-    background: #d744c0;
+    background: #f76bac;
     color: #ffff;
     border-color: #bc46a5;
 }
 .btn-unlove{
     font-size: 25px;
-    color: #d744c0;
+    color: #b2b2b2;
     border: 1px solid#ccc;
     background: #fff;
     padding: 6px 16px;
@@ -1435,7 +1459,7 @@ position: relative;
 }
 .main{
     width: 75%;
-    float: right;
+    /*float: right;*/
 }
 .bold{
     font-size: 20px !important;
@@ -1496,6 +1520,7 @@ position: relative;
 }
 .main-content {
   min-height: 600px;
+  background: white;
 }
 .main-content-message {
   min-height: 600px;

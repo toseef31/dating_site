@@ -52,7 +52,7 @@
                         @endif
                         <li class="nav-item">
                             <p>
-                                <span class="text-uppercase">{!! fullname($user->fullname, $user->username) !!}</span>
+                                <span class="text-capitalize">{!! fullname($user->fullname, $user->username) !!}</span>
                                 <span class="user-info">
                                     {!! Carbon\Carbon::parse($user->birthday)->age !!}yr {!! $user->gender == 1 ? 'Male' : 'Female' !!}
                                     | Seeking {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male, Female') !!}
@@ -71,7 +71,7 @@
         </nav>
         <div class="container">
             @if($user->photos()->count() || (auth()->check() && auth()->user()->id == $user->id) )
-                <p class="page-title text-uppercase mb-1">Public Photos</p>
+                <p class="page-title text-capitalize mb-1">Public Photos</p>
                 <div class="row users-photo mb-3">
                     <?php
                     if((auth()->check() && auth()->user()->id == $user->id)){
@@ -124,11 +124,11 @@
                     </div>
                 </div>
             @endif
-                <p class="page-title text-uppercase mb-1">Location</p>
+                <p class="page-title text-capitalize mb-1">Location</p>
                 <div id="usermap"></div>
-                <p class="page-title text-uppercase mb-1 mt-3">About Me</p>
+                <p class="page-title text-capitalize mb-1 mt-3">About Me</p>
                 <div id="user-about" class="text-muted">{!! $user->about !!}</div>
-                <p class="page-title text-uppercase mb-1 mt-3">Preference</p>
+                <p class="page-title text-capitalize mb-1 mt-3">Preference</p>
                 <div id="user-preference">
                     @foreach($user->interests as $interest)
                         <a href="javascript:void(0)" class="user-interest">{!! $interest->text !!}</a>

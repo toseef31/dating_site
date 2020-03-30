@@ -18,7 +18,7 @@
 </style>
 <div class="main-content">
 
-    <div class="page-title text-uppercase">
+    <div class="page-title text-capitalize">
         Search Filter
     </div>
     @if(session()->has('success_register'))
@@ -33,7 +33,7 @@
     <div class=" filter shadow-sm p-3 border bg-white">
         <form class="form-inline" action="" id="formFilter">
 
-            <div class="filter col-12 col-md-3 m-1">
+            <div class="filter col-12 col-md-4 m-1">
             <strong>I am a&nbsp;</strong>
             <div class="custom-control custom-radio custom-control-inline">
                 <input{!! request()->get('gender') == 'male' || (auth()->check() && auth()->user()->gender == '1') || !auth()->check()?' checked':'' !!} type="radio" value="male" id="gender-filter-male" name="gender" class="custom-control-input">
@@ -46,7 +46,7 @@
             </div>
 
 
-            <div class="filter col-12 col-md-3 m-1">
+            <div class="filter col-12 col-md-4 m-1">
             <strong>Seeking a&nbsp;</strong>
             <div class="custom-control custom-checkbox custom-control-inline">
                 <input{!! in_array(1,$default_preference)?' checked':'' !!} type="checkbox" value="male" id="seeking-filter-male" name="seeking[]" class="custom-control-input">
@@ -99,19 +99,5 @@
     </div>
   </div>
 
-    <div class="footer" style="position: relative !important;">
-      <div class="foo_container" style="margin-left:0;">
-        <div class="text-center">
-          <ul class="list-unstyled menu-footer clearfix mb-1">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="{!! route('landing') !!}">Search</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <p class="mb-1">&copy; 2020 Singles Dating World</p>
-        </div>
-      </div>
-    </div>
+  @include('partials.footer')
 @endsection

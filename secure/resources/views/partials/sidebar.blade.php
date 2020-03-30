@@ -7,9 +7,9 @@
     <!-- <p class="text-center logo mb-4">
         <a href="{!! url('/') !!}"><img src="{!! $logo !!}" class="img-fluid"></a>
     </p> -->
-        <a href="#" class="navbar-brand d-block text-center ml-2" style="min-height: 40px; overflow: hidden;" >
+        <a href="/" class="navbar-brand d-block text-center ml-2" style="min-height: 70px; overflow: hidden;" >
             <!-- <img src="https://demo.myclouddate.com/uploads/sites/n52fiuUta9o8rUR5seeb.png" height="28" alt="CoolBrand"> -->
-            <img src="{{$logo}}" height="28" alt="CoolBrand" >
+            <img src="{{$logo}}" height="70" alt="CoolBrand" >
         </a>
     @if(auth()->check())
         <?php
