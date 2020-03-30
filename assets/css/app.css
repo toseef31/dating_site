@@ -1646,3 +1646,8 @@ select.form-control-sm.form-control + i.fa{
   /* background-size: cover; */
   background-size: 100% 100%;
 }
+@-moz-document url-prefix() {
+  .main-navbar-logo {
+    min-height: 35px !important;
+  }
+}
