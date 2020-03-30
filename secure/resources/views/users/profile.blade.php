@@ -55,7 +55,7 @@
     }
     .online-class
     {
-        left:60% !important;
+        left:55% !important;
     }
 }
 .online-class
