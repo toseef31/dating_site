@@ -1650,5 +1650,6 @@ select.form-control-sm.form-control + i.fa{
 @-moz-document url-prefix() {
   .main-navbar-logo {
     min-height: 35px !important;
+    height: 35px !important;
   }
 }
