@@ -55,7 +55,7 @@
     }
 }
 
-@media  (max-device-width: 760px) {
+@media (min-device-width: 576px) and  (max-device-width: 760px) {
     .user-info {
         font-size: 0.75rem !important;
     }
