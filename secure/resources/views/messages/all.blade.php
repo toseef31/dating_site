@@ -73,7 +73,8 @@
                 || navigator.userAgent.match(/Windows Phone/i)
             )
             {
-                $('.list-conversations').hide();
+                // $('.list-conversations').hide();
+                $('.list-conversations').hide("slide", { direction: "left" }, 1000);
                 $('.message-box').show();
             }
 
