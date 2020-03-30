@@ -22,7 +22,8 @@
         // dd($photo_file);
       }
        ?>
-        <div class="full_photo d-flex align-items-center"><img src="{!! url($photo_file) !!}" style="width:100%;max-height: 630px;min-height:500px;"></div>
+        <!-- <div class="full_photo d-flex align-items-center"><img src="{!! url($photo_file) !!}" style="width:100%;max-height: 630px;min-height:500px;"></div> -->
+        <div class="full_photo d-flex align-items-center"><img src="{!! url($photo_file) !!}" style="width:100%;max-height: 570px;min-height:450px;"></div>
     </div>
     <div class="col-md-4 view-photo-right">
         <div class="content-photo">
