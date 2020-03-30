@@ -75,6 +75,7 @@
                         </div>
                     </div>
                 </div>
+                
             @if(!auth()->check())
             </div>
             @endif
