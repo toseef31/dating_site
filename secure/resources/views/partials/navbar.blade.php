@@ -8,7 +8,7 @@
     $logo = $logo ? url($logo) : url('assets/images/logo_white.png');
     ?>
     <a href="#" class="navbar-brand">
-      <img src="{{$logo}}" height="50" class="main-navbar-logo" alt="CoolBrand" style="min-height:48px;">
+      <img src="{{$logo}}" height="40" class="main-navbar-logo" alt="CoolBrand" style="min-height:40px;">
     </a>
   <!-- </div> -->
   <div class="collapse navbar-collapse" id="navbarCollapse">
