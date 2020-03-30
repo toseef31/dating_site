@@ -376,9 +376,10 @@ position: relative;
 	color:gray;
 }
 .footer{
-    /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25); */
+    /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25); */
+    /* -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25); */
+    /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25); */
+    border-top: 1px solid #cccc;
     min-height: 60px;
     background: white;;
     padding: 18px 0px;
