@@ -59,7 +59,9 @@ html,body{
         position: relative;
         top: 12% !important;
     }
-
+    .header-page{
+        font-size: 15px !important;
+        }
 
 
 
@@ -120,7 +122,9 @@ html,body{
       top: 0px !important;
 
     }
-
+    .header-page{
+        font-size: 15px !important;
+        }
 
 }
 
