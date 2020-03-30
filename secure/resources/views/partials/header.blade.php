@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="{!! url('assets/css/app.css') !!}">
 <script src="{!! url('node_modules/socket.io-client/dist/socket.io.js') !!}"></script>
 <script src="{!! url('assets/js/jquery.min.js') !!}"></script>
+<script src="{!! url('assets/js/jquery-ui.js') !!}"></script>
 <script src="{!! url('assets/js/popper.min.js') !!}"></script>
 <script src="{!! url('assets/js/bootstrap.min.js') !!}"></script>
 <script src="{!! url('assets/js/jquery.fancybox.min.js') !!}"></script>
@@ -30,6 +31,7 @@
 <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/app.css">
 <script src="http://localhost/dating/node_modules/socket.io-client/dist/socket.io.js"></script>
 <script src="http://localhost/dating/assets/js/jquery.min.js"></script>
+<script src="http://localhost/dating/assets/js/jquery-ui.js"></script>
 <script src="http://localhost/dating/assets/js/popper.min.js"></script>
 <script src="http://localhost/dating/assets/js/bootstrap.min.js"></script>
 <script src="http://localhost/dating/assets/js/jquery.fancybox.min.js"></script>
