@@ -24,19 +24,29 @@ html,body{
 {
     .hidden-lg
     {
+        display: none !important;
+    }
+
+}
+@media (max-width: 990px)
+{
+    .hidden-sm
+    {
         display: none;
+    }
+    .main
+    {
+        width: 100% !important;
     }
 }
 
-@media  (min-device-width: 761px) and (max-device-width: 1024px) {
+@media  (min-device-width:761px) and (max-device-width:1024px) {
+
     .foo_container
     {
         margin-left: 0rem !important;
     }
-    .hidden-sm
-    {
-        display: none!important;
-    }
+
     .conversations .message-box .list-messages ul{
         width: 90% !important;
 
@@ -50,10 +60,7 @@ html,body{
         padding: .25rem .5rem;
         font-size: 1.2rem;
     }
-    .main
-    {
-        width: 100% !important;
-    }
+
     .conversations .list-conversations{
 
         position: relative;
