@@ -45,6 +45,12 @@
         left:40% !important;
     }
 }
+@media  (min-device-width: 576px) {
+    .online-class
+    {
+        left:10% !important;
+    }
+}
 
 @media  (max-device-width: 760px) {
     .user-info {
