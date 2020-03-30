@@ -23,7 +23,7 @@ padding-top:10px;
 }
 
         .custom-image
-        {   
+        {
             width:100%;
             height: 300px;
             object-fit:cover;
@@ -59,4 +59,3 @@ padding-top:10px;
     </div>
     </div>
 @endsection
-

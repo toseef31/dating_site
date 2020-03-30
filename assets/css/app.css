@@ -1674,5 +1674,6 @@ background:#6ba8f7;
 @-moz-document url-prefix() {
   .main-navbar-logo {
     min-height: 35px !important;
+    height: 35px !important;
   }
 }
