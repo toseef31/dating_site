@@ -6,7 +6,7 @@
             <div class="main">
                 {{--@endif--}}
                 <div class="main-content">
-
+                 @if(auth()->user()->id != $user->id)
                 <div class="top-photo pt-3 pb-3 pl-3">
                     <div class="media">
                       <?php
@@ -29,6 +29,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
                 <div class="main-photos mh-550">
                     <p class="page-title mb-2 mt-5 pl-3">Lastest Photos</p>
                     @if($user->photos()->count())
@@ -60,7 +61,7 @@
                 </div>
               </div>
 @include('partials.footer')
-                
+
                 <div class="modal" id="modalPhoto" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
