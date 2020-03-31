@@ -1,5 +1,5 @@
 
-<div class="sidebar hidden-sm hidden-xs ">
+<div class="sidebar hidden-sm hidden-xs2">
     <?php
     $logo = setting('logo_second');
     $logo = $logo ? url($logo) : url('assets/images/logo_white.png');

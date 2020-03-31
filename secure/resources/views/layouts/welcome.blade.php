@@ -13,6 +13,7 @@
     <img class="set-welcome-logo" src="{!! $logo !!}">
 </div>
 @yield('content')
+@yield('intro')
 @include('partials.footer')
 <script>
     var ajax_url = '{!! route('ajax') !!}';

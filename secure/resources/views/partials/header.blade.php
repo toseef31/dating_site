@@ -21,6 +21,7 @@
 <script src="{!! url('assets/js/jquery.mcustomscrollbar.min.js') !!}"></script>
 <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
 <script src="{!! url('assets/js/cropper.min.js') !!}"></script>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/cropper.min.css">
