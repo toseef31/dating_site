@@ -41,7 +41,6 @@
                         <p class="text-center text-primary">{!! ($user->ip)?$user->ip:'No IP' !!}</p>
                         <p class="age">&#64;{!! ($user->username)?$user->username:'No Username'  !!}</p>
                         <p class="age">{!! ($age)?$age:'No Age' !!} - {!! ($user->country)?countries($user->country):'No Country' !!}</p>
-
                         <div class="btn-group btn-block" role="group" aria-label="Basic example">
                             @if(!$user->is_admin)
                             <a onclick="return confirm('Are you sure?')" type="button" class="btn btn-danger" href="{!! route('admindeleteuser',['id'=>$user->id]) !!}"><i class="fas fa-trash"></i> Delete</a>

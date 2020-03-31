@@ -7,7 +7,6 @@ use App\User;
 use App\Conversation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use DB;
 
 class UserController extends Controller
 {
@@ -21,10 +20,7 @@ class UserController extends Controller
     public function main()
     {
         $users = User::paginate(30);
-        // $users = DB::table('users')->paginate(30);
         $pages = $users->links();
-        // $pages='';
-        // dd($users);
         return view('admin.users', compact('users','pages'));
     }
 

@@ -17,7 +17,7 @@
                         $avatar ='http://localhost/dating/'.$avatar;
                       }
                        ?>
-                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-25">
+                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-20">
                         <div class="media-body pt-4">
                             <p class="font-weight-bold text-uppercase"><a href="{!! route('profile',['username'=>$user->username]) !!}">#{!! $user->username !!}</a></p>
                             <p>{!! $user->photos()->count() !!} photos</p>
@@ -29,10 +29,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="main-photos">
+                <div class="main-photos mh-550">
                     <p class="page-title mb-2 mt-5 pl-3">Lastest Photos</p>
                     @if($user->photos()->count())
-                        <div class="row pl-3 mr-1">
+                        <div class="row pl-3 mr-1 mh-400">
                             @foreach($user->photos()->orderBy('created_at','DESC')->get()->take(16) as $photo)
 
                             <?php
@@ -45,14 +45,13 @@
                             }
                              ?>
                                 <div class="col-md-3 ipad-photo-img">
-                                    <div data-id="{!! $photo->id !!}" data-url="{!! url($photo->file) !!}" class="photo-item view-photo border shadow style" style=" background-repeat: no-repeat;
+                                    <div data-id="{!! $photo->id !!}" data-url="{!! url($photo->file) !!}" class="photo-item view-photo border shadow style" style="background-repeat: no-repeat;
                                             background-size: 100% 100%;background-image: url('{!! url($cover) !!}');">
 
                                     </div>
                                 </div>
                             @endforeach
                         </div>
-                        <hr>
                         <p class="text-center">
                             <button data-id="{!! $user->id !!}" data-page="1" class="load_more_photo btn btn-sm btn-primary" style="padding-left: 50px!important;padding-right: 50px!important;"><i class="fas fa-spinner fa-spin"></i> Load more</button>
                         </p>
@@ -60,22 +59,8 @@
                     @endif
                 </div>
               </div>
-
-                <div class="footer" style="position:relative !important;">
-                    <div class="container">
-                        <div class="text-center">
-                            <ul class="list-unstyled menu-footer clearfix mb-1">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="{!! route('landing') !!}">Search</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                            <p class="mb-1">&copy; 2020 Singles Dating World</p>
-                        </div>
-                    </div>
-                </div>
+@include('partials.footer')
+                
                 <div class="modal" id="modalPhoto" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">

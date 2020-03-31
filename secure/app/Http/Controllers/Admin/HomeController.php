@@ -11,7 +11,7 @@ use app\User;
 use app\Message;
 use DB;
 use Carbon;
-
+use Intervention\Image\Facades\Image;
 
 class HomeController extends Controller
 {
@@ -235,45 +235,98 @@ class HomeController extends Controller
     public function pages()
     {
         $pages = Page::all();
-        return view('admin.pages',compact('pages'));
+        return view('admin.page.pages',compact('pages'));
     }
 
-    public function addPage($id = false)
+    public function addPage()
     {
-        $page = false;
-        if($id){
-            $page = Page::where('id', $id)->first();
-        }
-        return view('admin.addpage',compact('page'));
+        return view('admin.page.add-page');
     }
 
-    public function submitPage($id = false)
+    public function submitPage(Request $request)
     {
-        $page = false;
-        if($id){
-            $page = Page::where('id', $id)->first();
-        }
-
-        if(!$page){
-            $page = new Page();
-        }
-
+        $fileName = $this->uploadImage($request);
         $rules = array(
-            'title' => 'required',
-            'content' => 'required'
+          'title' => 'required',
+          'content' => 'required'
         );
-
         $validator = Validator::make($this->request->all(), $rules);
         if($validator->fails()){
             return redirect()->back()->withErrors((array)$validator->errors());
         }
-        else{
-            $page->title = $this->request->get('title');
-            $page->slug = Str::slug($page->title);
-            $page->content = $this->request->get('content');
-            $page->save();
-            return redirect()->route('adminpages');
+
+        $page = new Page();
+        $page->title = $request->title;
+        $page->slug = Str::slug($page->title);
+        $page->content = $request->content;
+        $page->keywords = $request->keywords;
+        $page->image = $fileName;
+        $page->description = $request->description;
+        $page->save();
+        return redirect()->route('adminpages');
+    }
+
+    public function uploadImage($request)
+    {
+        if ($request->hasFile('image')) {
+            $picture = $request->file('image');
+            $images = Image::make($picture);
+            $fileName = pathinfo('_page_' . '_' . rand(), PATHINFO_FILENAME) . '.' . $picture->getClientOriginalExtension();
+            $images->save('uploads/' . $fileName);
+            return $fileName;
         }
+    }
+
+    public function editPage($id)
+    {
+      $edit  = Page::where('id', $id)->first();
+        return view('admin.page.edit-page', compact('edit'));
+    }
+
+
+    public function updatePage(Request $request, $id)
+    {
+        $fileName = $this->updateImage($request, $id);
+        $rules = array(
+          'title' => 'required',
+          'content' => 'required'
+        );
+        $validator = Validator::make($this->request->all(), $rules);
+        if($validator->fails()){
+            return redirect()->back()->withErrors((array)$validator->errors());
+        }
+
+        $page = Page::find($id);
+        $page->title = $request->title;
+        $page->slug = Str::slug($page->title);
+        $page->content = $request->content;
+        $page->keywords = $request->keywords;
+        $page->image = $fileName;
+        $page->description = $request->description;
+        $page->save();
+        return redirect()->route('adminpages');
+    }
+       public function updateImage($request, $id)
+    {
+        $img = Page::where('id', $id)->first();
+        if ($request->hasFile('image')) {
+            $file_path = $img->image;
+            if($img->image){
+              $storage_path = 'uploads/' . $file_path;
+              if (\File::exists($storage_path)) {
+                  unlink($storage_path);
+              }
+            }
+
+            $picture = $request->file('image');
+            $images = Image::make($picture);
+            $picture = $request->file('image');
+            $fileName = pathinfo('_logo_' . '_' . rand(), PATHINFO_FILENAME) . '.' . $picture->getClientOriginalExtension();
+            $images->save('uploads/' . $fileName);
+        } else {
+            $fileName = $img['image'];
+        }
+        return $fileName;
     }
 
     public function deletePage($id)
