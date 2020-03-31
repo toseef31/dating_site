@@ -1,5 +1,5 @@
-<div class=" d-md-none d-lg-none" style="width: 100%;">
-<nav class="navbar navbar-expand-md  navbar-light bg-blue"  id="profile-header-sm">
+<!-- <div class="d-md-none " style="width: 100%;"> -->
+<nav class="navbar  navbar-light bg-blue d-lg-none"  id="profile-header-sm">
     <!-- <div class="bg-blue"> -->
     <button type="button" class="navbar-toggler nav-btn" data-toggle="collapse" data-target="#navbarCollapse" style="background: #ffffff;">
         <span class="navbar-toggler-icon"></span>
@@ -8,8 +8,12 @@
     $logo = setting('website_logo');
     $logo = $logo ? url($logo) : url('assets/images/logo_white.png');
     ?>
+    <?php
+    $logo = setting('logo_second');
+    $logo = $logo ? url($logo) : url('assets/images/logo_white.png');
+    ?>
     <a href="#" class="navbar-brand">
-      <img src="{{$logo}}" height="68" class="main-navbar-logo" alt="CoolBrand" style="min-height:48px;">
+      <img src="{{$logo}}" height="40" class="main-navbar-logo" alt="CoolBrand" style="min-height:40px;">
     </a>
     <!-- </div> -->
     <div class="collapse navbar-collapse"  id="navbarCollapse">
@@ -53,4 +57,4 @@
         </div>
     </div>
 </nav>
-</div>
+<!-- </div> -->

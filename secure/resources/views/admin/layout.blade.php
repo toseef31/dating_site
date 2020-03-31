@@ -32,7 +32,7 @@
 </head>
 <body>
 <div class="wrapper">
-    <div id="sidebar">
+    <div id="sidebar" class="hidden-sm">
         <div class="admin">
             <?php
             $adminavatar = (!empty(auth()->user()->avatar))?url(auth()->user()->avatar):url('assets/images/'.auth()->user()->gender.'.jpg');
@@ -58,16 +58,16 @@
         </ul>
     </div>
     <div id="content">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      @include('admin.navbar')
+        <nav class="navbar navbar-expand-lg navbar-light bg-light admin-navbar">
             <div class="container-fluid">
                 <button type="button" id="sidebarCollapse" class="btn btn-info hidden-xs ">
                     <i class="fas fa-th-list "></i>
                 </button>
-                @include('admin.navbar')
                 <a class="btn btn-danger text-white d-none d-sm-block" href="{!! route('adminlogout') !!}"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid main">
             @yield('content')
 
         </div>
