@@ -16,6 +16,9 @@
     margin-left: 14rem !important;
   }
 }
+.footer{
+  position: fixed !important;
+}
 </style>
     <div class="conversations clearfix">
 
