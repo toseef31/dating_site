@@ -4,7 +4,8 @@
 @media (max-width: 444px) {
   .main-content {
     margin-top: 4rem;
-    min-height: 475px !important;
+    /* min-height: 475px !important; */
+    min-height: 87% !important;
   }
   .message-box {
     height: 400px !important;
@@ -13,13 +14,20 @@
 @media  (min-device-width: 444px) and (max-device-width: 768px) {
   .main-content {
     margin-top: 7rem;
-    min-height: 500px !important;
+    /* min-height: 500px !important; */
+    min-height: 93% !important;
 
   }
 }
 @media  (min-device-width: 600px) and (max-device-width: 768px) {
   .foo_container {
     margin-left: -5rem !important;
+  }
+}
+@media (max-device-width: 1024px) and (min-device-width: 769px){
+  .main-content {
+      min-height: 90% !important;
+      margin-top: 7rem;
   }
 }
 @media  (min-device-width: 768px) and (max-device-width: 1024px) {
