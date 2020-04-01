@@ -1599,6 +1599,16 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     }
 
 }
+/* Ipad Modal */
+@media (max-width: 767px) {
+.view-photo-right .photo-action {
+  width: 88%;
+  left: 22px;
+}
+.view-photo-right .content-photo {
+  margin-left: 0px !important;
+}
+}
 /* Ipad */
 @media (max-width: 768px) {
 .ipad-col {
@@ -1621,13 +1631,7 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   .main-content {
     min-height: 928px !important;
   }
-  .view-photo-right .photo-action {
-    width: 88%;
-    left: 22px;
-  }
-  .view-photo-right .content-photo {
-    margin-left: 0px !important;
-  }
+
 
 }
 /* Ipad Pro */
