@@ -34,6 +34,14 @@
 
 @section('content')
 <style>
+.abt-spc {
+min-height:88px;
+padding-top:10px;
+padding-bottom:10px;
+}
+.padd-top-20 {
+  padding-top:20px;
+}
 .padd-bottom-20 {
   padding-bottom:20px;
 }
@@ -107,18 +115,15 @@ font-weight: 600;
                                         </li>
                                     @endif
                                     <li class="nav-item">
-                                        <p class="mb-1">
+                                        <p class="mb-1 pl-4 padd-top-20">
                                             <span class="text-capitalize font-weight-bold pr-3 bold" >{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
-                                            <span class="user-info">
-                                    {!! Carbon\Carbon::parse($user->birthday)->age !!}yr {!! $user->gender == 1 ? 'Male' : 'Female' !!}
-                                                | Seeking {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male, Female') !!}
+                                            <span class="user-info">Age <strong> {!! Carbon\Carbon::parse($user->birthday)->age !!}</strong>. &nbsp;  {!! $user->gender == 1 ? 'Male' : 'Female' !!}&nbsp; seeking&nbsp; {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male, Female') !!}
                                 </span>
-                                        </p>
-                                        @if($user->address !=null && $user->country)
-                                        <p class="user-address font-weight-bold mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!} @if($user->status == 'Online')
+                                       @if($user->status == 'Online')
                                         <span class="online-class">Online Now</span>
-                                        @endif</p>
                                         @endif
+                                      </p>
+                                        
 
                                     </li>
                                 </ul>
@@ -226,8 +231,11 @@ font-weight: 600;
                 // @endif
                  ?>
                 <p class="page-title text-capitalize mb-1 mt-3 pl-4">About Me</p>
-                <div id="user-about" class="text-muted pl-4">{!! $user->about !!}</div>
+                <div id="user-about" class="text-muted pl-4 abt-spc">{!! $user->about !!}</div>
                 <p class="page-title text-capitalize mb-1 pl-4 ">Location</p>
+                 @if($user->address !=null && $user->country)
+                                        <p class="user-address mb-1 pl-4 mt-2"><i class="fas fa-map-marker-alt"></i> {!! fulladdress($user->address, $user->country) !!} 
+                                        </p>@endif
                 <div id="usermap" class="ml-4 mr-3"></div>
                 <p class="page-title text-capitalize mb-1 mt-3 pl-4">Interests</p>
                 <div id="user-preference" class="pl-4 padd-bottom-20">

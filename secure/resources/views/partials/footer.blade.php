@@ -5,6 +5,7 @@
     <div class="container">
         <div class="text-center">
             <ul class="list-unstyled menu-footer clearfix mb-1">
+                <li><a href="/">Home</a></li>
                 @foreach($pages as $page)
                 <li><a href="{{route('page',$page->slug)}}">{{$page->title}}</a></li>
                 @endforeach

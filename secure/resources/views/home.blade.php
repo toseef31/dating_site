@@ -4,6 +4,9 @@
 $seo_social_image = setting('social_image');
 ?>
 <style>
+.welcome {
+min-height:480px;
+}
 .form-group label {
 color:#ffffff;
 }
@@ -37,17 +40,16 @@ font-weight:bolder;
 background:white;
 padding-bottom:25px;
 }
-.intro-img {
-width:100%;
-height:250px;
-background-image: url('{!! isset($seo_image) ? $seo_image : url($seo_social_image) !!}');
-background-attachment: fixed;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-}
 .pt-20 {
  padding-top:20px;
+}
+.hidden {
+display:none;
+}
+@media screen and (max-width:760px) {
+.welcome {
+min-height:550px;
+}
 }
 </style>
     <div class="welcome overflow-hidden">
@@ -55,16 +57,16 @@ background-repeat: no-repeat;
           <!--  <span class="position-absolute circle-1"></span>
             <span class="position-absolute circle-2"></span> -->
             <div class="row h-100">
-                <div class="col-md-6 d-none d-sm-block"><!--  pt-5 -->
+                <div class="col-md-6 d-none hidden"><!-- d-sm-block  pt-5 -->
                     <?php
                         $home_background = setting('home_background');
                         $home_background = $home_background ? url($home_background) : url('assets/images/couple.png');
                     ?>
                     <img class="set-image" src="{!! $home_background !!}">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="row" class="set-login">
-                        <div class="col-md-9 mx-auto pt-5">
+                        <div class="col-md-6 mx-auto pt-5">
                             @if(session()->has('fail_login'))
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <strong>Warning!</strong> {!! session()->get('fail_login') !!}
@@ -128,8 +130,7 @@ background-repeat: no-repeat;
 <div class="text-center section-h1">
 <h1>Fun, free online dating website and app</h1>
 </div>
-<p class="section-summary">For everyone! Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-<div class="intro-img"></div>
+<p class="section-summary">For everyone! modi tempora incidunt ut labore et dolore magnam aliquam quaerat</p>
 <div class="container pt-20">
 <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
 

@@ -5,12 +5,26 @@
     $register_background = $register_background ? url($register_background) : url('assets/images/bg.jpg');
     ?>
     <style>
-
+         .mt-5, .my-5 {
+    margin-top: 1.7rem !important;
+        }
         .register{
             background-image: url("{!! $register_background !!}");
             background-repeat: no-repeat;
             background-position: top left;
+            height:630px;
         }
+        .footer {
+         max-height:80px !important;
+}
+@media screen and (max-width:760px) {
+.register {
+min-height:960px;
+}
+.p-5 {
+    padding: 1.2rem !important;
+}
+}
     </style>
 @endsection
 @section('javascript')
