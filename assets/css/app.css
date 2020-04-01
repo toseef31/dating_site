@@ -1584,10 +1584,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     margin-bottom: 10px;
   }
   .photo-item-cover {
-    height: 220px !important;
+    height: 130px !important;
   }
   .photo-item {
-    height: 220px !important;
+    height: 130px !important;
   }
   .ipad-photo-img {
       min-width: 50%;
