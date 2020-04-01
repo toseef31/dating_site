@@ -31,9 +31,9 @@
           }
           ?>
       <a href="{!! route('profile',['username'=>$user->username]) !!}" class="nav-item nav-link">
-        <div class="" style="display:-webkit-box;">
+        <div class="" style="display:flex;">
           <img src="{!! $avatar !!}" class="w-20 rounded-circle mb-2 nav-item nav-link">
-          <span class="mbl-hdr-nm">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
+          <span class="mbl-hdr-nm" style="margin-top: 7%;">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
         </div>
       </a>
       <a class="{!! Illuminate\Support\Facades\Route::is('landing')?'active':'' !!} nav-item nav-link" href="{!! route('landing') !!}">Browse <i class="fas fa-search" style="float: right;"></i></a>

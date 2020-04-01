@@ -31,10 +31,10 @@
                 }
                 ?>
                 <a href="{!! route('profile',['username'=>$user->username]) !!}" class="nav-item nav-link ">
-                    <div class="" style="display:-webkit-box;">
-                        <img src="{!! $avatar !!}" class="w-20 rounded-circle mb-2 nav-item nav-link" style="width: 20%">
-                        <span class="mbl-hdr-nm">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
-                    </div>
+                  <div class="" style="display:flex;">
+                    <img src="{!! $avatar !!}" class="w-20 rounded-circle mb-2 nav-item nav-link">
+                    <span class="mbl-hdr-nm" style="margin-top: 7%;">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
+                  </div>
                 </a>
                 <a class="{!! Illuminate\Support\Facades\Route::is('adminhome')?'active':'' !!} nav-item nav-link" href="{!! route('adminhome') !!}">Dashboard <i class="fas fa-home float-right" style="padding-left:48px; margin-right: 50px;"></i></a>
                 <a class="{!! Illuminate\Support\Facades\Route::is('adminsetting') || Illuminate\Support\Facades\Route::is('adminsetting')?'active':'' !!} nav-item nav-link" href="{!! route('adminsetting') !!}">Setting  <span class="badge badge-light ">{!! $unread > 0 ? $unread: '' !!}</span><i class="fas fa-cogs float-right"  style="padding-left:30px; margin-right: 50px;"></i></a>
