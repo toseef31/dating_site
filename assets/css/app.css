@@ -1601,6 +1601,14 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
        min-height: 150px !important;
        margin: 5px 0px !important;
     }
+    .search-content .user-item .fullname {
+      top: 98px !important;
+      font-size: 17px !important;
+    }
+    .search-content .user-item .address {
+      font-size: 11px !important;
+      top: 118px !important;
+    }
 
 }
 /* Ipad Modal */
