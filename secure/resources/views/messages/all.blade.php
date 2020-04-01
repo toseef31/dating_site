@@ -5,7 +5,7 @@
   .main-content {
     margin-top: 4rem;
     /* min-height: 475px !important; */
-    min-height: 87% !important;
+    min-height: 100% !important;
   }
   .message-box {
     height: 400px !important;
