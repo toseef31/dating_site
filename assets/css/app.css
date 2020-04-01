@@ -1620,8 +1620,8 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     max-width: 33% !important;
   }
   #modalPhoto .modal-dialog {
-    width: 71vh;
-    max-width: 71vh;
+    width: 60vh;
+    max-width: 60vh;
   }
   .main-content {
     min-height: 928px !important;
@@ -1656,8 +1656,12 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 }
 /* ----END -----*/
   #modalPhoto .modal-dialog {
-    width: 71vh;
-    max-width: 71vh;
+    width: 60vh;
+    max-width: 60vh;
+  }
+  .full_photo img {
+    max-height: 500px;
+    min-height: 400px;
   }
 
 }
