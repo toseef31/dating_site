@@ -1688,9 +1688,15 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   }
   .main-navbar-logo {
     position: relative;
-    right: 21rem;
   }
 }
+/* Ipad Mini Landscape */
+@media  (min-width: 1025px){
+  .disp-none {
+    display: none !important;
+  }
+}
+
 /* LCD */
 @media  (min-device-width: 1500px) and (max-device-width: 2000px) {
   .main-content {

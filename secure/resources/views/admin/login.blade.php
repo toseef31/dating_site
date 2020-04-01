@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="{!! url('assets/css/bootstrap.min.css') !!}">
     <link rel="stylesheet" type="text/css" href="{!! url('assets/css/admin.css') !!}">
+    <!-- <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/dating/assets/css/admin.css"> -->
     <title>Login</title>
 </head>
 <body>
