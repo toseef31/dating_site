@@ -1695,8 +1695,8 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     position: relative;
   }
   .full_photo img {
-    max-height: 500px;
-    min-height: 400px;
+    max-height: 500px !important;
+    min-height: 400px !important;
   }
 }
 /* Ipad Mini Landscape */
