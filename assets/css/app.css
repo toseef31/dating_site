@@ -1587,7 +1587,7 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     min-height: auto;
   }
   .conversations .list-conversations ul {
-    overflow: scroll;
+    /* overflow: scroll; */
     height: 290px !important;
   }
   .write-message {
