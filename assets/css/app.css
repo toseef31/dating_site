@@ -1565,11 +1565,13 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   min-height: 600px;
 }
  /* Mobile Portrait */
-@media (max-width: 425px) {
+@media (max-width: 444px) {
   #modalPhoto .modal-dialog {
     width: 50vh !important;
     max-width:50vh !important;
   }
+}
+@media (max-width: 375px) {
   .photo-item-cover {
     height: 130px !important;
   }
