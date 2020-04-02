@@ -145,7 +145,19 @@ color:rgb(101, 119, 134);
     .header-page{
         font-size: 15px !important;
         }
-
+.love-760 {
+	    position: fixed;
+    left: 30%;
+    top: 75%;
+}
+.hate-760 {
+	    position: fixed;
+    right: 30%;
+    top: 75%;
+}
+.rounded-pill {
+    border-radius: .5rem!important;
+}
 }
 
 button.search_btn {
@@ -1892,18 +1904,6 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     .h-20 {
       height: 20%;
     }
-    .main-content {
-      margin-top: 0 !important;
-    }
-}
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .main-content {
-      margin-top: 0 !important;
-    }
 }
 /* Ipad Mini Landscape */
 @media only screen
@@ -1916,18 +1916,8 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       max-width:100vh !important;
     }
 }
-/* ----------- iPad Pro 10.5" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 834px)
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .main-content {
-      margin-top: 0 !important;
-    }
-}
 /* Ipad 10.5 Landscape */
+
 @media only screen
   and (min-device-width: 1112px)
   and (max-device-width: 1112px)
@@ -1936,33 +1926,5 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     #modalPhoto .modal-dialog {
       width: 130vh !important;
       max-width:130vh !important;
-    }
-    .main-content {
-    min-height: 100% !important;
-  }
-}
-/* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .main-content {
-      margin-top: 0 !important;
-    }
-}
-/* Ipad 12.9 Landscape */
-@media only screen
-  and (min-device-width: 1366px)
-  and (max-device-width: 1366px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    #modalPhoto .modal-dialog {
-      width: 110vh !important;
-      max-width:110vh !important;
-    }
-    .main-content {
-      min-height: 840px !important;
     }
 }

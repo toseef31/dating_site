@@ -103,12 +103,12 @@ font-weight: 600;
                             <div class="collapse navbar-collapse">
                                 <ul class="navbar-nav mr-auto">
                                     @if((auth()->check() && auth()->user()->id != $user->id) || !auth()->check())
-                                        <li class="nav-item">
+                                        <li class="nav-item love-760">
                                             <a class="nav-link" href="javascript:void(0)">
                                                 <button data-id="{!! $user->id !!}" data-type="like" class="btn-love<?php echo auth()->check() && auth()->user()->likes()->where('id', $user->id)->first() && auth()->user()->likes()->where('id', $user->id)->first()->pivot->type == 'like' ? ' active': '';?>"><i class="fas fa-heart"></i></button>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
+                                        <li class="nav-item hate-760">
                                             <a class="nav-link" href="{!! $nextuser ? route('profile',['username'=>$nextuser->username]) : route('landing') !!}">
                                                 <button class="btn-unlove"><i class="fas fa-times"></i></button>
                                             </a>
