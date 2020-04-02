@@ -159,20 +159,20 @@ color:rgb(101, 119, 134);
     border-radius: .5rem!important;
 }
 .btn-love {
-    font-size: 55px;
+    font-size: 55px !important;
     border: 1px solid#ccc;
     background: #fff;
-    padding: 6px 20px;
-    border-radius: 50%;
+    padding: 6px 20px !important;
+    border-radius: 50% !important;
     color: #f76bac;
 }
 .btn-unlove{
-    font-size: 55px;
+    font-size: 55px  !important;
     color: #b2b2b2;
     border: 1px solid#ccc;
     background: #fff;
-    padding: 6px 20px;
-    border-radius: 50%;
+    padding: 6px 20px  !important;
+    border-radius: 50% !important;
 }
 }
 
@@ -1616,13 +1616,6 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   }
   .mh-400 {
     min-height: auto;
-  }
-  .conversations .list-conversations ul {
-    overflow: scroll;
-    height: 290px !important;
-  }
-  .write-message {
-    z-index: 999;
   }
 }
 @media (max-width: 375px) {
