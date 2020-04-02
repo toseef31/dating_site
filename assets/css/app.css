@@ -967,15 +967,15 @@ background:#6ba8f7;
     color: #fff;
 }
 .conversations{
-    position: absolute;
-    top: -51px;
+    position: relative;
+    top: -44px;
     left: 0px;
     width: 100%;
     height: calc(100vh - 92px);
 }
 .search-conversation{
     position: relative;
-    padding: 5px 10px 6px 10px;
+    padding: 10px 10px 7px 10px;
     border-bottom: 1px solid #858585;
 }
 .search-conversation i{
@@ -1162,6 +1162,8 @@ background:#6ba8f7;
     border: 0;
     height: 50px;
     border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
 }
 .conversations .message-box .list-messages{
     height: calc(100% - 51px);
@@ -1325,6 +1327,7 @@ background:#6ba8f7;
 .title-conversation{
     padding: 10px;
     font-size: 20px;
+	box-shadow: 0 8px 6px -6px #e6e6e6;
 }
 .title-conversation .dropdown-toggle{
     color: #242424;

@@ -52,9 +52,25 @@
 .list-unstyled {
   border-left: 1px solid #cccc;
 }
+.page-title {
+    min-height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+    border-bottom: 1px solid #f6f6f6;
+}
+.custom-h1 >h1 {
+    color: rgb(101, 119, 134);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-top: 10px;
+}
 </style>
     <div class="conversations clearfix">
-      <div class="main-content">
+      <div class="main-content"><div class="page-title text-capitalize custom-h1"><h1>
+                Conversations</h1>
+            </div>
 
 
         <div class="float-left list-conversations">
