@@ -1788,3 +1788,22 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     height: 55px !important;
   }
 }
+/* View Image Modal */
+@media (max-width: 320px) {
+  #modalPhoto .modal-dialog {
+    width: 60vh !important;
+    max-width:60vh !important;
+  }
+}
+@media only screen and (min-width:321px) and (max-width:375px) {
+  #modalPhoto .modal-dialog {
+    width: 60vh !important;
+    max-width:60vh !important;
+  }
+}
+@media only screen and (min-width:376px) and (max-width:425px) {
+  #modalPhoto .modal-dialog {
+    width: 60vh !important;
+    max-width:60vh !important;
+  }
+}
