@@ -1864,6 +1864,12 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       width: 55vh !important;
       max-width:55vh !important;
     }
+    .conversations .list-conversations ul {
+      height: 356px !important;
+    }
+    .main-content {
+        min-height: 81% !important;
+    }
 }
 /* Iphone X Landscape */
 @media only screen
