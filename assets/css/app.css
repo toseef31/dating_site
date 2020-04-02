@@ -1561,6 +1561,14 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 .main-content-message {
   min-height: 600px;
 }
+.profile-ipad-img {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}
+.ipad-photo-img {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}
  /* Mobile Portrait */
 @media (max-width: 444px) {
   #modalPhoto .modal-dialog {
@@ -1678,14 +1686,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     flex: 0 0 19.666667%;
     max-width: 19.666667%;
     margin-bottom: 10px;
-    padding-right: 5px !important;
-    padding-left: 5px !important;
   }
   .ipad-photo-img {
     flex: 0 0 25%;
     max-width: 25%;
-    padding-right: 5px !important;
-    padding-left: 5px !important;
   }
 
   /* Logo Behaviour */
