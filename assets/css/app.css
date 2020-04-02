@@ -1578,6 +1578,9 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     width: 50vh !important;
     max-width:50vh !important;
   }
+  .view-photo-right .content-photo {
+    min-height: 209px;
+  }
 }
 @media (max-width: 375px) {
   .photo-item-cover {
@@ -1800,13 +1803,14 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 }
 @media only screen and (min-width:321px) and (max-width:375px) {
   #modalPhoto .modal-dialog {
-    width: 70vh !important;
-    max-width:70vh !important;
+    width: 61vh !important;
+    max-width:61vh !important;
   }
 }
 @media only screen and (min-width:376px) and (max-width:425px) {
   #modalPhoto .modal-dialog {
-    width: 80vh !important;
-    max-width:80vh !important;
+    width: 70vh !important;
+    max-width:70vh !important;
   }
 }
+/* View Image Modal End */
