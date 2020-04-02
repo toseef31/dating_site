@@ -1843,8 +1843,8 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       height: 20%;
     }
     #modalPhoto .modal-dialog {
-      width: 64vh !important;
-      max-width:64vh !important;
+      width: 56vh !important;
+      max-width:56vh !important;
     }
 }
 /* Ipad Mini css */
