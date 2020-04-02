@@ -148,12 +148,12 @@ color:rgb(101, 119, 134);
 .love-760 {
 	    position: fixed;
     left: 20%;
-    top: 75%;
+    top: 70%;
 }
 .hate-760 {
 	    position: fixed;
     right: 20%;
-    top: 75%;
+    top: 70%;
 }
 .rounded-pill {
     border-radius: .5rem!important;
@@ -171,7 +171,7 @@ color:rgb(101, 119, 134);
     color: #b2b2b2;
     border: 1px solid#ccc;
     background: #fff;
-    padding: 6px 20px  !important;
+    padding: 6px 28px !important;
     border-radius: 50% !important;
 }
 }

@@ -115,14 +115,14 @@ font-weight: 600;
                                         </li>
                                     @endif
                                     <li class="nav-item">
-                                        <p class="mb-1 pl-4 padd-top-20">
+                                        <div class="mb-1 pl-4 padd-top-20 col-md-8">
                                             <span class="text-capitalize font-weight-bold pr-3 bold" >{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
-                                            <span class="user-info">Age <strong> {!! Carbon\Carbon::parse($user->birthday)->age !!}</strong>. &nbsp;  {!! $user->gender == 1 ? 'Male' : 'Female' !!}&nbsp; seeking&nbsp; {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male, Female') !!}
+                                            <span class="user-info">Age <strong> {!! Carbon\Carbon::parse($user->birthday)->age !!}</strong>. &nbsp;  {!! $user->gender == 1 ? 'Male' : 'Female' !!}&nbsp; Seeking&nbsp; {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male, Female') !!}
                                 
                                        @if($user->status == 'Online')
                                         <span class="online-class">Online Now</span>
                                         @endif
-                                      </p></span>
+                                      </span></div>
                                         
 
                                     </li>
