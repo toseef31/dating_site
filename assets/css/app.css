@@ -1590,6 +1590,9 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     overflow: scroll;
     height: 290px !important;
   }
+  .write-message {
+    z-index: 999;
+  }
 }
 @media (max-width: 375px) {
   .photo-item-cover {
