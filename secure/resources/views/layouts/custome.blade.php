@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  @include('partials.header')
     @include('partials.navbar')
-    @include('partials.header')
     @yield('meta')
     @yield('stylesheet')
 </head>
