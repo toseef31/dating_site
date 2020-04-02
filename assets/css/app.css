@@ -1562,10 +1562,16 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   min-height: 600px;
 }
  /* Mobile */
-@media (max-width: 444px) {
+@media (max-width: 425px) {
   #modalPhoto .modal-dialog {
     width: 50vh !important;
     max-width:50vh !important;
+  }
+  .photo-item-cover {
+    height: 130px !important;
+  }
+  .photo-item {
+    height: 130px !important;
   }
 }
  /* Mobile */
@@ -1586,10 +1592,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     padding-left: 5px !important;
   }
   .photo-item-cover {
-    height: 130px !important;
+    height: 200px !important;
   }
   .photo-item {
-    height: 130px !important;
+    height: 200px !important;
   }
   .ipad-photo-img {
       min-width: 50%;
