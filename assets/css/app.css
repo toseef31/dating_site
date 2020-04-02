@@ -1925,4 +1925,7 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       width: 110vh !important;
       max-width:110vh !important;
     }
+    .main-content {
+      min-height: 840px !important;
+    }
 }
