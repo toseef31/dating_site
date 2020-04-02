@@ -1,3 +1,7 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="csrf_token" content="{!! csrf_token() !!}">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <nav class="navbar  navbar-light bg-blue disp-none"  id="profile-header-sm">
   <!-- <div class="bg-blue"> -->
     <button type="button" class="navbar-toggler nav-btn" data-toggle="collapse" data-target="#navbarCollapse">
@@ -32,7 +36,7 @@
           ?>
       <a href="{!! route('profile',['username'=>$user->username]) !!}" class="nav-item nav-link">
         <div class="" style="display:flex;">
-          <img src="{!! $avatar !!}" class="w-20 rounded-circle mb-2 nav-item nav-link">
+          <img src="{!! $avatar !!}" class="w-20 h-20 rounded-circle mb-2 nav-item nav-link">
           <span class="mbl-hdr-nm" style="margin-top: 7%;">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
         </div>
       </a>
