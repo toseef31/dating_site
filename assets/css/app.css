@@ -1828,6 +1828,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       width: 20%;
       height: 20%;
     }
+    #modalPhoto .modal-dialog {
+      width: 55vh !important;
+      max-width:55vh !important;
+    }
 }
 /* Iphone 6,7,8 */
 @media only screen
