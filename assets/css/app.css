@@ -1834,7 +1834,6 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     #modalPhoto .modal-dialog {
       width: 55vh !important;
       max-width:55vh !important;
-      margin-left: 0 !important;
     }
 }
 /* Iphone 6,7,8 */
@@ -1849,6 +1848,8 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     #modalPhoto .modal-dialog {
       width: 56vh !important;
       max-width:56vh !important;
+    }
+    .iphone-low-model {
       margin-left: 30px;
     }
 }
