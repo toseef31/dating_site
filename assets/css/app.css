@@ -1333,7 +1333,8 @@ background:#6ba8f7;
     display: none;
 }
 .conversations .list-conversations ul{
-    height: calc(100% - 51px);
+    /* height: calc(100% - 51px); */
+        height: 426px;
 }
 .notifications{
     position: fixed;
