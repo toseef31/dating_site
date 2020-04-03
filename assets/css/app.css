@@ -1962,7 +1962,7 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       max-width:130vh !important;
     }
     .main-content {
-    min-height: 100% !important;
+    min-height: 630px !important;
   }
 }
 /* ----------- iPad Pro 12.9" ----------- */
@@ -1987,6 +1987,6 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       max-width:110vh !important;
     }
     .main-content {
-      min-height: 840px !important;
+      min-height: 820px !important;
     }
 }
