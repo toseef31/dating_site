@@ -32,7 +32,7 @@
                 ?>
                 <a href="{!! route('profile',['username'=>$user->username]) !!}" class="nav-item nav-link ">
                   <div class="" style="display:flex;">
-                    <img src="{!! $avatar !!}" class="w-20 rounded-circle mb-2 nav-item nav-link" style="width:20%;">
+                    <img src="{!! $avatar !!}" class="w-20 h-20 rounded-circle mb-2 nav-item nav-link" style="width:20%;">
                     <span class="mbl-hdr-nm" style="margin-top: 7%;">{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
                   </div>
                 </a>
