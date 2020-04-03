@@ -1908,7 +1908,7 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     {
       display: none;
     }
-    .meanmenu-reveal .meanicon-bar {
+    .list-messages .meanicon-bar {
       display: block !important;
     }
 }
