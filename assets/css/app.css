@@ -1919,6 +1919,13 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     .view-photo-right .content-photo {
       min-height: 209px;
     }
+    .search-content .user-item {
+      min-height: 225px;
+      width: 225px;
+    }
+    .ipad-col {
+      width: auto !important;
+    }
 }
 /* Landscape */
 @media only screen
