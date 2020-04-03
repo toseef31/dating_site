@@ -37,6 +37,31 @@
     <form action="" method="post" enctype="multipart/form-data">
         {!! csrf_field() !!}
         <div class="row mr-1">
+<div class="col-md-12 col-sm-12 col-12">
+                <div class="form-group">
+                    <label>Avatar</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="custom-file">
+                                    <input accept="image/*" type="file" class="custom-file-input" name="avatar" id="register-avatar" aria-describedby="register-avatar">
+                                    <label class="custom-file-label" for="register-avatar">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-12">
+                            <div class="register-upload-avatar">
+                                <input type="hidden" id="x" value="" name="x">
+                                <input type="hidden" id="y" value="" name="y">
+                                <input type="hidden" id="w" value="" name="w">
+                                <input type="hidden" id="h" value="" name="h">
+                                <span class="clear-avatar">&times;</span>
+                                <img id="register-upload-avatar" src="{!! avatar($user->avatar, $user->gender) !!}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-6 col-sm-12 col-12 ">
                 <div class="form-group">
                     <label>First Name</label>
@@ -67,7 +92,7 @@
 
             <div class="col-md-12 col-sm-12 col-12">
                 <div class="form-group">
-                    <label>Age</label>
+                    <label>Birthday</label>
                     <div class="row">
                         <div class="col-md-4 col-sm-3 col-3">
                             <select autocomplete="off" class="form-control second bg-white" name="day" required>
@@ -145,31 +170,7 @@
                     <i class="fa fa-chevron-down"></i>
                 </div>
             </div>
-            <div class="col-md-12 col-sm-12 col-12">
-                <div class="form-group">
-                    <label>Avatar</label>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="input-group mb-3">
-                                <div class="custom-file">
-                                    <input accept="image/*" type="file" class="custom-file-input" name="avatar" id="register-avatar" aria-describedby="register-avatar">
-                                    <label class="custom-file-label" for="register-avatar">Choose file</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-12">
-                            <div class="register-upload-avatar">
-                                <input type="hidden" id="x" value="" name="x">
-                                <input type="hidden" id="y" value="" name="y">
-                                <input type="hidden" id="w" value="" name="w">
-                                <input type="hidden" id="h" value="" name="h">
-                                <span class="clear-avatar">&times;</span>
-                                <img id="register-upload-avatar" src="{!! avatar($user->avatar, $user->gender) !!}">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <?php
             $user_interests = collect($user->interests()->get())->pluck('id')->all();
             ?>

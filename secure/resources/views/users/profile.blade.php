@@ -39,6 +39,9 @@ min-height:88px;
 padding-top:10px;
 padding-bottom:10px;
 }
+.padd-top-10 {
+padding-top:10px;
+}
 .padd-top-20 {
   padding-top:20px;
 }
@@ -85,7 +88,9 @@ font-weight: 600;
   left: 5%;
   color: #02e75c;
 }
-
+.profile-min-height {
+min-height: 950px;
+}
 </style>
     <div class="landing">
 
@@ -93,7 +98,7 @@ font-weight: 600;
             @include('partials.sidebar')
                 <div class="main">
 
-                  <div class="main-content">
+                  <div class="main-content profile-min-height">
 
                     <nav class="navbar navbar-expand navbar-expand-md navbar-expand-lg navbar-light bg-white shadow-sm " id="profile-header">
                         <div class="container">
@@ -115,9 +120,9 @@ font-weight: 600;
                                         </li>
                                     @endif
                                     <li class="nav-item">
-                                        <div class="mb-1 pl-4 padd-top-20 col-md-8">
+                                        <div class="mb-1 pl-4 padd-top-10 col-md-8">
                                             <span class="text-capitalize font-weight-bold pr-3 bold" >{!! fullname($user->firstname, $user->lastname, $user->username) !!}</span>
-                                            <span class="user-info">Age <strong> {!! Carbon\Carbon::parse($user->birthday)->age !!}</strong>. &nbsp;  {!! $user->gender == 1 ? 'Male' : 'Female' !!}&nbsp; Seeking&nbsp; {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male, Female') !!}
+                                            <span class="user-info">Age <strong> {!! Carbon\Carbon::parse($user->birthday)->age !!}</strong>. &nbsp;  {!! $user->gender == 1 ? 'Male' : 'Female' !!}&nbsp; Seeking&nbsp; {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male and Female') !!}
                                 
                                        @if($user->status == 'Online')
                                         <span class="online-class">Online Now</span>

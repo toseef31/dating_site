@@ -1,4 +1,9 @@
-<div class="sidebar hidden-xs">
+<style>.badge-pink {
+	color: #fff;
+	background-color: #ff70b3;
+	width: 28px;
+	/* padding-right: 3px; */
+}</style><div class="sidebar hidden-xs">
     <?php
     $logo = setting('logo_second');
     $logo = $logo ? url($logo) : url('assets/images/logo_white.png');
@@ -20,7 +25,7 @@
         </div>
         <ul class="list-unstyled">
             <li><a class="{!! Illuminate\Support\Facades\Route::is('landing')?'active':'' !!}" href="{!! route('landing') !!}">Browse <i class="fas fa-search"></i></a></li>
-            <li id="message-sidebar"><a class="{!! Illuminate\Support\Facades\Route::is('messages') || Illuminate\Support\Facades\Route::is('message')?'active':'' !!}" href="{!! route('messages') !!}">Messages  <span class="badge badge-light">{!! $unread > 0 ? $unread: '' !!}</span><i class="fas fa-comments"></i></a></li>
+            <li id="message-sidebar"><a class="{!! Illuminate\Support\Facades\Route::is('messages') || Illuminate\Support\Facades\Route::is('message')?'active':'' !!}" href="{!! route('messages') !!}">Messages  <span class="badge badge-pink">{!! $unread > 0 ? $unread: '' !!}</span><i class="fas fa-comments"></i></a></li>
             <li><a class="{!! Illuminate\Support\Facades\Route::is('video')?'active':'' !!}" href="">Video Chat <i class="fas fa-video"></i></a></li>
             <li><a class="{!! Illuminate\Support\Facades\Route::is('setting')?'active':'' !!}" href="{!! route('setting') !!}">Setting <i class="fas fa-cog"></i></a></li>
             <li><a href="{!! route('logout') !!}">Logout <i class="fas fa-sign-out-alt"></i></a></li>

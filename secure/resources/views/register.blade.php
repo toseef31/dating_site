@@ -12,7 +12,7 @@
             background-image: url("{!! $register_background !!}");
             background-repeat: no-repeat;
             background-position: top left;
-            height:630px;
+            min-height:630px;
         }
         .footer {
          max-height:80px !important;
@@ -109,7 +109,7 @@ min-height:960px;
                                 </div>
                                 <div class="tab-pane fade p-5" id="register-age" role="tabpanel" aria-labelledby="profile-tab">
                                     <div class="form-group">
-                                        <label>Choose Age</label>
+                                        <label>Birthday</label>
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <select class="form-control second bg-mute" name="day" id="register-day" required>
@@ -190,7 +190,7 @@ min-height:960px;
                                     <div class="row">
                                         <div class="col-md-8 d-flex align-items-center">
                                             <div class="form-group">
-                                                <label>Upload Profile Photo</label>
+                                               <h3>Upload Profile Photo</h3>
                                                 <div class="input-group mb-3">
                                                     <div class="custom-file">
                                                         <input accept="image/*" type="file" class="custom-file-input" name="avatar" id="register-avatar" aria-describedby="register-avatar">
@@ -214,7 +214,7 @@ min-height:960px;
                                         <label>About Me</label>
                                         <textarea class="form-control second bg-mute" rows="6" name="about"></textarea>
                                         <p class="font-weight-bold mb-0 mt-3">Please include important keywords example. </p>
-                                        <p class="helper">SHY, OUTGOING, SPONTANEOUS, FUN, LOVE TO TRAVEL or HOMEBODY etc.</p>
+                                        <p class="helper">Shy, Outgoing, Spontaneous, Fun, Love to travel or home body etc.</p>
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-md-6 mx-auto">
