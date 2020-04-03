@@ -1938,8 +1938,8 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       min-height: 209px;
     }
     .search-content .user-item {
-      min-height: 225px;
-      width: 225px;
+      min-height: 205px;
+      width: 205px;
     }
     .ipad-col {
       flex: 0 0 33% !important;
