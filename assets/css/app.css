@@ -1948,6 +1948,16 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       min-height: 536px !important;
     }
 }
+/* iPhone 6, 6S, 7 and 8 Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .main-content {
+      min-height: 536px !important;
+    }
+}
 /* iPhone 6, 6S, 7 and 8  Landscape */
 @media only screen
   and (min-device-width: 375px)
