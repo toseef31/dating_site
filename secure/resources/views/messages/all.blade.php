@@ -4,7 +4,7 @@
 @media (max-width: 444px) {
   .main-content {
     /* margin-top: 4rem; */
-    min-height: 475px !important;
+    min-height: 475px;
     /* min-height: 100% !important; */
   }
   .message-box {
@@ -15,7 +15,7 @@
   .main-content {
     /* margin-top: 7rem; */
     /* min-height: 500px !important; */
-    min-height: 93% !important;
+    min-height: 93%;
 
   }
 }
@@ -26,7 +26,7 @@
 }
 @media (max-device-width: 1024px) and (min-device-width: 769px){
   .main-content {
-      min-height: 90% !important;
+      min-height: 90%;
       /* margin-top: 7rem; */
   }
 }
