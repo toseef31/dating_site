@@ -6,7 +6,30 @@
             <div class="main">
                 {{--@endif--}}
                 <div class="main-content">
-                 @if(auth()->user()->id != $user->id)
+                @if(!auth()->check())
+                <div class="top-photo pt-3 pb-3 pl-3">
+                    <div class="media">
+                      <?php
+                      $avatar = avatar($user->avatar, $user->gender);
+                      $avatar2 = substr($avatar,7,9);
+                      if ($avatar2 == 'localhost') {
+                        $avatar = substr($avatar,34);
+                        $avatar ='http://localhost/dating/'.$avatar;
+                      }
+                       ?>
+                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-20">
+                        <div class="media-body pt-4">
+                            <p class="font-weight-bold text-uppercase"><a href="{!! route('profile',['username'=>$user->username]) !!}">#{!! $user->username !!}</a></p>
+                            <p>{!! $user->photos()->count() !!} photos</p>
+                            @if(auth()->check() && in_array($user->id, collect(auth()->user()->follows()->get())->pluck('id')->all()))
+                                <button class="btn btn-sm btn-primary font-weight-bold btn-follow" data-id="{!! $user->id !!}" style="padding-left: 30px!important;padding-right: 30px!important;"><i class="fas fa-check"></i>Followed</button>
+                            @else
+                                <button class="btn btn-sm btn-primary font-weight-bold btn-follow" data-id="{!! $user->id !!}" style="padding-left: 30px!important;padding-right: 30px!important;">Follow</button>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+                 @else(auth()->user()->id != $user->id)
                 <div class="top-photo pt-3 pb-3 pl-3">
                     <div class="media">
                       <?php

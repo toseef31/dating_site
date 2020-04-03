@@ -622,7 +622,7 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 }
 .search-content{}
 .search-content .user-item{
-    min-height: 250px;
+    min-height: 200px;
     position: relative;
     overflow: hidden;
     transition: all .2s ease;
