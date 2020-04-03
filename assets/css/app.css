@@ -1904,6 +1904,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     .conversations .message-box {
       width: 100%;
     }
+    .message-box .hidden-xs
+    {
+      display: none;
+    }
     .meanmenu-reveal .meanicon-bar {
       display: block !important;
     }
