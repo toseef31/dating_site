@@ -40,6 +40,16 @@
     margin-left: 14rem !important;
   }
 }
+/* Iphone X css portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .main-content {
+        min-height: 83% !important;
+    }
+  }
 .main-content {
   min-height: 536px;
 }
