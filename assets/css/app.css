@@ -1951,6 +1951,16 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     .main-content {
       margin-top: 0 !important;
     }
+    .search-content .user-item {
+      min-height: 250px;
+    }
+    .search-content .user-item .fullname{
+      top: 196px;
+    }
+    .search-content .user-item .address {
+      top: 220px;
+    }
+
 }
 /* Ipad Mini Landscape */
 @media only screen
