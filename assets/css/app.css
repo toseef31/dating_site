@@ -1904,7 +1904,7 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     .conversations .message-box {
       width: 100%;
     }
-    .message-box .hidden-xs
+    .conversations .message-box
     {
       display: none;
     }
