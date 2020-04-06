@@ -68,11 +68,13 @@
                           <img src="{!! $avatar !!}">
                           <div class="media-body">
                               <h3 class="mb-0"><a href="{!! route('profile',['username'=>$username]) !!}">{!! fullname($firstname, $lastname, $username) !!}</a></h3>
+                              @if(!auth()->check() || auth()->user()->id != $user_id)
                                 @if(auth()->check() && in_array($user_id, collect(auth()->user()->follows()->get())->pluck('id')->all()))
                                     <span data-id="{!! $user_id !!}" class="badge badge-primary btn-follow"><i class="fas fa-check"></i> Followed</span>
                                 @else
                                     <span data-id="{!! $user_id !!}" class="badge badge-primary btn-follow">Follow</span>
                                 @endif
+                              @endif
                                 @if($type != 'cover')
                                 <p>
                                     {!! $photo->description !!}

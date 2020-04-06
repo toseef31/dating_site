@@ -48,7 +48,7 @@ $seo_website_description = setting('website_description');
                         </div>
                     </div>
                 </div>
-                 @else(auth()->user()->id != $user->id)
+                 @elseif(auth()->user()->id != $user->id)
                 <div class="top-photo pt-3 pb-3 pl-3">
                     <div class="media">
                       <?php
