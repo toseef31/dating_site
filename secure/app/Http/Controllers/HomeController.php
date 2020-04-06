@@ -6,7 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-
+use Mail;
 class HomeController extends Controller
 {
     protected $request;
@@ -84,5 +84,43 @@ class HomeController extends Controller
         }
         $users = $users->paginate(16);
         return view('landing', compact('users','seo_title','default_preference'));
+    }
+
+    public function forgetPassword(Request $request)
+    {
+      return view('forget_password');
+    }
+    public function checkEmail(Request $request)
+    {
+      // dd($request->all());
+      $string = rand(5,999999999);
+      // dd($string);
+      $token = $string;
+      $email = $request->input('email');
+      $toemail=$email;
+      $user = User::where('email','=',$email)->first();
+      // dd($toemail);
+      if ($user =="") {
+        $request->session()->flash('resetAlert', "We can't find a user with that e-mail address.");
+        return redirect()->back();
+      }
+      $first_name = "waqas";
+      $last_name = "ali";
+      // $first_name = $user->firstname;
+      // $last_name = $user->lastname;
+      $user_info['forget_token']=$token;
+      // dd($toemail);
+      Mail::send('mail.resetpassword',['u_name' =>$first_name." ".$last_name,'token' =>$token],
+      function ($message) use ($toemail)
+      {
+
+        $message->subject('demo.myclouddate.com - Reset Password');
+        $message->from('admin@demo.myclouddate.com', 'Singles Dating World');
+        $message->to($toemail);
+      });
+      $user_id = User::where('email','=',$email)->update($user_info);
+      $request->session()->flash('resetSuccess', 'Check your Email to change your password.');
+      return redirect('/forget-password');
+
     }
 }

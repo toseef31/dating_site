@@ -88,11 +88,18 @@ class AjaxController extends Controller
     public function view_photo()
     {
         if($this->request->has('id')){
-            $photo = Photo::with('comments','likes','user')->where('id',$this->request->id)->first();
+          // $get_user = Photo::with('comments','likes','user')->where('id',$this->request->id)->first();
+          $photo = Photo::with('comments','likes','user')->where('id',$this->request->id)->first();
+          // $user_id = $get_user->user_id;
+            // $photos = Photo::with('comments','likes','user')->where('user_id',$user_id)->get();
+            // dd($photo);
+
             $type='';
             if($photo) {
                 $html = view('photo.view',compact('photo','type'))->render();
+                // $html = view('photo.view2',compact('photos','type'))->render();
                 return response()->json(['status' => 'success', 'height' => $photo->height, 'width'=>$photo->width ,'html'=>$html]);
+                // return response()->json(['status' => 'success', 'height' => $photos[0]->height, 'width'=>$photos[0]->width ,'html'=>$html]);
             }
         }
         return response()->json(['status'=>'error']);

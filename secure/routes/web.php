@@ -25,6 +25,9 @@ Route::post('register', 'UserController@postRegister')->name('register')->middle
 Route::get('logout','UserController@logout')->name('logout');
 Route::get('browse','HomeController@landing')->name('landing')->middleware('complete');
 Route::post('register/quick','UserController@quickRegister')->name('quick_reg');
+Route::get('/forget-password', 'HomeController@forgetPassword');
+Route::match(['get','post'],'/checkEmail','HomeController@checkEmail');
+
 Route::middleware(['auth','complete'])->prefix('/')->group(function(){
     Route::post('upload/photo','PhotoController@upload')->name('upload_photo');
     Route::get('messages','MessageController@messages')->name('messages');

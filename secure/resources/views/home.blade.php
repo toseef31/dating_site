@@ -117,6 +117,7 @@ min-height:550px;
                                     <button class="btn btn-primary btn-block" type="submit">Login</button>
                                 </div>
                             </form>
+                            <a href="{{url('forget-password')}}" style="color:white;">Forget password ?</a>
                             <p class="text-center mt-4 mb-4"><a class="btn btn-register btn-block" href="{!! route('register') !!}">Register</a></p>
                             @if(setting('social_login'))
                             <div class="row">
