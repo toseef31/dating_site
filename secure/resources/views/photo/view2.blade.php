@@ -1,9 +1,13 @@
+<style>
+.img-next {
+  right: 356px;
+}
+</style>
 <div id="demo" class="carousel slide" data-ride="carousel">
   <!-- The slideshow -->
   <div class="carousel-inner">
-    @foreach($photos->chunk(1) as $key => $chunk)
-    @foreach($chunk as $photo)
-    <div class="carousel-item active">
+    @foreach($photos as $photo)
+    <div class="carousel-item" id="{{$photo->id}}">
       <div class="row position-relative">
           <span class="close-view-photo position-absolute">&times;</span>
           <div class="col-md-8">
@@ -108,7 +112,6 @@
       <!-- <img src="http://localhost/dating/uploads/photos/13/badJdQvNgH1Xfy7ToDRf1585045832_thumb.jpg" alt="Los Angeles" width="1100" height="500"> -->
     </div>
     @endforeach
-    @endforeach
     <!-- <div class="carousel-item">
       <img src="http://localhost/dating/uploads/photos/13/QZoUqO0dkTEaz6ipxwL81583950232_thumb.jpg" alt="Chicago" width="1100" height="500">
     </div>
@@ -121,7 +124,19 @@
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
+  <a class="carousel-control-next img-next" href="#demo" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
+
+<script>
+$('.carousel').carousel({
+    interval: false
+});
+$(document).ready(function () {
+  var id = "{{$id}}";
+  $("#"+id).addClass("active");
+})
+
+
+</script>
