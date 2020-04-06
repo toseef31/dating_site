@@ -156,7 +156,7 @@
       <div class="col-md-12">
         <div class="card ">
           <div class="card-header ">
-            <h5 class="card-title">Today Users</h5>
+            <h5 class="card-title">Todays Users</h5>
             <!-- <p class="card-category">Patners Registered</p> -->
           </div>
           <div class="card-body ">

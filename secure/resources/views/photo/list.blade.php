@@ -1,4 +1,23 @@
 @extends('layouts.photo')
+<?php
+$seo_social_image = setting('social_image');
+$seo_website_description = setting('website_description');
+?>
+@section('page_description')
+
+    Hi! My name is {!! $user->username !!}. Check out my photo page, view all my latest images and follow my posts for more updates.
+@endsection
+@section('social_image')
+<?php
+                      $avatar = avatar($user->avatar, $user->gender);
+                      $avatar2 = substr($avatar,7,9);
+                      if ($avatar2 == 'localhost') {
+                        $avatar = substr($avatar,34);
+                        $avatar ='http://localhost/dating/'.$avatar;
+                      }
+                       ?>
+    {!! $avatar ?? '' !!}
+@endsection
 @section('content')
     <div class="container-fluid main_container photos">
         {{--@if(!auth()->check())--}}
@@ -17,9 +36,9 @@
                         $avatar ='http://localhost/dating/'.$avatar;
                       }
                        ?>
-                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-20">
+                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-20"></a>
                         <div class="media-body pt-4">
-                            <p class="font-weight-bold text-uppercase"><a href="{!! route('profile',['username'=>$user->username]) !!}">#{!! $user->username !!}</a></p>
+                            <p class="font-weight-bold">@<a href="{!! route('profile',['username'=>$user->username]) !!}">{!! $user->username !!} </a></p>
                             <p>{!! $user->photos()->count() !!} photos</p>
                             @if(auth()->check() && in_array($user->id, collect(auth()->user()->follows()->get())->pluck('id')->all()))
                                 <button class="btn btn-sm btn-primary font-weight-bold btn-follow" data-id="{!! $user->id !!}" style="padding-left: 30px!important;padding-right: 30px!important;"><i class="fas fa-check"></i>Followed</button>
@@ -40,9 +59,9 @@
                         $avatar ='http://localhost/dating/'.$avatar;
                       }
                        ?>
-                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-20">
+                        <img src="{!! $avatar !!}" class="mr-3 border rounded-circle w-20"></a>
                         <div class="media-body pt-4">
-                            <p class="font-weight-bold text-uppercase"><a href="{!! route('profile',['username'=>$user->username]) !!}">#{!! $user->username !!}</a></p>
+                            <p class="font-weight-bold">@<a href="{!! route('profile',['username'=>$user->username]) !!}">{!! $user->username !!}</a></p>
                             <p>{!! $user->photos()->count() !!} photos</p>
                             @if(auth()->check() && in_array($user->id, collect(auth()->user()->follows()->get())->pluck('id')->all()))
                                 <button class="btn btn-sm btn-primary font-weight-bold btn-follow" data-id="{!! $user->id !!}" style="padding-left: 30px!important;padding-right: 30px!important;"><i class="fas fa-check"></i>Followed</button>

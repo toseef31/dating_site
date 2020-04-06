@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function main()
     {
       // dd("Asdf");
-      // $all_user = DB::table('users')->where('is_admin',0)->get()->count();
+      //$all_user = DB::table('users')->where('is_admin',0)->get()->count();
       $all_user=User::where('is_admin',0)->get()->count();
       $today_user=User::where('is_admin',0)->where('created_at',Carbon\Carbon::now())->get()->count();
       $online_user=User::where('status','Online')->get()->count();

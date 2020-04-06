@@ -31,6 +31,27 @@
     <script src="https://maps.googleapis.com/maps/api/js?key={!! env('GOOGLE_PLACE_API','AIzaSyBjVRkL8MOLaVd-fjloQguTIQDLAAzA4w0') !!}&callback=showUserLocation" async defer></script>
 
 @endsection
+ @section('page_description')
+    Hi! My name is {!! fullname($user->firstname, $user->lastname, $user->username) !!}
+                                            I am {!! Carbon\Carbon::parse($user->birthday)->age !!} Years young :). I am a {!! $user->gender == 1 ? 'Male' : 'Female' !!} Seeking {!! $user->preference == 1 ? 'Male' : ($user->preference == 2 ? 'Female': 'Male and Female') !!}.
+@endsection
+
+<?php
+$seo_social_image = setting('social_image');
+?>
+@section('social_image')
+<?php
+                    $avatar = avatar($user->avatar, $user->gender);
+                    // dd($user->id);
+                    $avatar2 = substr($avatar,7,9);
+                    if ($avatar2 == 'localhost') {
+                        $avatar = substr($avatar,34);
+                        $avatar ='http://localhost/dating/'.$avatar;
+                    }
+
+                    ?>
+    {!! url($avatar) !!}
+@endsection
 
 @section('content')
 <style>

@@ -11,7 +11,7 @@
     $logo = setting('website_logo');
     $logo = $logo ? url($logo) : url('assets/images/logo.png');
     ?>
-    <a href="{!! route('home') !!}"><img src="{!! $logo !!}"></a>
+    <a href="{!! route('home') !!}"><img src="{!! $logo !!}" alt="logo"></a>
 </div> -->
 @yield('content')
 <script>

@@ -16,6 +16,16 @@
   }
 
 </style>
+<?php
+$seo_social_image = setting('social_image');
+$seo_website_description = setting('website_description');
+?>
+@section('page_description')
+    This is the search page for DateV2, Use our awesome search filter to connect with single men and women worldwide.
+@endsection
+@section('social_image')
+    {!! isset($seo_image) ? $seo_image : url($seo_social_image) !!}
+@endsection
 <div class="main-content">
 
     <div class="page-title text-capitalize">

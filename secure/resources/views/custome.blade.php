@@ -37,6 +37,17 @@ padding-top:10px;
 @section('meta')
 <meta name="keywords" content="{{$data->keywords}}">
 @endsection
+
+@section('page_title')
+    {{ "$data->title | " }}
+@endsection
+
+@section('page_description')
+    {{ "$data->description" }}
+@endsection
+@section('social_image')
+    {{asset("uploads/". $data->image)}}
+@endsection
 @section('content')
     <div class="landing">
     <div class="container-fluid main_container">
