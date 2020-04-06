@@ -52,6 +52,7 @@ class PhotoController extends Controller
     public function photos($username)
     {
         $user = User::with('photos','interests')->where('username', $username)->first();
+        // dd($user);
         if($user) {
             $seo_title = $username."'s Photos";
             return view('photo.list',compact('seo_title', 'user'));

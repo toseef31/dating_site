@@ -1979,6 +1979,17 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     }
 
 }
+/* Ipad Mini Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #modalPhoto .modal-dialog {
+      width: 72vh !important;
+      max-width:72vh !important;
+    }
+}
 /* Ipad Mini Landscape */
 @media only screen
   and (min-device-width: 768px)
