@@ -1,6 +1,6 @@
 <style>
 .img-next {
-  right: 356px;
+  right: 32%;
 }
 </style>
 <div id="demo" class="carousel slide" data-ride="carousel">
