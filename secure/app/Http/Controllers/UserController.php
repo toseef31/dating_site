@@ -29,7 +29,7 @@ class UserController extends Controller
         $rules = array(
             'username' => 'required|alpha_dash|min:6|unique:users,username',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|confirmed|min:6',
+            'password' => 'required|min:6',
             'gender' => 'required',
             'country' => 'required'
         );
@@ -38,6 +38,8 @@ class UserController extends Controller
             return redirect()->back()->withErrors((array)$validator->errors());
         }
         else{
+          // dd($this->request->all());
+
             $user = new User();
             $user->username = $this->request->get('username');
             $user->email = $this->request->get('email');
@@ -47,6 +49,8 @@ class UserController extends Controller
             $user->active = 1;
             $user->country = $this->request->get('country');
             $user->save();
+            Auth::login($user);
+            
             return redirect()->route('setting');
         }
     }

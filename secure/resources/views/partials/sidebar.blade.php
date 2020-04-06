@@ -41,6 +41,7 @@
         <div class="text-center text-white p-3">
             <p class="text-uppercase font-weight-bold">Create an account</p>
             <form action="{!! route('quick_reg') !!}" method="post" id="formQuick">
+              {{csrf_field()}}
                 <div class="form-group">
                     <input class="form-control form-control-sm" name="username" required placeholder="Username" id="register-username">
                 </div>

@@ -76,6 +76,7 @@ jQuery(document).ready(function ($) {
         })
     });
     $('#formQuick').submit(function (e) {
+      // alert("Asdf");
         const errors = [];
         const username = $('#register-username').val();
         const email = $('#register-email').val();
@@ -88,7 +89,7 @@ jQuery(document).ready(function ($) {
         if($('#register-username').hasClass('invalid')){
             errors.push('Username already exist');
         }
-        if(username.leng < 6){
+        if(username.length < 6){
             errors.push('Username must be at least 6 characters');
         }
         if(email === ''){
