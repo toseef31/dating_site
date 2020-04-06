@@ -27,7 +27,7 @@ class HomeController extends Controller
       // dd("Asdf");
       // $all_user = DB::table('users')->where('is_admin',0)->get()->count();
       $all_user=User::where('is_admin',0)->get()->count();
-      $today_user=User::where('is_admin',0)->where('created_at',Carbon\Carbon::now())->get()->count();
+      $today_user=User::where('is_admin',0)->whereDate('created_at',Carbon\Carbon::today())->get()->count();
       $online_user=User::where('status','Online')->get()->count();
       $message=DB::table('messages')->get()->count();
       // dd($message);
