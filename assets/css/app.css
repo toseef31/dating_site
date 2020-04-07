@@ -1720,6 +1720,12 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 .view-photo-right .content-photo {
   margin-left: 0px !important;
 }
+.img-next{
+  right: 0 !important;
+}
+.view-photo-right .comments .gallery_list {
+    min-height: 160px;
+}
 }
 /* Ipad */
 @media (max-width: 768px) {
