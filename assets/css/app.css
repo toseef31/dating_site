@@ -1600,8 +1600,14 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   .write-message {
     z-index: 999;
   }
-  .view-photo-right .comments ul{
+  .view-photo-right .comments .gallery_list{
     min-height: 160px;
+  }
+  .img-prev, .img-next{
+    bottom: 50%;
+  }
+  .img-next{
+    right: 0 !important;
   }
 }
 @media (max-width: 375px) {

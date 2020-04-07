@@ -84,7 +84,11 @@
                       </div>
                   </div>
                   <div class="comments">
+                    @if($photo->comments()->count() >0)
+                    <ul class="list-unstyled m-0 gallery_list">
+                    @else
                       <ul class="list-unstyled m-0">
+                    @endif
                         @if($type != 'cover')
                           @if($photo->comments()->count())
                               @foreach($photo->comments as $comment)
@@ -116,7 +120,7 @@
   </div>
 
   <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+  <a class="carousel-control-prev img-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
   <a class="carousel-control-next img-next" href="#demo" data-slide="next">
