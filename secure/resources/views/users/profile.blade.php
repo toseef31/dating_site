@@ -92,9 +92,9 @@ padding-top:10px;
         font-size: 0.75rem !important;
     }
     .online-class
-    {
+    /* {
         left:55% !important;
-    }
+    } */
 }
 .online-class
 {
