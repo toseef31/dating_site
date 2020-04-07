@@ -120,7 +120,7 @@ class AjaxController extends Controller
             // dd($photo);
             $type='';
             if($photo) {
-              $html = view('photo.view3',compact('photo','type'))->render();
+              $html = view('photo.view',compact('photo','type'))->render();
                 return response()->json(['status' => 'success', 'height' => $photo->height, 'width'=>$photo->width ,'html'=>$html]);
             }
         }
