@@ -8,17 +8,18 @@
 <table class="m_1888394735623576276wrapper" width="100%" cellpadding="0" cellspacing="0" style="font-family:Avenir,Helvetica,sans-serif;box-sizing:border-box;background-color:#f5f8fa;margin:0;padding:0;width:100%"><tbody><tr>
 <td align="center" style="font-family:Avenir,Helvetica,sans-serif;box-sizing:border-box">
                 <table class="m_1888394735623576276content" width="100%" cellpadding="0" cellspacing="0" style="font-family:Avenir,Helvetica,sans-serif;box-sizing:border-box;margin:0;padding:0;width:100%">
-<tbody><tr>
+<tbody>
+	<!-- <tr>
 <td class="m_1888394735623576276header" style="font-family: Avenir,Helvetica,sans-serif;box-sizing: border-box;padding: 14px 0 6px 0;text-align: center;background: #171717;">
-        <!-- <a href="https://alllinkshare.com/" style="font-family:Avenir,Helvetica,sans-serif;box-sizing:border-box;color:#bbbfc3;font-size:19px;font-weight:bold;text-decoration:none" target="_blank">
+        <a href="https://alllinkshare.com/" style="font-family:Avenir,Helvetica,sans-serif;box-sizing:border-box;color:#bbbfc3;font-size:19px;font-weight:bold;text-decoration:none" target="_blank">
 
 
            <img src="http://203.99.61.173/demos/boarding_system/public/frontend-assets/images/logo.jpg" class="logo-img" style="width: 20%;">
 
 
-        </a> -->
+        </a>
     </td>
-</tr>
+</tr> -->
 <tr>
 <td class="m_1888394735623576276body" width="100%" cellpadding="0" cellspacing="0" style="font-family:Avenir,Helvetica,sans-serif;box-sizing:border-box;background-color:#ffffff;border-bottom:1px solid #edeff2;border-top:1px solid #edeff2;margin:0;padding:0;width:100%">
                             <table class="m_1888394735623576276inner-body" align="center" width="620" cellpadding="0" cellspacing="0" style="font-family:Avenir,Helvetica,sans-serif;box-sizing:border-box;background-color:#ffffff;margin:0 auto;padding:0;width:620px">
