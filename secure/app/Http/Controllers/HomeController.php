@@ -115,7 +115,7 @@ class HomeController extends Controller
       {
 
         $message->subject('demo.myclouddate.com - Reset Password');
-        $message->from('admin@demo.myclouddate.com', 'Singles Dating World');
+        $message->from('clouddate.dating@gmail.com', 'Singles Dating World');
         $message->to($toemail);
       });
       $user_id = User::where('email','=',$email)->update($user_info);
