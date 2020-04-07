@@ -85,7 +85,7 @@ $seo_website_description = setting('website_description');
 
         </form>
     </div>
-    <div class="search-content mt-3 mb-3 col-xs-12">
+    <div class="search-content mt-3 ml-2 mr-2 mb-3 col-xs-12">
         @if(count($users))
             <div class="row mb-3 ml-1 mr-1">
             @foreach($users as $user)
