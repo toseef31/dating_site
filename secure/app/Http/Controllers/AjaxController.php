@@ -94,38 +94,38 @@ class AjaxController extends Controller
         return view('ajax_filter', compact('users'));
     }
 
-    // public function view_photo()
-    // {
-    //     if($this->request->has('id')){
-    //       $get_user = Photo::with('comments','likes','user')->where('id',$this->request->id)->first();
-    //       $user_id = $get_user->user_id;
-    //       $id = $get_user->id;
-    //         $photos = Photo::with('comments','likes','user')->where('user_id',$user_id)->get();
-    //         $type='';
-    //         if($photos) {
-    //             // $html = view('photo.view',compact('photo','type'))->render();
-    //             $html = view('photo.view2',compact('photos','type','id'))->render();
-    //             // return response()->json(['status' => 'success', 'height' => $photo->height, 'width'=>$photo->width ,'html'=>$html]);
-    //             return response()->json(['status' => 'success', 'height' => $photos[0]->height, 'width'=>$photos[0]->width ,'html'=>$html]);
-    //         }
-    //     }
-    //     return response()->json(['status'=>'error']);
-    // }
     public function view_photo()
     {
         if($this->request->has('id')){
-          $photo = Photo::with('comments','likes','user')->where('id',$this->request->id)->first();
-          $user_id = $photo->user_id;
-          $id = $photo->id;
-            // dd($photo);
+          $get_user = Photo::with('comments','likes','user')->where('id',$this->request->id)->first();
+          $user_id = $get_user->user_id;
+          $id = $get_user->id;
+            $photos = Photo::with('comments','likes','user')->where('user_id',$user_id)->get();
             $type='';
-            if($photo) {
-              $html = view('photo.view',compact('photo','type'))->render();
-                return response()->json(['status' => 'success', 'height' => $photo->height, 'width'=>$photo->width ,'html'=>$html]);
+            if($photos) {
+                // $html = view('photo.view',compact('photo','type'))->render();
+                $html = view('photo.view2',compact('photos','type','id'))->render();
+                // return response()->json(['status' => 'success', 'height' => $photo->height, 'width'=>$photo->width ,'html'=>$html]);
+                return response()->json(['status' => 'success', 'height' => $photos[0]->height, 'width'=>$photos[0]->width ,'html'=>$html]);
             }
         }
         return response()->json(['status'=>'error']);
     }
+    // public function view_photo()
+    // {
+    //     if($this->request->has('id')){
+    //       $photo = Photo::with('comments','likes','user')->where('id',$this->request->id)->first();
+    //       $user_id = $photo->user_id;
+    //       $id = $photo->id;
+    //         // dd($photo);
+    //         $type='';
+    //         if($photo) {
+    //           $html = view('photo.view3',compact('photo','type'))->render();
+    //             return response()->json(['status' => 'success', 'height' => $photo->height, 'width'=>$photo->width ,'html'=>$html]);
+    //         }
+    //     }
+    //     return response()->json(['status'=>'error']);
+    // }
 
     public function view_cover_photo()
     {
