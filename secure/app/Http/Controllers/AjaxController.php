@@ -57,6 +57,8 @@ class AjaxController extends Controller
 
     public function search_more()
     {
+      // dd($this->request->all());
+      // dd($this->request->get('seeking'));
         if(Auth::check()){
             $user = Auth::user();
             $default_gender = $user->gender;
@@ -71,8 +73,17 @@ class AjaxController extends Controller
         if($this->request->has('gender') && ($gender == 'male' || $gender == 'female')){
             $default_gender = $gender == 'male'?1:2;
         }
-        if($this->request->has('seeking') && ($seeking == 'male' || $seeking == 'female' || $seeking == 'male,female')){
-            $default_preference = $seeking == 'male'?[1]:($seeking == 'female'?[2]:[1,2]);
+        if($seeking && is_array($seeking) && in_array('male', $seeking)){
+            $default_preference = [1];
+        }
+        if($seeking && is_array($seeking) && in_array('female', $seeking)){
+            $default_preference = [2];
+        }
+        // if($this->request->has('seeking') && ($seeking == 'male' || $seeking == 'female' || $seeking == 'male,female')){
+        // $default_preference = $seeking == 'male'?[1]:($seeking == 'female'?[2]:[1,2]);
+        // }
+        if($seeking && is_array($seeking) && in_array('female', $seeking) && in_array('male', $seeking)){
+          $default_preference = [1,2];
         }
         $users = User::whereIn('gender',$default_preference);
         if(Auth::check()){

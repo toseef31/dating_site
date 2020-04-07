@@ -83,6 +83,7 @@ class HomeController extends Controller
             $users->where('country', $this->request->country);
         }
         $users = $users->paginate(16);
+        // dd($seeking);
         return view('landing', compact('users','seo_title','default_preference'));
     }
 

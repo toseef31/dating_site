@@ -380,13 +380,37 @@ jQuery(document).ready(function ($) {
         if(!el.hasClass('active')){
             var page = el.attr('data-page');
             var data = $('#formFilter').serialize();
+            var gender='';
+            var preference1='';
+            var preference2='';
+            var country='';
+            // var url = window.location.href;
+            function qs() {
+              var qsparam = new Array(10);
+              var query = window.location.search.substring(1);
+              var parms = query.split('&');
+              for (var i = 0; i < parms.length; i++) {
+                var pos = parms[i].indexOf('=');
+                if (pos > 0)
+                {
+                  var key = parms[i].substring(0, pos);
+                  var val = parms[i].substring(pos + 1);
+                  qsparam[i] = val;
+                }
+              }
+                  gender = qsparam[0];
+                  preference1 = qsparam[1];
+                  preference2 = qsparam[2];
+                  country = qsparam[3];
+            }
+            var splitstr = qs();
             $.ajax({
                 url: ajax_url,
                 data: data,
                 dataType: 'HTML',
                 type: 'POST',
                 beforeSend: function(xhr, settings){
-                    settings.data += '&action=search_more&page='+page+'&_token='+token;
+                    settings.data += '&action=search_more&page='+page+'&_token='+token+'&preference1'+preference1+'&preference2'+preference2;
                 },
                 success: function (res) {
                     $('.search-content').empty();
