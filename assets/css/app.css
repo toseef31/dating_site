@@ -811,8 +811,10 @@ border: 1px solid #f6f6f6 !important;
     min-height: calc(100% - 153px);
 }
 #modalPhoto .modal-dialog{
-    width: 150vh;
-    max-width: 150vh;
+    /* width: 150vh;
+    max-width: 150vh; */
+    width: 80%;
+    max-width: 80%;
 }
 #modalPhoto .modal-content{
     height: 100%;
@@ -1614,8 +1616,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
  /* Mobile Portrait */
 @media (max-width: 444px) {
   #modalPhoto .modal-dialog {
-    width: 50vh !important;
-    max-width:50vh !important;
+    /* width: 50vh !important;
+    max-width:50vh !important; */
+    width: 80% !important;
+    max-width:80% !important;
   }
   .view-photo-right .content-photo {
     min-height: 209px;
@@ -1720,8 +1724,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     padding-left: 5px !important;
   }
   #modalPhoto .modal-dialog {
-    width: 60vh;
-    max-width: 60vh;
+    /* width: 60vh;
+    max-width: 60vh; */
+    width: 80%;
+    max-width: 80%;
   }
   .main-content {
     min-height: 928px !important;
@@ -1757,8 +1763,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 }
 /* ----END -----*/
   #modalPhoto .modal-dialog {
-    width: 60vh;
-    max-width: 60vh;
+    /* width: 60vh;
+    max-width: 60vh; */
+    width: 80%;
+    max-width: 80%;
   }
 
 
@@ -1848,20 +1856,26 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 /* View Image Modal */
 @media (max-width: 320px) {
   #modalPhoto .modal-dialog {
-    width: 60vh !important;
-    max-width:60vh !important;
+    /* width: 60vh !important;
+    max-width:60vh !important; */
+    width: 80% !important;
+    max-width:80% !important;
   }
 }
 @media only screen and (min-width:321px) and (max-width:375px) {
   #modalPhoto .modal-dialog {
-    width: 61vh !important;
-    max-width:61vh !important;
+    /* width: 61vh !important;
+    max-width:61vh !important; */
+    width: 80% !important;
+    max-width:80% !important;
   }
 }
 @media only screen and (min-width:376px) and (max-width:425px) {
   #modalPhoto .modal-dialog {
-    width: 70vh !important;
-    max-width:70vh !important;
+    /* width: 70vh !important;
+    max-width:70vh !important; */
+    width: 80% !important;
+    max-width:80% !important;
   }
 }
 /* View Image Modal End */
@@ -1876,8 +1890,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       height: 20%;
     }
     #modalPhoto .modal-dialog {
-      width: 55vh !important;
-      max-width:55vh !important;
+      /* width: 55vh !important;
+      max-width:55vh !important; */
+      width: 80% !important;
+      max-width:80% !important;
     }
     .conversations .list-conversations ul {
       height: 356px !important;
@@ -1893,8 +1909,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   and (orientation: landscape)
   and (-webkit-min-device-pixel-ratio: 3) {
     #modalPhoto .modal-dialog {
-      width: 100vh !important;
-      max-width:100vh !important;
+      /* width: 100vh !important;
+      max-width:100vh !important; */
+      width: 80% !important;
+      max-width:80% !important;
     }
     .main-content {
       min-height: 536px !important;
@@ -1924,8 +1942,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
       height: 20%;
     }
     #modalPhoto .modal-dialog {
-      width: 56vh !important;
-      max-width:56vh !important;
+      /* width: 56vh !important;
+      max-width:56vh !important; */
+      width: 80% !important;
+      max-width:80% !important;
     }
 }
 /* Iphone 6+,7+,8+ Landscape */
@@ -2019,8 +2039,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 2) {
     #modalPhoto .modal-dialog {
-      width: 72vh !important;
-      max-width:72vh !important;
+      /* width: 72vh !important;
+      max-width:72vh !important; */
+      width: 80% !important;
+      max-width:80% !important;
     }
 }
 /* Ipad Mini Landscape */
@@ -2030,8 +2052,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   and (orientation: landscape)
   and (-webkit-min-device-pixel-ratio: 2) {
     #modalPhoto .modal-dialog {
-      width: 120vh !important;
-      max-width:120vh !important;
+      /* width: 120vh !important;
+      max-width:120vh !important; */
+      width: 80% !important;
+      max-width:80% !important;
     }
 }
 /* ----------- iPad Pro 10.5" ----------- */
@@ -2052,8 +2076,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   and (orientation: landscape)
   and (-webkit-min-device-pixel-ratio: 2) {
     #modalPhoto .modal-dialog {
-      width: 130vh !important;
-      max-width:130vh !important;
+      /* width: 130vh !important;
+      max-width:130vh !important; */
+      width: 80% !important;
+      max-width:80% !important;
     }
     .main-content {
     min-height: 630px !important;
@@ -2077,8 +2103,10 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   and (orientation: landscape)
   and (-webkit-min-device-pixel-ratio: 2) {
     #modalPhoto .modal-dialog {
-      width: 110vh !important;
-      max-width:110vh !important;
+      /* width: 110vh !important;
+      max-width:110vh !important; */
+      width: 80% !important;
+      max-width:80% !important;
     }
     .main-content {
       min-height: 820px !important;
