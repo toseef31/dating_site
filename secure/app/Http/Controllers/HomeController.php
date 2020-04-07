@@ -105,10 +105,10 @@ class HomeController extends Controller
         $request->session()->flash('resetAlert', "We can't find a user with that e-mail address.");
         return redirect()->back();
       }
-      $first_name = "waqas";
-      $last_name = "ali";
-      // $first_name = $user->firstname;
-      // $last_name = $user->lastname;
+      // $first_name = "waqas";
+      // $last_name = "ali";
+      $first_name = $user->firstname;
+      $last_name = $user->lastname;
       $user_info['forget_token']=$token;
       // dd($toemail);
       Mail::send('mail.resetpassword',['u_name' =>$first_name." ".$last_name,'token' =>$token],
