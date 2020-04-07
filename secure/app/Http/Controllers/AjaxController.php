@@ -57,8 +57,6 @@ class AjaxController extends Controller
 
     public function search_more()
     {
-      // dd($this->request->all());
-      // dd($this->request->get('seeking'));
         if(Auth::check()){
             $user = Auth::user();
             $default_gender = $user->gender;

@@ -80,23 +80,21 @@ background-repeat: no-repeat;
                             </div>
                                 {{ session()->forget('resetAlert') }}
                             @endif
-                          @if(Session::has('resetSuccess'))
+                          @if(Session::has('passwordSuccess'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                 {!! session()->get('resetSuccess') !!}
+                                 {!! session()->get('passwordSuccess') !!}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                                {{ session()->forget('resetSuccess') }}
+                                {{ session()->forget('passwordSuccess') }}
                             @endif
 
                             @if($errors->any())
                                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                         <ul class="mb-0">
                                         @foreach($errors->all() as $error)
-                                            @foreach($error as $item)
-                                                <li>{!! $item !!}</li>
-                                            @endforeach
+                                                <li>{!! $error !!}</li>
                                         @endforeach
                                         </ul>
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -104,11 +102,14 @@ background-repeat: no-repeat;
                                         </button>
                                     </div>
                             @endif
-                            <form method="post" class="login_forms" action="{{ url('/checkEmail') }}">
+                            <form method="post" class="login_forms" action="{{ url('/reset-passwrod') }}">
                                 {!! csrf_field() !!}
+                                <input type="hidden" name="user_id" value="{{$user->id}}">
                                 <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email">
+                                  <input type="password" class="form-control" placeholder="Enter password" id="pwd" name="password" required>
+                                </div>
+                                <div class="form-group">
+                                  <input id="confirm_password" type="password" class="form-control" name="confirm_password" placeholder="Confirm password" required>
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-primary btn-block" type="submit">Submit</button>
