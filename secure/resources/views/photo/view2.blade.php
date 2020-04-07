@@ -67,7 +67,7 @@
                         ?>
                           <img src="{!! $avatar !!}">
                           <div class="media-body">
-                              <h3 class="mb-0"><a href="{!! route('profile',['username'=>$username]) !!}">{!! fullname($firstname, $lastname, $username) !!}</a></h3>
+                              <h3 class="mb-0"><a href="{!! route('profile',['username'=>$username]) !!}">{!! fullname($firstname, $lastname, $username) !!} </a></h3>
                               @if(!auth()->check() || auth()->user()->id != $user_id)
                                 @if(auth()->check() && in_array($user_id, collect(auth()->user()->follows()->get())->pluck('id')->all()))
                                     <span data-id="{!! $user_id !!}" class="badge badge-primary btn-follow"><i class="fas fa-check"></i> Followed</span>
@@ -111,15 +111,8 @@
 
           </div>
       </div>
-      <!-- <img src="http://localhost/dating/uploads/photos/13/badJdQvNgH1Xfy7ToDRf1585045832_thumb.jpg" alt="Los Angeles" width="1100" height="500"> -->
     </div>
     @endforeach
-    <!-- <div class="carousel-item">
-      <img src="http://localhost/dating/uploads/photos/13/QZoUqO0dkTEaz6ipxwL81583950232_thumb.jpg" alt="Chicago" width="1100" height="500">
-    </div>
-    <div class="carousel-item">
-      <img src="http://localhost/dating/uploads/photos/13/zl90b4phkzXvv2uJ4Bd11582556885_thumb.jpg" alt="New York" width="1100" height="500">
-    </div> -->
   </div>
 
   <!-- Left and right controls -->
