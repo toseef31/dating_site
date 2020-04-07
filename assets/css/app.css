@@ -2001,6 +2001,9 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     .main-content {
       min-height: 536px !important;
     }
+    .online-class {
+      left: 42% !important;
+    }
 }
 /* iPhone 6, 6S, 7 and 8 Portrait */
 @media only screen
@@ -2031,6 +2034,9 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
     }
     .main-content {
       min-height: 536px !important;
+    }
+    .online-class {
+      left: 36% !important;
     }
 }
 
