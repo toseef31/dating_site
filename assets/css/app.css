@@ -1633,6 +1633,16 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   .mh-400 {
     min-height: auto;
   }
+  .conversations .list-conversations ul {
+    /* overflow: scroll; */
+    height: 290px !important;
+  }
+  .write-message {
+    z-index: 999;
+  }
+  .view-photo-right .comments ul{
+    min-height: 160px;
+  }
 }
 @media (max-width: 375px) {
   .photo-item-cover {
