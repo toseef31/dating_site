@@ -27,6 +27,8 @@ Route::get('browse','HomeController@landing')->name('landing')->middleware('comp
 Route::post('register/quick','UserController@quickRegister')->name('quick_reg');
 Route::get('/forget-password', 'HomeController@forgetPassword');
 Route::match(['get','post'],'/checkEmail','HomeController@checkEmail');
+Route::get('/check-token/{token}','HomeController@checkToken');
+Route::match(['get','post'],'/reset-passwrod','HomeController@ResetPassword');
 
 Route::middleware(['auth','complete'])->prefix('/')->group(function(){
     Route::post('upload/photo','PhotoController@upload')->name('upload_photo');

@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 use Mail;
 class HomeController extends Controller
 {
@@ -83,7 +84,6 @@ class HomeController extends Controller
             $users->where('country', $this->request->country);
         }
         $users = $users->paginate(16);
-        // dd($seeking);
         return view('landing', compact('users','seo_title','default_preference'));
     }
 
@@ -124,4 +124,31 @@ class HomeController extends Controller
       return redirect('/forget-password');
 
     }
+    public function checkToken(Request $request, $token)
+    {
+      // dd($token);
+      $user = User::where('forget_token','=',$token)->first();
+      if ($user =="") {
+        $request->session()->flash('resetAlert', "Your secret code don't match please contact to Admin.");
+        return redirect('/forget-password');
+      }
+      // dd($user);
+      return view('reset-password',compact('user'));
+    }
+    public function ResetPassword(Request $request)
+    {
+      // dd($request->all());
+            $this->validate($request, [
+              'password' => 'required|min:6|max:50|required_with:confirm_password|same:confirm_password',
+              'confirm_password' => 'min:6'
+      ]);
+      $user_id= $request->input('user_id');
+      $pass=Hash::make(trim($request->input('password')));
+      // dd($user_id);
+      $user = User::where('id','=',$user_id)->update(array('password'=>$pass));
+      $request->session()->flash('passwordSuccess', 'Password changed successfully');
+      return redirect('/');
+
+    }
+
 }

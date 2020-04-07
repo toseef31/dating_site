@@ -49,6 +49,12 @@ background-repeat: no-repeat;
 .pt-20 {
  padding-top:20px;
 }
+.login_forms .form-control {
+    min-height: calc(1.9em + .75rem + 5px);
+    box-shadow: inset 0px -1px 1px -2px rgb(149, 149, 149);
+    border-radius: 6px;
+    font-size: 16px;
+}
 </style>
     <div class="welcome overflow-hidden">
         <div class="container h-100 position-relative">
@@ -65,31 +71,30 @@ background-repeat: no-repeat;
                 <div class="col-md-6">
                     <div class="row" class="set-login">
                         <div class="col-md-9 mx-auto pt-5">
-                            @if(session()->has('fail_login'))
+                          @if(Session::has('resetAlert'))
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <strong>Warning!</strong> {!! session()->get('fail_login') !!}
+                                <strong>Warning!</strong> {!! session()->get('resetAlert') !!}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                                {{ session()->forget('fail_login') }}
+                                {{ session()->forget('resetAlert') }}
                             @endif
-                            @if(Session::has('passwordSuccess'))
-                              <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                   {!! session()->get('passwordSuccess') !!}
-                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                  </button>
-                              </div>
-                                  {{ session()->forget('passwordSuccess') }}
-                              @endif
+                          @if(Session::has('passwordSuccess'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                 {!! session()->get('passwordSuccess') !!}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                                {{ session()->forget('passwordSuccess') }}
+                            @endif
+
                             @if($errors->any())
                                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                         <ul class="mb-0">
                                         @foreach($errors->all() as $error)
-                                            @foreach($error as $item)
-                                                <li>{!! $item !!}</li>
-                                            @endforeach
+                                                <li>{!! $error !!}</li>
                                         @endforeach
                                         </ul>
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -97,32 +102,20 @@ background-repeat: no-repeat;
                                         </button>
                                     </div>
                             @endif
-                            <form method="post" class="login_form" action="">
+                            <form method="post" class="login_forms" action="{{ url('/reset-passwrod') }}">
                                 {!! csrf_field() !!}
+                                <input type="hidden" name="user_id" value="{{$user->id}}">
                                 <div class="form-group">
-                                    <label>Username</label>
-                                    <input class="form-control" type="text" required name="username">
+                                  <input type="password" class="form-control" placeholder="Enter password" id="pwd" name="password" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Password</label>
-                                    <input class="form-control" type="password" required name="password">
+                                  <input id="confirm_password" type="password" class="form-control" name="confirm_password" placeholder="Confirm password" required>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-primary btn-block" type="submit">Login</button>
+                                    <button class="btn btn-primary btn-block" type="submit">Submit</button>
                                 </div>
                             </form>
-                            <a href="{{url('forget-password')}}" style="color:white;">Forget password ?</a>
-                            <p class="text-center mt-4 mb-4"><a class="btn btn-register btn-block" href="{!! route('register') !!}">Register</a></p>
-                            @if(setting('social_login'))
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <a href="{!! route('loginfacebook') !!}" class="btn btn-block btn-facebook btn-sm mb-2"><i class="fab fa-facebook-f"></i> Login with Facebook</a>
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="{!! route('logintwitter') !!}" class="btn btn-block btn-twitter btn-sm mb-2"><i class="fab fa-twitter"></i> Login with Twitter</a>
-                                </div>
-                            </div>
-                            @endif
+
                         </div>
                     </div>
                 </div>
