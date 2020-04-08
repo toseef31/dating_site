@@ -1690,7 +1690,7 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   .full_photo img {
     max-height: 240px !important;
     min-height: 240px !important;
-    object-fit: cover;
+    /* object-fit: cover; */
     margin: auto;
   }
   .profile-ipad-img {
