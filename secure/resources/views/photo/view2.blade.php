@@ -1,11 +1,11 @@
 <style>
 .img-next {
   /* right: 32%; */
-  right: -10%;
+  right: -12%;
 }
 .img-prev {
   /* right: 32%; */
-  left: -10%;
+  left: -12%;
 }
 </style>
 <div id="demo" class="carousel slide" data-ride="carousel">
