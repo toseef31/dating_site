@@ -1649,6 +1649,9 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   .img-next{
     right: 0 !important;
   }
+  .img-prev {
+    left: 0 !important;
+  }
 }
 @media (max-width: 375px) {
   .photo-item-cover {
@@ -1722,6 +1725,9 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 }
 .img-next{
   right: 0 !important;
+}
+.img-prev {
+  left: 0 !important;
 }
 .view-photo-right .comments .gallery_list {
     min-height: 160px;
