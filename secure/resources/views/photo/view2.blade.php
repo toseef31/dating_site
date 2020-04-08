@@ -126,10 +126,10 @@
 
   <!-- Left and right controls -->
   <a class="carousel-control-prev img-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
+    <span class="btn-border"><span class="carousel-control-prev-icon"></span></span>
   </a>
   <a class="carousel-control-next img-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
+    <span class="btn-border"><span class="carousel-control-next-icon"></span></span>
   </a>
 </div>
 
