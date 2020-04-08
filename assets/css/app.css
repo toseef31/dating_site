@@ -815,7 +815,7 @@ border: 1px solid #f6f6f6 !important;
     max-width: 150vh; */
     width: 80%;
     max-width: 80%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 #modalPhoto .modal-content{
     height: 100%;
@@ -1620,9 +1620,9 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   #modalPhoto .modal-dialog {
     /* width: 50vh !important;
     max-width:50vh !important; */
-    width: 80% !important;
-    max-width:80% !important;
-    margin-left: 10%;
+    width: 100% !important;
+    max-width:100% !important;
+    /* margin-left: 10%; */
   }
   .view-photo-right .content-photo {
     min-height: 209px;
@@ -1918,9 +1918,9 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
   #modalPhoto .modal-dialog {
     /* width: 60vh !important;
     max-width:60vh !important; */
-    width: 80% !important;
-    max-width:80% !important;
-    margin-left: 10%;
+    width: 100% !important;
+    max-width:100% !important;
+    /* margin-left: 10%; */
 
   }
 }
