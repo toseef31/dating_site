@@ -71,7 +71,7 @@
                         // dd(in_array($user_id, collect(auth()->user()->follows()->get())->pluck('id')->all()));
                         ?>
                           <img src="{!! $avatar !!}">
-                          <div class="media-body">
+                          <div class="media-body content-photo2">
                               <h3 class="mb-0"><a href="{!! route('profile',['username'=>$username]) !!}">{!! fullname($firstname, $lastname, $username) !!} </a></h3>
                               @if(!auth()->check() || auth()->user()->id != $user_id)
                                 @if(auth()->check() && in_array($user_id, collect(auth()->user()->follows()->get())->pluck('id')->all()))

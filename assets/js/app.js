@@ -245,7 +245,17 @@ jQuery(document).ready(function ($) {
                     type: 'POST',
                     success: function (res) {
                         if(res.status === 'success'){
-                            $('.view-photo-right .comments ul').append(res.html);
+                            // $('.view-photo-right .comments ul').append(res.html);
+                            // $('.view-photo-right .comments ul').mCustomScrollbar().mCustomScrollbar("scrollTo","bottom",{scrollInertia:0})
+                            // $(".view-photo-right .comments ul").mCustomScrollbar().append(res.html);
+                            // $(".view-photo-right .comments ul").mCustomScrollbar("update");
+                            // $(".view-photo-right .comments ul").mCustomScrollbar("scrollTo", "bottom");
+
+                            $('.view-photo-right .comments ul .mCSB_container ').append(res.html);
+                            $(".view-photo-right .comments ul").mCustomScrollbar("update");
+                                setTimeout(function(){
+                                    $(".view-photo-right .comments ul").mCustomScrollbar("scrollTo","bottom");
+                                },1000);
                             el.val('');
                         }
                         else if(res.status === 'login'){
@@ -314,7 +324,10 @@ jQuery(document).ready(function ($) {
                 if(res.status == 'success') {
                     modalBody.append(res.html);
                     $('#modalPhoto').modal('show').css({opacity: 0});
-                    $('.view-photo-right .content-photo').mCustomScrollbar();
+                    // $('.view-photo-right .content-photo').mCustomScrollbar();
+                    $('.view-photo-right .comments ul').mCustomScrollbar().mCustomScrollbar("scrollTo","bottom",{scrollInertia:0});
+                    // $('.view-photo-right .comments ul').mCustomScrollbar().mCustomScrollbar("scrollTo","bottom",{scrollInertia:0})
+
                     var image_box_width = modalBody.find('.full_photo').width();
                     // console.log(image_box_width);
                     // modalBody.find('.full_photo').height('auto');
