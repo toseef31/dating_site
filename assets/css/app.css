@@ -1750,8 +1750,8 @@ background-image: linear-gradient(315deg, #4a5e6e 0%, #6696ed 74%);
 /* Ipad */
 @media (max-width: 768px) {
 .ipad-col {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
+    flex: 0 0 33% !important;
+    max-width: 33% !important;
   }
   .profile-ipad-img {
     flex: 0 0 32.666667% !important;
