@@ -30,10 +30,10 @@
                     {!! csrf_field() !!}
                     <input type="hidden" value="{!! request()->fullUrl() !!}" name="ref">
                     <div class="form-group">
-                        <input class="form-control second bg-mute" name="username" placeholder="Username">
+                        <input class="form-control second bg-mute" name="username" placeholder="Username" required>
                     </div>
                     <div class="form-group">
-                        <input class="form-control second bg-mute" type="password" name="password" placeholder="Password">
+                        <input class="form-control second bg-mute" type="password" name="password" placeholder="Password" required>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-block btn-sm btn-primary">Login</button>
